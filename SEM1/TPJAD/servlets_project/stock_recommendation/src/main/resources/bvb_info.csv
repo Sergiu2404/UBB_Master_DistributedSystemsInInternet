@@ -1,0 +1,180 @@
+ticker,company_name,industry
+EBS,Erste Group Bank AG,financials
+H2O,S.P.E.E.H. Hidroelectrica S.A.,utilities
+SNP,OMV Petrom S.A.,energy
+TLV,Banca Transilvania S.A.,financials
+SNG,SNGN Romgaz SA,energy
+SNN,S.N. Nuclearelectrica S.A.,utilities
+BRD,BRD - Groupe Société Générale S.A.,financials
+DIGI,Digi Communications N.V.,telecom
+TGN,S.N.T.G.N. Transgaz S.A.,energy
+EL,Societatea Energetica Electrica S.A.,utilities
+TEL,CNTEE Transelectrica SA,utilities
+M,Med Life S.A.,healthcare
+SCD,Zentiva S.A.,healthcare
+CRC,Chimcomplex S.A.,materials
+PE,Premier Energy PLC,utilities
+ONE,One United Properties SA,realestate
+RRC,Rompetrol Rafinare S.A.,energy
+AQ,Aquila Part Prod Com S.A.,logistics
+ATB,Antibiotice S.A.,healthcare
+SFG,Sphera Franchise Group S.A.,restaurants
+LION,Lion Capital S.A.,financials
+ARS,Aerostar S.A.,aerospace
+EVER,Evergent Investments SA,financials
+TRP,Teraplast S.A.,materials
+ALR,Alro S.A.,materials
+FP,Fondul Proprietatea SA,financials
+GREEN,Green Tech International S.A.,technology
+INFINITY,Infinity Capital Investments S.A.,financials
+SOCP,SOCEP S.A.,construction
+TTS,TTS (Transport Trade Services) S.A.,transport
+BIO,Biofarm S.A.,healthcare
+WINE,Purcari Wineries Public Company Limited,food_beverage
+CMVX,Comvex S.A.,logistics
+COTE,Conpet S.A.,energy
+AROBS,AROBS Transilvania Software S.A.,technology
+IMP,Impact Developer & Contractor S.A.,realestate
+SMTL,Simtel Team S.A.,technology
+OIL,Oil Terminal S.A.,energy
+BVB,Bursa de Valori Bucuresti SA,financials
+DN,Dn Agrar Group S.A.,agriculture
+GSH,GRUP SERBAN HOLDING SA,financials
+PBK,Patria Bank SA,financials
+FOSB,SC Foraj Sonde SA Craiova,energy
+SCDM,S.C. Unirea Shopping Center S.A.,realestate
+IARV,IAR S.A.,aerospace
+VNC,Vrancart S.A.,materials
+VAC,Prodvinalco SA,food_beverage
+TUFE,S.C. Turism Felix S.A.,leisure
+ROC1,Roca Industry Holdingrock1 S.A.,materials
+SNC,Santierul Naval Constanta S.A.,industrial
+FOJE,S.C. Foraj Sonde S.A.,energy
+PTR,Rompetrol Well Services SA,energy
+ARO,S.C. Aro-Palace S.A.,leisure
+BUCU,S.C. Bucur Obor S.A.,realestate
+CBC,Carbochim S.A.,materials
+RCHI,Societatea Comerciala Compania Hoteliera Intercontinental Romania S.A.,leisure
+PPL,S.C. Promateris S.A.,materials
+IORB,S.C. IOR S.A.,construction
+TBM,Turbomecanica SA,industrial
+IPRU,S.C. Iproeb S.A.,construction
+MOIB,S.C. Moara Cibin S.A.,food_beverage
+ELMA,Electromagnetica S.A.,technology
+SAFE,Safetech Innovations S.A.,technology
+CMP,Compa S.A.,automotive
+JTG,SC J.T. Grup Oil SA,energy
+ARCU,Sifi Cluj Retail SA,retail
+AG,Agroland Business System S.A.,agriculture
+PREH,Prefab S.A.,construction
+BENTO,2B Intelligent Soft S.A.,technology
+SPX,Sipex Company S.A.,materials
+AVIO,Avioane Craiova S.A.,aerospace
+ARTE,S.C. Artego S.A.,materials
+ALDANI,ALDANI MASTER CAPITAL S.A.,financials
+CC,Connections Consult S.A.,technology
+CMF,Comelf S.A.,industrial
+PREB,S.C. Prebet Aiud S.A.,construction
+AST,Arctic Stream S.A.,food_beverage
+EFO,Turism Hoteluri Restaurante Marea Neagra S.A.,leisure
+RPH,S.C. Ropharma S.A.,healthcare
+ALU,Alumil Rom Industry S.A.,materials
+SNO,Santierul Naval Orsova S.A.,industrial
+BNET,Bittnet Systems SA,technology
+ARCV,S.C. Imotrust S.A.,realestate
+CICO,Ci-Co S.a. Bucharest,industrial
+ROCE,S.C. Romcarbon S.A.,materials
+HAI,Holde Agri Invest SA,agriculture
+PRSN,S.C.Prospectiuni S.A.,energy
+RMAH,Farmaceutica REMEDIA S.A.,healthcare
+TBK,Transilvania Broker de Asigurare S.A.,financials
+COKJ,Concivia SA (Braila),construction
+NRF,Norofert S.A.,materials
+MET,Meta Estate Trust S.A.,realestate
+CAOR,SIF Hoteluri S.A.,leisure
+ELZY,Electroprecizia S.A.,industrial
+TSLA,Transilvania Leasing IFN SA,financials
+MECE,Mecanica Fina SA,industrial
+MACO,S.C. Macofil S.A.,materials
+FACY,Fabrica de Scule Rasnov S.A.,industrial
+BRNA,S.C. Romnav S.A.,transport
+ASC,Ascendia S.A.,technology
+CMCM,S.C. Comcm S.A.,materials
+BRM,S.C. Bermas S.A.,food_beverage
+AAG,SC Aages SA,agriculture
+STZ,Sinteza S.A.,materials
+MCAB,Romcab SA,industrial
+MOBE,S.C. Mobest S.A.,retail
+CCOM,S.C. CEREALCOM S.A.,agriculture
+AVSL,S.C. Avicola Slobozia S.A.,agriculture
+UZC,S.C. Uzuc S.A.,industrial
+COCR,S.C. Cocor S.A.,retail
+MAMA,S.C. Magazin Universal Maramures S.A.,retail
+CBOT,S.C. Comcereal S.A.,agriculture
+4RT,FORT S.A,construction
+MEOY,S.C. Mecanica Codlea S.A.,industrial
+MIB,Millenium Insurance Broker S.A.,financials
+VIAG,S.C. Vinalcool Arges S.A.,food_beverage
+UPET,S.C. Upet S.A.,energy
+UNISEM,Societatea Comerciala Unisem S.A.,technology
+MOBG,S.C. Mobex S.A.,transport
+BRK,SSIF BRK Financial Group S.A.,financials
+TRGI,S.C.Transporturi Auto Giulesti S.A.,transport
+CLAIM,Air Claim S.A.,technology
+MECF,Mecanica Ceahlau S.A.,industrial
+BCM,Casa de Bucovina - Club de Munte S.A.,leisure
+RRD,Romradiatoare SA,industrial
+CACU,SIFI CJ LOGISTIC SA,logistics
+AAB,Agroland Agribusiness S.A.,agriculture
+SEOM,Germina Agribusiness S.A.,agriculture
+ALT,Altur S.A.,materials
+2P,2performant Network S.A.,technology
+LIH,Life is Hard S.A.,technology
+LCSI,S.C. LCS Imobiliar S.A.,realestate
+CODE,Softbinator Technologies S.A.,technology
+SEOL,S.C. Semrom Oltenia S.A.,agriculture
+ALW,S.C. Visual Fan S.A.,technology
+ELV,S.C. Elvila S.A.,retail
+PRAE,S.C. Prodlacta S.A.,food_beverage
+ELGS,Aeta SA,technology
+NAPO,Societatea de Constructii Napoca SA,construction
+FERO,IAMBA Arad S.A.,materials
+COBL,SC Bricomat SA,retail
+NTEX,Sifi Cj Storage S.A.,logistics
+EMAI,S.C. Emailul S.A.,materials
+UAM,S.C. UAMT S.A.,industrial
+REVA,S.C. De Reparat Material Rulant Reva S.A.,industrial
+PETY,S.C. Petal S.A.,materials
+CRMC,S.C. Carmeco S.A.,automotive
+ABN,Abn Systems International SA,technology
+REIT,Star Residence Invest Sa,realestate
+BUCS,S.C. Bucovina S.A.,food_beverage
+DENT,Dr. Fischer Dental S.A.,healthcare
+ARAX,Armax Gaz SA,utilities
+CNTE,S.C. Conted S.A.,construction
+TRVM,S.C. Transcom S.A.,transport
+MILK,Agroserv Mariuta S.A.,agriculture
+IANY,S.C. 24 Ianuarie S.A.,industrial
+UZIN,SC Uzinexport SA,industrial
+RELE,S.C. Relee S.A.,technology
+ELJ,S.C. Electroaparataj S.A.,industrial
+ADISS,Adiss S.A.,construction
+CEPO,S.C. Ceprocim S.A.,materials
+ECT,SC Grupul Industrial Electrocontact SA,industrial
+COMI,S.C. Condmag S.A.,industrial
+CHRD,Chromosome Dynamics S.a.,healthcare
+SATU,S.C. Saturn S.A. Alba Iulia,materials
+ARM,Armatura SA,industrial
+INOX,S.C. Inox S.A.,materials
+COUT,S.C. Comturist S.A.,leisure
+HUNT,iHunt Technology Import-Export S.A.,technology
+BIOW,Vifrana S.A.,agriculture
+BONA,Bonas Import Export S.A.,retail
+FRB,Firebyte Games S.A.,technology
+MAM,Mambricolaj S.A.,construction
+EEAI,S.C. Electroconstructia Elco Alba Iulia S.A.,industrial
+PVBS,Perseus Fintech S A,financials
+MESA,S.C. Metalul Mesa S.A.,materials
+ENP,SC Compania Energopetrol SA,energy
+COMY,Comat SA (Giurgiu),materials
+GGC,Glissando Garden Center S.a.,retail
