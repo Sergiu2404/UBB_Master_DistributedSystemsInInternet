@@ -7,6 +7,8 @@ import com.stock_recommendation.repository.StockRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class PortfolioService {
     private PortfolioRepository portfolioRepository;
@@ -31,4 +33,16 @@ public class PortfolioService {
     }
 
     public List<PortfolioStock> getPortfolio(){ return this.portfolioRepository.getPortfolioStocks(); }
+
+    public List<Stock> getAvailableStocksNotInPortfolio() {
+        List<PortfolioStock> portfolio = getPortfolio();
+        Set<String> portfolioTickers = portfolio.stream()
+                .map(p -> p.getStock().getTicker())
+                .collect(Collectors.toSet());
+
+        return stockService.getAllStocks().stream()
+                .filter(stock -> !portfolioTickers.contains(stock.getTicker()))
+                .collect(Collectors.toList());
+    }
+
 }

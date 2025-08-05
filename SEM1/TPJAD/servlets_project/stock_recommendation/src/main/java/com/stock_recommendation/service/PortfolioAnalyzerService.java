@@ -9,10 +9,19 @@ import java.util.stream.Collectors;
 public class PortfolioAnalyzerService {
     private final StockService stockService;
     private final PortfolioService portfolioService;
+    private List<PortfolioStock> externalPortfolioOverride = null;
 
     public PortfolioAnalyzerService(StockService stockService, PortfolioService portfolioService) {
         this.stockService = stockService;
         this.portfolioService = portfolioService;
+    }
+
+    public void setExternalPortfolio(List<PortfolioStock> portfolio){
+        this.externalPortfolioOverride = portfolio;
+    }
+
+    private List<PortfolioStock> getActivePortfolio() {
+        return externalPortfolioOverride != null ? externalPortfolioOverride : portfolioService.getPortfolio();
     }
 
     public List<String> getMissingIndustries(){
@@ -20,7 +29,7 @@ public class PortfolioAnalyzerService {
                 .map(Stock::getIndustry)
                 .collect(Collectors.toSet());
 
-        Set<String> portfolioIndustries = portfolioService.getPortfolio().stream()
+        Set<String> portfolioIndustries = getActivePortfolio().stream()
                 .map(portfolioStock -> portfolioStock.getStock())
                 .map(Stock::getIndustry)
                 .collect(Collectors.toSet());
@@ -42,7 +51,7 @@ public class PortfolioAnalyzerService {
         return recommendations;
     }
     public Map<String, Integer> getIndustryQuantitiesForCurrentPortfolio(){
-        List<PortfolioStock> portfolio = portfolioService.getPortfolio();
+        List<PortfolioStock> portfolio = getActivePortfolio();
         Map<String, Integer> industryQuantities = new HashMap<>();
 
         for(PortfolioStock portfolioStock : portfolio){
@@ -81,7 +90,7 @@ public class PortfolioAnalyzerService {
     }
     public Map<String, List<Stock>> recommendToBalanceByQuantity(double maxPercentagePerIndustry){
         List<String> overweightedIndustries = getOverweightedIndustries(maxPercentagePerIndustry);
-        Set<String> portfolioIndustries = portfolioService.getPortfolio().stream()
+        Set<String> portfolioIndustries = getActivePortfolio().stream()
                 .map(p -> p.getStock().getIndustry())
                 .collect(Collectors.toSet());
 
@@ -103,7 +112,7 @@ public class PortfolioAnalyzerService {
         return recommendations;
     }
     public List<PortfolioStock> getOverconcentratedStocks(int maxQuantity) {
-        return portfolioService.getPortfolio().stream()
+        return getActivePortfolio().stream()
                 .filter(p -> p.getQuantity() > maxQuantity)
                 .collect(Collectors.toList());
     }
@@ -112,7 +121,7 @@ public class PortfolioAnalyzerService {
             int maxStockQuantity,
             int suggestedStockQuantity
     ) {
-        List<PortfolioStock> currentPortfolio = portfolioService.getPortfolio();
+        List<PortfolioStock> currentPortfolio = getActivePortfolio();
         Map<String, Integer> industryTotals = getIndustryQuantitiesForCurrentPortfolio();
         int totalQuantity = industryTotals.values().stream().mapToInt(Integer::intValue).sum();
 

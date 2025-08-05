@@ -13,6 +13,10 @@ public class CSVLoader {
     private static final String CSV_BVB_STOCKS_INFO = "bvb_info_enhanced.csv";
     private List<Stock> stocks;
 
+    public CSVLoader(){
+        this.stocks = new ArrayList<>();
+    }
+
     public List<Stock> getAllStocks(){
         return this.stocks;
     }
