@@ -1,5 +1,4 @@
 package com.stock_recommendation.embedded_tomcat;
-import com.stock_recommendation.servlet.HomeServlet;
 import com.stock_recommendation.servlet.PortfolioServlet;
 import com.stock_recommendation.servlet.RecommendationServlet;
 import org.apache.catalina.Context;
@@ -19,9 +18,6 @@ public class Main {
 
         ((StandardJarScanner) context.getJarScanner()).setScanManifest(false);
 
-        Tomcat.addServlet(context, "HomeServlet", new HomeServlet());
-        context.addServletMappingDecoded("", "HomeServlet");
-
         Tomcat.addServlet(context, "PortfolioServlet", new PortfolioServlet());
         context.addServletMappingDecoded("/portfolio", "PortfolioServlet");
 
@@ -34,6 +30,5 @@ public class Main {
         tomcat.getConnector();
         tomcat.start();
         tomcat.getServer().await();
-
     }
 }
