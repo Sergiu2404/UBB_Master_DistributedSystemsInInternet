@@ -1,6 +1,6 @@
 package com.stock_recommendation.embedded_tomcat;
-import com.stock_recommendation.servlet.PortfolioServlet;
-import com.stock_recommendation.servlet.RecommendationServlet;
+import com.stock_recommendation.servlet.FilterServlet;
+import com.stock_recommendation.servlet.SearchServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.tomcat.util.scan.StandardJarScanner;
@@ -18,13 +18,20 @@ public class Main {
 
         ((StandardJarScanner) context.getJarScanner()).setScanManifest(false);
 
-        Tomcat.addServlet(context, "PortfolioServlet", new PortfolioServlet());
-        context.addServletMappingDecoded("/portfolio", "PortfolioServlet");
+//        Tomcat.addServlet(context, "PortfolioServlet", new PortfolioServlet());
+//        context.addServletMappingDecoded("/portfolio", "PortfolioServlet");
+//
+//        Tomcat.addServlet(context, "RecommendationServlet", new RecommendationServlet());
+//        context.addServletMappingDecoded("/recommendation", "RecommendationServlet");
+//
+//        context.addWelcomeFile("portfolio.jsp");
+        Tomcat.addServlet(context, "SearchServlet", new SearchServlet());
+        context.addServletMappingDecoded("/api/search", "SearchServlet");
+        context.addServletMappingDecoded("/search", "SearchServlet");
+        Tomcat.addServlet(context, "FilterServlet", new FilterServlet());
+        context.addServletMappingDecoded("/api/filter", "FilterServlet");
 
-        Tomcat.addServlet(context, "RecommendationServlet", new RecommendationServlet());
-        context.addServletMappingDecoded("/recommendation", "RecommendationServlet");
-
-        context.addWelcomeFile("portfolio.jsp");
+        context.addWelcomeFile("index.jsp");
         System.out.println("Starting embedded Tomcat at http://localhost:8080");
 
         tomcat.getConnector();
