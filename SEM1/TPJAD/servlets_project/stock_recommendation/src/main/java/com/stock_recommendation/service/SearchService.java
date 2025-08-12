@@ -2,7 +2,7 @@ package com.stock_recommendation.service;
 
 import com.stock_recommendation.entity.StockInfo;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;

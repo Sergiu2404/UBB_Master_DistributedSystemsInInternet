@@ -1,5 +1,6 @@
 package com.stock_recommendation.embedded_tomcat;
 import com.stock_recommendation.servlet.FilterServlet;
+import com.stock_recommendation.servlet.IndexServlet;
 import com.stock_recommendation.servlet.SearchServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.startup.Tomcat;
@@ -8,9 +9,10 @@ import org.apache.tomcat.util.scan.StandardJarScanner;
 import java.io.File;
 
 public class Main {
+    private static int PORT = 8082;
     public static void main(String[] args) throws Exception {
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8080);
+        tomcat.setPort(PORT);
         tomcat.setBaseDir("temp-tomcat");
 
         File webContentFolder = new File("src/main/webapp");
@@ -30,9 +32,11 @@ public class Main {
         context.addServletMappingDecoded("/search", "SearchServlet");
         Tomcat.addServlet(context, "FilterServlet", new FilterServlet());
         context.addServletMappingDecoded("/api/filter", "FilterServlet");
+        Tomcat.addServlet(context, "IndexServlet", new IndexServlet());
+        context.addServletMappingDecoded("", "IndexServlet");
 
         context.addWelcomeFile("index.jsp");
-        System.out.println("Starting embedded Tomcat at http://localhost:8080");
+        System.out.println("Starting embedded Tomcat at http://localhost:8082");
 
         tomcat.getConnector();
         tomcat.start();
