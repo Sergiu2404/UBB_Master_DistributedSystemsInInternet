@@ -1,0 +1,20 @@
+Build proj
+Create war file from webapp folder, type: jar -cvf MyWebApp.war *
+Copy .war inside tomcat/webapps and startup.bat
+From .../apahe-tomcat/bin start app with startup.bat
+
+
+Start jetty server from D:\Tools\jetty-home-12.1.1> with: java -Djetty.base=D:\Tools\jetty-home-12.1.1\jetty-base -jar start.jar
+or start on specific port: java -Djetty.base=D:\Tools\jetty-base -jar start.jar --add-modules=server,http --exec --port=8082
+Stop: ctrl+c
+
+Wildfly:
+STart from: cd D:\Tools\wildfly-27.0.1\bin with: standalone.bat
+or start on specific port: standalone.bat -Djboss.http.port=8083
+Stop: ctrl+c
+
+
+
+RUN INTELLIJ:
+mvn jetty:run
+si tomcat run de la buton

@@ -11,7 +11,7 @@ import java.util.List;
 
 @Stateless
 public class ChampionshipService {
-    @PersistenceContext(unitName = "oraclePU")
+    @PersistenceContext(unitName = "pgPU")
     private EntityManager entityManager;
 
     public Championship create(String name, String countryName) {

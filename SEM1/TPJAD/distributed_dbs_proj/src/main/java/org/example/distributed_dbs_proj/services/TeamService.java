@@ -10,7 +10,7 @@ import java.util.List;
 
 @Stateless
 public class TeamService {
-    @PersistenceContext(unitName = "oraclePU")
+    @PersistenceContext(unitName = "mssqlPU")
     private EntityManager entityManager;
 
     public Team create(String name, Long championshipId) {
