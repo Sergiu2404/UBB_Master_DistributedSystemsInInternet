@@ -1,0 +1,234 @@
+m 11 10.200000000000003 n 21 20.0
+(0,0) lat=48.5, lon=20.0 2777, 980 26 Kraskovo, Slovakia
+(0,1) lat=48.5, lon=20.5 049 55 Ke?ovo, Slovakia
+(0,2) lat=48.5, lon=21.0 Kány, 26127, 3821, Hungary
+(0,3) lat=48.5, lon=21.5 Füzérkajata, Borsod-Abaúj-Zemplén, Hungary
+(0,4) lat=48.5, lon=22.0 076 71 Po?any, Slovakia
+(0,5) lat=48.5, lon=22.5 Tsentralna Street, Uzhhorod Raion, Dubrivka, 89445, Ukraine
+(0,6) lat=48.5, lon=23.0 Svaliava Urban Hromada, Mukachevo Raion, Ukraine
+(0,7) lat=48.5, lon=23.5 ???? ????? ??????, Khust Raion, Mizhhiria, 90005, Ukraine
+(0,8) lat=48.5, lon=24.0 Ust-Chorna Settlement Hromada, Tiachiv Raion, Ukraine
+(0,9) lat=48.5, lon=24.5 Deliatyn Settlement Hromada, Nadvirna Raion, Ukraine
+(0,10) lat=48.5, lon=25.0 ??????? ??????, ??????? ??????, Nyzhnii Verbizh, 78218, Ukraine
+(0,11) lat=48.5, lon=25.5 Kolomyia Raion, Rusiv, 78335, Ukraine
+(0,12) lat=48.5, lon=26.0 Chernivtsi Raion, Dobrynivtsi, 59444, Ukraine
+(0,13) lat=48.5, lon=26.5 Yosypa Klishcha Street, 144, Nove misto, Khotyn, 60000, Ukraine
+(0,14) lat=48.5, lon=27.0 Dnistrovskyi Raion, Maiorka, 60140, Ukraine
+(0,15) lat=48.5, lon=27.5 unnamed road, Mohyliv-Podilskyi Raion, Bernashivka, 24022, Ukraine
+(0,16) lat=48.5, lon=28.0 Mohyliv-Podilskyi Raion, Vilne, 24094, Ukraine
+(0,17) lat=48.5, lon=28.5 unnamed road, Tulchyn Raion, Rakova, 24262, Ukraine
+(0,18) lat=48.5, lon=29.0 unnamed road, Haisyn Raion, Kytaihorod, 24335, Ukraine
+(0,19) lat=48.5, lon=29.5 unnamed road, Haisyn Raion, Sumivka, 24410, Ukraine
+(0,20) lat=48.5, lon=30.0 Dzhulynka Rural Hromada, Haisyn Raion, Ukraine
+(1,0) lat=48.0, lon=20.0 Mátraballa, 3247, Hungary
+(1,1) lat=48.0, lon=20.5 Bükkzsérc, 3414, Hungary
+(1,2) lat=48.0, lon=21.0 Köröm, 3611, 3577, Hungary
+(1,3) lat=48.0, lon=21.5 Tiszaeszlár, 3634, 4464, Hungary
+(1,4) lat=48.0, lon=22.0 Levelek, 4555, Hungary
+(1,5) lat=48.0, lon=22.5 Fehérgyarmat, Eötvös utca, 4900, Hungary
+(1,6) lat=48.0, lon=23.0 ?????????? ??????, Berehove Raion, Nevetlenfolu, 90365, Ukraine
+(1,7) lat=48.0, lon=23.5 Khust Raion, Yablunivka, 90458, Ukraine
+(1,8) lat=48.0, lon=24.0 Velykyi Bychkiv Settlement Hromada, Rakhiv Raion, Ukraine
+(1,9) lat=48.0, lon=24.5 Bohdan Rural Hromada, Rakhiv Raion, Ukraine
+(1,10) lat=48.0, lon=25.0 unnamed road, Vyzhnytsia Raion, Samakova, 59123, Ukraine
+(1,11) lat=48.0, lon=25.5 Krasnoilsk Settlement Hromada, Chernivtsi Raion, Ukraine
+(1,12) lat=48.0, lon=26.0 unnamed road, Chernivtsi Raion, Novyi Vovchynets, 60444, Ukraine
+(1,13) lat=48.0, lon=26.5 715203 Dorohoi, Romania
+(1,14) lat=48.0, lon=27.0 DN29, 717022 Tudor Vladimirescu, Romania
+(1,15) lat=48.0, lon=27.5 Pîrjota-Borosenii Noi-Mih?ilenii Noi, MD-5613 Vasileu?i, Moldova
+(1,16) lat=48.0, lon=28.0 Drochia District, Moldova
+(1,17) lat=48.0, lon=28.5 V?r?nc?u-Temeleu?i, Moldova
+(1,18) lat=48.0, lon=29.0 ????????? ?????? ???????, Podilsk Raion, Ukraine
+(1,19) lat=48.0, lon=29.5 ?-160312, Podilsk Raion, Lisnychivka, 66127, Ukraine
+(1,20) lat=48.0, lon=30.0 ?-162132, Podilsk Raion, Savran, 66200, Ukraine
+(2,0) lat=47.5, lon=20.0 Jásztelek, Jákóhalmi út, 5141, Hungary
+(2,1) lat=47.5, lon=20.5 Kisköre, Dózsa György út, 3384, Hungary
+(2,2) lat=47.5, lon=21.0 Hortobágy, 4071, Hungary
+(2,3) lat=47.5, lon=21.5 Ebes, Piac d?l?, 4211, Hungary
+(2,4) lat=47.5, lon=22.0 Bagamér, 4286, Hungary
+(2,5) lat=47.5, lon=22.5 DJ108M, 447271 Chereu?a, Romania
+(2,6) lat=47.5, lon=23.0 447286 Cu?a, Romania
+(2,7) lat=47.5, lon=23.5 437338 ?omcuta Mare, Romania
+(2,8) lat=47.5, lon=24.0 unnamed road, 437175 L?pu?, Romania
+(2,9) lat=47.5, lon=24.5 unnamed road, Bistri?a-N?s?ud, Romania
+(2,10) lat=47.5, lon=25.0 Bistri?a-N?s?ud, Romania
+(2,11) lat=47.5, lon=25.5 Suceava, Romania
+(2,12) lat=47.5, lon=26.0 unnamed road, 727581 Mironu, Romania
+(2,13) lat=47.5, lon=26.5 unnamed road, 727338 Liteni, Romania
+(2,14) lat=47.5, lon=27.0 DC43, 717307 Lup?ria, Romania
+(2,15) lat=47.5, lon=27.5 Pruteni, F?le?ti District, Moldova
+(2,16) lat=47.5, lon=28.0 Sîngerei District, Moldova
+(2,17) lat=47.5, lon=28.5 Z?icani, Telene?ti District, Moldova
+(2,18) lat=47.5, lon=29.0 unnamed road, Mîrze?ti, Moldova
+(2,19) lat=47.5, lon=29.5 unnamed road, Podilsk Raion, Novosamarka, 67942, Ukraine
+(2,20) lat=47.5, lon=30.0 Podilsk Raion, Florynske, 66811, Ukraine
+(3,0) lat=47.0, lon=20.0 Tiszakécske, Sárhalom d?l?, 6060, Hungary
+(3,1) lat=47.0, lon=20.5 Mez?túr, 4628, 5400, Hungary
+(3,2) lat=47.0, lon=21.0 Kéthalom, Dévaványa, 4205, 5510, Hungary
+(3,3) lat=47.0, lon=21.5 Vegyesbolt, Komádi, Munkás utca, 4138, Hungary
+(3,4) lat=47.0, lon=22.0 Strada Principal? 70, 417502 Ront?u, Romania
+(3,5) lat=47.0, lon=22.5 DC170, 417615 Vadu Cri?ului, Romania
+(3,6) lat=47.0, lon=23.0 457051 Bogdana, Romania
+(3,7) lat=47.0, lon=23.5 DC146A, 407049 ??chileu Mare, Romania
+(3,8) lat=47.0, lon=24.0 DJ109C, 407275 Cluj, Romania
+(3,9) lat=47.0, lon=24.5 unnamed road, 427153 M?ri?elu, Romania
+(3,10) lat=47.0, lon=25.0 547484 Iod, Romania
+(3,11) lat=47.0, lon=25.5 DJ174A, 537021 R?chiti?, Romania
+(3,12) lat=47.0, lon=26.0 Bicaz, Neam?, Romania
+(3,13) lat=47.0, lon=26.5 617437 Cârligi, Romania
+(3,14) lat=47.0, lon=27.0 unnamed road, 617036 Rediu, Romania
+(3,15) lat=47.0, lon=27.5 Mogo?e?ti, Ia?i, Romania
+(3,16) lat=47.0, lon=28.0 R?duc?neni, Ia?i, Romania
+(3,17) lat=47.0, lon=28.5 Hînce?ti District, Moldova
+(3,18) lat=47.0, lon=29.0 unnamed road, Moldova
+(3,19) lat=47.0, lon=29.5 M4, Butor, Moldova
+(3,20) lat=47.0, lon=30.0 ?-160816, Rozdilna Raion, Myhai, 67151, Ukraine
+(4,0) lat=46.5, lon=20.0 Ópusztaszer, 6767, Hungary
+(4,1) lat=46.5, lon=20.5 Székkutas mez?gazdasági repül?tér, Székkutas, 47, Hungary
+(4,2) lat=46.5, lon=21.0 Medgyesegyháza, Békés, Hungary
+(4,3) lat=46.5, lon=21.5 DN79, 315101 Chisineu-Cris, Romania
+(4,4) lat=46.5, lon=22.0 unnamed road, 317040 Beliu, Romania
+(4,5) lat=46.5, lon=22.5 415804 Va?c?u, Romania
+(4,6) lat=46.5, lon=23.0 unnamed road, 517011 Dealu L?m??oi, Romania
+(4,7) lat=46.5, lon=23.5 407322 Lunge?ti, Romania
+(4,8) lat=46.5, lon=24.0 Biserica Reformat?, DC96, 547151 Grindeni, Romania
+(4,9) lat=46.5, lon=24.5 Strada Orizontului, 547185 Criste?ti, Romania
+(4,10) lat=46.5, lon=25.0 unnamed road, 547269 Ghindari, Romania
+(4,11) lat=46.5, lon=25.5 537364 ?icas?u, Romania
+(4,12) lat=46.5, lon=26.0 537161 Valea Ugra, Romania
+(4,13) lat=46.5, lon=26.5 unnamed road, 607304 Valea Arinilor, Romania
+(4,14) lat=46.5, lon=27.0 unnamed road, 607617 Furnicari, Romania
+(4,15) lat=46.5, lon=27.5 737270 Gherghe?ti, Romania
+(4,16) lat=46.5, lon=28.0 737287 Deleni, Romania
+(4,17) lat=46.5, lon=28.5 unnamed road, Hîrtop, Moldova
+(4,18) lat=46.5, lon=29.0 Cimi?lia District, Moldova
+(4,19) lat=46.5, lon=29.5 Semionovca, ?tefan Vod? District, Moldova
+(4,20) lat=46.5, lon=30.0 Odesa Raion, ?????????? ???????? ???????, 67642, Ukraine
+(5,0) lat=46.0, lon=20.0 Kanjiza Municipality, North Banat Administrative District, Serbia
+(5,1) lat=46.0, lon=20.5 Dude?tii Vechi, Timi?, Romania
+(5,2) lat=46.0, lon=21.0 Varia?, Timi?, Romania
+(5,3) lat=46.0, lon=21.5 307271 Alio?, Romania
+(5,4) lat=46.0, lon=22.0 Arad, Romania
+(5,5) lat=46.0, lon=22.5 337168 Petre?ti, Romania
+(5,6) lat=46.0, lon=23.0 337191 Certeju de Jos, Romania
+(5,7) lat=46.0, lon=23.5 DJ107C, 517875 Vin?u de Jos, Romania
+(5,8) lat=46.0, lon=24.0 Cenade, Alba, Romania
+(5,9) lat=46.0, lon=24.5 557037 Ighi?u Vechi, Romania
+(5,10) lat=46.0, lon=25.0 507113 Lovnic, Romania
+(5,11) lat=46.0, lon=25.5 507150 Ormeni?, Romania
+(5,12) lat=46.0, lon=26.0 527070 Cernat, Romania
+(5,13) lat=46.0, lon=26.5 Vrancea, Romania
+(5,14) lat=46.0, lon=27.0 Vrancea, Romania
+(5,15) lat=46.0, lon=27.5 807151 Slobozia Corni, Romania
+(5,16) lat=46.0, lon=28.0 DJ242D, 807285 Suceveni, Romania
+(5,17) lat=46.0, lon=28.5 Sofievca, Taraclia District, Moldova
+(5,18) lat=46.0, lon=29.0 ??????????? ??????? ???????, Bolhrad Raion, Ukraine
+(5,19) lat=46.0, lon=29.5 Bolhrad Raion, Dolynivka, 68451, Ukraine
+(5,20) lat=46.0, lon=30.0 ???????????? ???????? ???????, Bilhorod-Dnistrovskyi Raion, Ukraine
+(6,0) lat=45.5, lon=20.0 21238 Zabalj Municipality, Serbia
+(6,1) lat=45.5, lon=20.5 ???????, Zitiste Municipality, Central Banat Administrative District, Serbia
+(6,2) lat=45.5, lon=21.0 unnamed road, 307228 Rudna, Romania
+(6,3) lat=45.5, lon=21.5 DJ592A, 307430 Tormac, Romania
+(6,4) lat=45.5, lon=22.0 327451 Zorlencior, Romania
+(6,5) lat=45.5, lon=22.5 327261 Vama Marga, Romania
+(6,6) lat=45.5, lon=23.0 337429 Râu Mic, Romania
+(6,7) lat=45.5, lon=23.5 Petrila, Hunedoara, Romania
+(6,8) lat=45.5, lon=24.0 Voineasa, Vâlcea, Romania
+(6,9) lat=45.5, lon=24.5 Izvor, Peri?ani, Vâlcea, Romania
+(6,10) lat=45.5, lon=25.0 Ruc?r, Arge?, Romania
+(6,11) lat=45.5, lon=25.5 505301 Rasnov, Romania
+(6,12) lat=45.5, lon=26.0 BA, Vama Buz?ului, Romania
+(6,13) lat=45.5, lon=26.5 unnamed road, 127302 Gura Teghii, Romania
+(6,14) lat=45.5, lon=27.0 627309 Ol?reni, Romania
+(6,15) lat=45.5, lon=27.5 DN23, 627190 M?ic?ne?ti, Romania
+(6,16) lat=45.5, lon=28.0 unnamed road, 807326 Costi, Romania
+(6,17) lat=45.5, lon=28.5 MD-5352 Etulia, Moldova
+(6,18) lat=45.5, lon=29.0 Safiany Rural Hromada, Izmail Raion, Ukraine
+(6,19) lat=45.5, lon=29.5 Stentsivsko-Zhebryianivski Flush, Izmail Raion, Ukraine
+(6,20) lat=45.5, lon=30.0 Odesa Oblast, Ukraine
+(7,0) lat=45.0, lon=20.0 126, 22321 Ruma Municipality, Serbia
+(7,1) lat=45.0, lon=20.5 131, 26203 Pancevo City, Serbia
+(7,2) lat=45.0, lon=21.0 ???????? ????????, Alibunar Municipality, South Banat Administrative District, Serbia
+(7,3) lat=45.0, lon=21.5 Vr?niu?-Berli?te, 327024 Vrani, Romania
+(7,4) lat=45.0, lon=22.0 Bozovici, Cara?-Severin, Romania
+(7,5) lat=45.0, lon=22.5 Cornereva, Cara?-Severin, Romania
+(7,6) lat=45.0, lon=23.0 217256 Pârâu de Vale, Romania
+(7,7) lat=45.0, lon=23.5 215508 Târgu C?rbune?ti, Romania
+(7,8) lat=45.0, lon=24.0 247109 Ulmetu, Romania
+(7,9) lat=45.0, lon=24.5 unnamed road, 247427 Pope?ti, Romania
+(7,10) lat=45.0, lon=25.0 Davide?ti, Arge?, Romania
+(7,11) lat=45.0, lon=25.5 unnamed road, 137229 Schela, Romania
+(7,12) lat=45.0, lon=26.0 Strada Radu Tudoran, 107071 Ploie?tiori, Romania
+(7,13) lat=45.0, lon=26.5 Mizil, Prahova, Romania
+(7,14) lat=45.0, lon=27.0 Buz?u, Romania
+(7,15) lat=45.0, lon=27.5 817037 Ione?ti, Romania
+(7,16) lat=45.0, lon=28.0 817070 Gropeni, Romania
+(7,17) lat=45.0, lon=28.5 Izvoarele, Tulcea, Romania
+(7,18) lat=45.0, lon=29.0 Murighiol, Tulcea, Romania
+(7,19) lat=45.0, lon=29.5 827195 Sfântu Gheorghe, Romania
+(7,20) lat=45.0, lon=30.0 Romania
+(8,0) lat=44.5, lon=20.0 unnamed road, 14214 Ub Municipality, Serbia
+(8,1) lat=44.5, lon=20.5 unnamed road, Sopot Urban Municipality, Serbia
+(8,2) lat=44.5, lon=21.0 Osipaonica, Smederevo City, Podunavlje Administrative District, Serbia
+(8,3) lat=44.5, lon=21.5 unnamed road, Petrovac-na-Mlavi Municipality, Serbia
+(8,4) lat=44.5, lon=22.0 Majdanpek Municipality, Bor Administrative District, Serbia
+(8,5) lat=44.5, lon=22.5 unnamed road, Kladovo Municipality, Serbia
+(8,6) lat=44.5, lon=23.0 unnamed road, 227382 Stigni?a, Romania
+(8,7) lat=44.5, lon=23.5 DC115A, 207091 Valea Fântânilor, Romania
+(8,8) lat=44.5, lon=24.0 DJ643E, 237220 Iancu Jianu, Romania
+(8,9) lat=44.5, lon=24.5 Valea Mare, Olt, Romania
+(8,10) lat=44.5, lon=25.0 117624 Orodel, Romania
+(8,11) lat=44.5, lon=25.5 087250 Cupele, Romania
+(8,12) lat=44.5, lon=26.0 ?oseaua de Centur?, 014970 Mogo?oaia, Romania
+(8,13) lat=44.5, lon=26.5 unnamed road, 915102 Fundulea, Romania
+(8,14) lat=44.5, lon=27.0 Dor M?runt, C?l?ra?i, Romania
+(8,15) lat=44.5, lon=27.5 DJ213A, 917196 M?rcule?ti, Romania
+(8,16) lat=44.5, lon=28.0 Bordu?ani, Ialomi?a, Romania
+(8,17) lat=44.5, lon=28.5 Gr?dina, Constan?a, Romania
+(8,18) lat=44.5, lon=29.0 Romania
+(8,19) lat=44.5, lon=29.5 Black Sea
+(8,20) lat=44.5, lon=30.0 Black Sea
+(9,0) lat=44.0, lon=20.0 unnamed road, Kosjeric Municipality, Serbia
+(9,1) lat=44.0, lon=20.5 unnamed road, Gornji Milanovac Municipality, Serbia
+(9,2) lat=44.0, lon=21.0 unnamed road, City of Kragujevac, Serbia
+(9,3) lat=44.0, lon=21.5 unnamed road, Cuprija Municipality, Serbia
+(9,4) lat=44.0, lon=22.0 ??????????, 19215 City of Bor, Serbia
+(9,5) lat=44.0, lon=22.5 unnamed road, Borilovets, Bulgaria
+(9,6) lat=44.0, lon=23.0 Strada Câmpului, 205201 Calafat, Romania
+(9,7) lat=44.0, lon=23.5 unnamed road, 207005 Afuma?i, Romania
+(9,8) lat=44.0, lon=24.0 207380 Marsani, Romania
+(9,9) lat=44.0, lon=24.5 237490 Traian, Romania
+(9,10) lat=44.0, lon=25.0 unnamed road, 147415 Troianul, Romania
+(9,11) lat=44.0, lon=25.5 DJ506A, 147295 R?smire?ti, Romania
+(9,12) lat=44.0, lon=26.0 Plop?oru, Giurgiu, Romania
+(9,13) lat=44.0, lon=26.5 7645 Nova Cherna, Bulgaria
+(9,14) lat=44.0, lon=27.0 7580 Iskra, Bulgaria
+(9,15) lat=44.0, lon=27.5 unnamed road, Kaynardzha, Bulgaria
+(9,16) lat=44.0, lon=28.0 DJ391A, 907149 Tufani, Romania
+(9,17) lat=44.0, lon=28.5 DJ391, 907286 Biruin?a, Romania
+(9,18) lat=44.0, lon=29.0 Black Sea
+(9,19) lat=44.0, lon=29.5 Black Sea
+(9,20) lat=44.0, lon=30.0 Black Sea
+(10,0) lat=43.5, lon=20.0 Stitkovo, Nova Varos Municipality, Zlatibor Administrative District, Serbia
+(10,1) lat=43.5, lon=20.5 unnamed road, 36343 Kraljevo City, Serbia
+(10,2) lat=43.5, lon=21.0 unnamed road, Aleksandrovac Municipality, Serbia
+(10,3) lat=43.5, lon=21.5 R223, City of Kruševac, Serbia
+(10,4) lat=43.5, lon=22.0 425, Svrljig Municipality, Serbia
+(10,5) lat=43.5, lon=22.5 Knjazevac Municipality, Zajecar Administrative District, Serbia
+(10,6) lat=43.5, lon=23.0 1, Smolianovtsi, Bulgaria
+(10,7) lat=43.5, lon=23.5 Gromshin, Montana, Bulgaria
+(10,8) lat=43.5, lon=24.0 3200 Byala Slatina, Bulgaria
+(10,9) lat=43.5, lon=24.5 3004, Dolna Mitropolia, Bulgaria
+(10,10) lat=43.5, lon=25.0 unnamed road, Batsova Mahala, Bulgaria
+(10,11) lat=43.5, lon=25.5 407, Pavel, Bulgaria
+(10,12) lat=43.5, lon=26.0 unnamed road, Dve Mogili, Bulgaria
+(10,13) lat=43.5, lon=26.5 ?.?. ????????????, 7200 Razgrad, Bulgaria
+(10,14) lat=43.5, lon=27.0 Gabritsa, Shumen, Bulgaria
+(10,15) lat=43.5, lon=27.5 Karamanite, Varna, Bulgaria
+(10,16) lat=43.5, lon=28.0 Bezvoditsa, Dobrich, Bulgaria
+(10,17) lat=43.5, lon=28.5 Gorun, Dobrich, Bulgaria
+(10,18) lat=43.5, lon=29.0 Black Sea
+(10,19) lat=43.5, lon=29.5 Black Sea
+(10,20) lat=43.5, lon=30.0 Black Sea
+80 partial areas. Total area: 86535.15432429707
+Center: lat=45.726295650054766, lon=25.016354949980084 507094 Sebe?, Romania

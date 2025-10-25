@@ -1,0 +1,6 @@
+apply plugin: 'java'
+repositories {mavenCentral()}
+repositories { jcenter()}
+dependencies { compile 'com.microsoft.sqlserver:sqljdbc4:+' }
+project.configurations.compile.each { println it.name }
+jar { from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) }

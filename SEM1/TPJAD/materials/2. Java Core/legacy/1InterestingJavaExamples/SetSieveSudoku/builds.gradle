@@ -1,0 +1,24 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java"
+        copy { from "Set.java" into "src/main/java" }
+        copy { from "Impur.java" into "src/main/java" }
+        copy { from "Init.java" into "src/main/java" }
+        copy { from "Sudoku.java" into "src/main/java" }
+        copy { from "ThrSud.java" into "src/main/java" }
+    }
+}
+apply plugin: 'java'
+repositories { jcenter() }
+repositories { mavenCentral() }
+jar { archiveName = "Sudoku.jar" 
+    manifest { attributes 'Main-Class': 'Sudoku' }
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}

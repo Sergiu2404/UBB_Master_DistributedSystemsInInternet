@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <servlet>
+        <servlet-name>forecasts</servlet-name>
+        <servlet-class>com.example.weather_app.ForecastsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forecasts</servlet-name>
+        <url-pattern>/forecasts</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>weather_service</servlet-name>
+        <servlet-class>com.example.weather_app.WeatherServiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>weather_service</servlet-name>
+        <url-pattern>/weather_service</url-pattern>
+    </servlet-mapping>
+</web-app>

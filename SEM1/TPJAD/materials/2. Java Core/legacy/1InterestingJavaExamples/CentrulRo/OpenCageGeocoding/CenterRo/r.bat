@@ -1,0 +1,7 @@
+java -jar CenterRo.jar east=29.74 west=20.24 south=43.78 north=48.28 step=0.14 country=Romania 1>out0_14 2>err0_14
+rem 1>out0_14 2>err0_14 step=0.14 aprox. 10.57km, 33 X 68 = 2244puncte
+rem Romania
+rem east 45.17644325085645, 29.7361168293324
+rem west 46.12867075129214, 20.24392983310496
+rem north 48.27791196474631, 26.615999807424313
+rem south 43.78122942804811, 28.52762079972011

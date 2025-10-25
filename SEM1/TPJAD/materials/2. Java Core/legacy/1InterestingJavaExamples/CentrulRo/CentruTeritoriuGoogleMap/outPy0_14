@@ -1,0 +1,6 @@
+
+['arii.py', 'east=29.74', 'west=20.24', 'south=43.78', 'north=48.28', 'step=0.14', 'key=cc', 'value=RO']
+m 36 n 71
+Loading formatted geocoded file...
+Aria: 247731.41683705884
+Centrul: 45.73472460991828 25.262989433810144 [OrderedDict([('lat', '45.69457'), ('lon', '25.24348'), ('name', 'Sinca Noua'), ('admin1', 'Brasov'), ('admin2', 'Comuna Sinca Noua'), ('cc', 'RO')])]

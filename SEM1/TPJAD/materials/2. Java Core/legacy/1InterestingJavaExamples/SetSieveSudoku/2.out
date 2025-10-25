@@ -1,0 +1,479 @@
+Alfabet: ABCDE
+
+Harta grupurilor de celule: 
+
+22XXX
+22ccX
+2cceX
+1ceee
+1111e
+
+Partial 0, parinte -1, total 0, active 1. Problema initiala
+
+-----
+----D
+--E--
+---B-
+A----
+
+ml[0]= [A,B,C,D,E]
+ml[1]= [A,B,C,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,B,C,D]
+mc[3]= [A,C,D,E]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C,E]
+mg[c]= [A,B,C,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 0, parinte -1, total 2, active 3. Ramificare in (1,3) cu [A,C]
+
+-----
+----D
+--E--
+---B-
+A----
+
+ml[0]= [A,B,C,D,E]
+ml[1]= [A,B,C,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,B,C,D]
+mc[3]= [A,C,D,E]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C,E]
+mg[c]= [A,B,C,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 2, parinte 0, total 4, active 4. Ramificare in (0,3) cu [A,E]
+
+-----
+---CD
+--E--
+---B-
+A----
+
+ml[0]= [A,B,C,D,E]
+ml[1]= [A,B,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,B,C,D]
+mc[3]= [A,D,E]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C,E]
+mg[c]= [A,B,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 1, parinte 0, total 6, active 5. Ramificare in (0,3) cu [C,E]
+
+-----
+---AD
+--E--
+---B-
+A----
+
+ml[0]= [A,B,C,D,E]
+ml[1]= [B,C,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,B,C,D]
+mc[3]= [C,D,E]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C,E]
+mg[c]= [B,C,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 4, parinte 2, total 8, active 6. Ramificare in (1,0) cu [B,E]
+
+---E-
+---CD
+--EA-
+---B-
+A--D-
+
+ml[0]= [A,B,C,D]
+ml[1]= [A,B,E]
+ml[2]= [B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,B,C,D]
+mc[3]= []
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C]
+mg[c]= [A,B,D]
+mg[e]= [C,D,E]
+mg[1]= [B,C,E]
+
+Partial 6, parinte 1, total 10, active 7. Ramificare in (1,2) cu [B,C]
+
+---E-
+---AD
+--E--
+---B-
+A----
+
+ml[0]= [A,B,C,D]
+ml[1]= [B,C,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,B,C,D]
+mc[3]= [C,D]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C]
+mg[c]= [B,C,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 3, parinte 2, total 10, active 6. ESEC nr: 1
+
+--CAE
+E-BCD
+CAEDB
+---B-
+A--EC
+
+ml[0]= [B,D]
+ml[1]= [A]
+ml[2]= []
+ml[3]= [A,C,D,E]
+ml[4]= [B,D]
+
+mc[0]= [B,D]
+mc[1]= [B,C,D,E]
+mc[2]= [A,D]
+mc[3]= []
+mc[4]= [A]
+
+mg[2]= [A,B,D]
+mg[X]= []
+mg[c]= [D]
+mg[e]= [A,E]
+mg[1]= [B,C,D]
+
+Partial 5, parinte 1, total 10, active 5. ESEC nr: 2
+
+DABCE
+-ECAD
+-BED-
+--AB-
+A--EC
+
+ml[0]= []
+ml[1]= [B]
+ml[2]= [A,C]
+ml[3]= [C,D,E]
+ml[4]= [B,D]
+
+mc[0]= [B,C,E]
+mc[1]= [C,D]
+mc[2]= [D]
+mc[3]= []
+mc[4]= [A,B]
+
+mg[2]= [B,C]
+mg[X]= [A]
+mg[c]= [D]
+mg[e]= [E]
+mg[1]= [B,C,D]
+
+Partial 10, parinte 6, total 10, active 4. ESEC nr: 3
+
+DABEC
+BECAD
+CBED-
+-DAB-
+AC---
+
+ml[0]= []
+ml[1]= []
+ml[2]= [A]
+ml[3]= [C,E]
+ml[4]= [B,D,E]
+
+mc[0]= [E]
+mc[1]= []
+mc[2]= [D]
+mc[3]= [C]
+mc[4]= [A,B,E]
+
+mg[2]= []
+mg[X]= [A]
+mg[c]= []
+mg[e]= [C,E]
+mg[1]= [B,D,E]
+
+Partial 8, parinte 4, total 10, active 3. ESEC nr: 4
+
+---E-
+EB-CD
+--EA-
+CADB-
+A--D-
+
+ml[0]= [A,B,C,D]
+ml[1]= [A]
+ml[2]= [B,C,D]
+ml[3]= [E]
+ml[4]= [B,C,E]
+
+mc[0]= [B,D]
+mc[1]= [C,D,E]
+mc[2]= [A,B,C]
+mc[3]= []
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,C,D]
+mg[X]= [A,B,C]
+mg[c]= [B,D]
+mg[e]= [C,E]
+mg[1]= [B,E]
+
+Partial 7, parinte 4, total 10, active 2. ESEC nr: 5
+
+-CBEA
+BEACD
+-BEAC
+-D-B-
+A--D-
+
+ml[0]= [D]
+ml[1]= []
+ml[2]= [D]
+ml[3]= [A,C,E]
+ml[4]= [B,C,E]
+
+mc[0]= [C,D,E]
+mc[1]= [A]
+mc[2]= [C,D]
+mc[3]= []
+mc[4]= [B,E]
+
+mg[2]= [A,D]
+mg[X]= []
+mg[c]= []
+mg[e]= [C,D,E]
+mg[1]= [B,C,E]
+
+Partial 9, parinte 6, total 12, active 3. Ramificare in (0,2) cu [A,C]
+
+---E-
+--BAD
+--E--
+---B-
+A----
+
+ml[0]= [A,B,C,D]
+ml[1]= [C,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [A,C,D]
+mc[3]= [C,D]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [A,B,C]
+mg[c]= [C,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 12, parinte 9, total 12, active 2. SOLUTIA nr: 1
+
+DACEB
+CEBAD
+BCEDA
+EDABC
+ABDCE
+
+ml[0]= []
+ml[1]= []
+ml[2]= []
+ml[3]= []
+ml[4]= []
+
+mc[0]= []
+mc[1]= []
+mc[2]= []
+mc[3]= []
+mc[4]= []
+
+mg[2]= []
+mg[X]= []
+mg[c]= []
+mg[e]= []
+mg[1]= []
+
+Partial 11, parinte 9, total 14, active 3. Ramificare in (0,4) cu [B,C]
+
+--AE-
+--BAD
+--E--
+---B-
+A----
+
+ml[0]= [B,C,D]
+ml[1]= [C,E]
+ml[2]= [A,B,C,D]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [C,D]
+mc[3]= [C,D]
+mc[4]= [A,B,C,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= [B,C]
+mg[c]= [C,D]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 14, parinte 11, total 16, active 4. Ramificare in (0,0) cu [B,D]
+
+--AEC
+--BAD
+--E-B
+---BA
+A---E
+
+ml[0]= [B,D]
+ml[1]= [C,E]
+ml[2]= [A,C,D]
+ml[3]= [C,D,E]
+ml[4]= [B,C,D]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,D,E]
+mc[2]= [C,D]
+mc[3]= [C,D]
+mc[4]= []
+
+mg[2]= [A,B,C,D,E]
+mg[X]= []
+mg[c]= [C,D]
+mg[e]= [C,D]
+mg[1]= [B,C,D,E]
+
+Partial 13, parinte 11, total 16, active 3. ESEC nr: 6
+
+--AEB
+--BAD
+-DE-C
+---B-
+A----
+
+ml[0]= [C,D]
+ml[1]= [C,E]
+ml[2]= [A,B]
+ml[3]= [A,C,D,E]
+ml[4]= [B,C,D,E]
+
+mc[0]= [B,C,D,E]
+mc[1]= [A,B,C,E]
+mc[2]= [C,D]
+mc[3]= [C,D]
+mc[4]= [A,E]
+
+mg[2]= [A,B,C,D,E]
+mg[X]= []
+mg[c]= [C]
+mg[e]= [A,C,D,E]
+mg[1]= [B,C,D,E]
+
+Partial 16, parinte 14, total 16, active 2. ESEC nr: 7
+
+DBAEC
+E-BAD
+C-E-B
+---BA
+A---E
+
+ml[0]= []
+ml[1]= [C]
+ml[2]= [A,D]
+ml[3]= [C,D,E]
+ml[4]= [B,C,D]
+
+mc[0]= [B]
+mc[1]= [A,C,D,E]
+mc[2]= [C,D]
+mc[3]= [C,D]
+mc[4]= []
+
+mg[2]= [A]
+mg[X]= []
+mg[c]= [C,D]
+mg[e]= [C,D]
+mg[1]= [B,C,D,E]
+
+Partial 15, parinte 14, total 16, active 1. ESEC nr: 8
+
+BDAEC
+--BAD
+C-E-B
+---BA
+A---E
+
+ml[0]= []
+ml[1]= [C,E]
+ml[2]= [A,D]
+ml[3]= [C,D,E]
+ml[4]= [B,C,D]
+
+mc[0]= [D,E]
+mc[1]= [A,B,C,E]
+mc[2]= [C,D]
+mc[3]= [C,D]
+mc[4]= []
+
+mg[2]= [A,E]
+mg[X]= []
+mg[c]= [C,D]
+mg[e]= [C,D]
+mg[1]= [B,C,D,E]
+
+Partiale 17, esecuri 8, solutii 1

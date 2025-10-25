@@ -1,0 +1,14 @@
+DAO este o clasa care de obicei are opera?ii CRUD. 
+Are rolul de a ascunde detaliile modului în care 
+datele sunt stocate ?i preluate. Avantajul DAO 
+este acela ca daca trebuie sa schimbat mecanismul 
+de persisten?a, trebuie modificat doar DAO, nu 
+toate locurile din logica domeniului actioneaza DAO.
+
+DTO este un obiect care pastreaza date 
+serializabile. Are rolul de a pastra date 
+structurate si de a le transfera intre nivelele 
+aplicatiei (peste retea). Avantajul DTO consta 
+în faptul ca acesta adauga o mare flexibilitate 
+designului aplica?iei. De regula are campuri 
+private, gettere si setere.

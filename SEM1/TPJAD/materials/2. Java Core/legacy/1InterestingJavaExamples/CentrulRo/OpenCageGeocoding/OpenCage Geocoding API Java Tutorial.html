@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://opencagedata.com/tutorials/geocode-in-java -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="https://assets.opencagedata.com/" rel="dns-prefetch">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="Tutorial for using the OpenCage Geocoding API in Java - An API for reverse and forward geocoding using open geo data
+" name="description">
+<meta content="follow, index" name="robots">
+<meta content="OpenCage Geocoding API Java Tutorial
+" property="og:title">
+<meta content="website" property="og:type">
+<meta content="https://assets.opencagedata.com/assets/opencage_logo_200_100-219e46ebb35897921848dcd2abb9f828a884510fcf2532efe5bae330259a4288.png" property="og:logo">
+<meta content="Tutorial for using the OpenCage Geocoding API in Java - An API for reverse and forward geocoding using open geo data
+" property="og:description">
+<meta content="https://opencagedata.com/tutorials/geocode-in-java" property="og:url">
+<meta content="https://assets.opencagedata.com/assets/reverse-geocoding-big-ed66e9619a7cc9eb56333086bde3e3aa2b392a24026268f4ee702bd9249058f7.png" property="og:image">
+
+<meta content="summary" name="twitter:card">
+<meta content="OpenCage Geocoding API Java Tutorial
+" name="twitter:title">
+<meta content="Tutorial for using the OpenCage Geocoding API in Java - An API for reverse and forward geocoding using open geo data
+" name="twitter:description">
+<meta content="https://opencagedata.com/tutorials/geocode-in-java" name="twitter:url">
+<meta content="https://assets.opencagedata.com/assets/reverse-geocoding-big-ed66e9619a7cc9eb56333086bde3e3aa2b392a24026268f4ee702bd9249058f7.png" name="twitter:image">
+
+<meta content="5lTtMtpl6wP-mAwEqc4F6UXGjSyaBvwiNK1jBMj6mCA" name="google-site-verification">
+<meta content="#1a8865" name="theme-color">
+<title>OpenCage Geocoding API Java Tutorial </title>
+<link href="https://assets.opencagedata.com/assets/favicon-87b005b78d525e217f87b3da68cfc008223392f914c557c04120e05f98caa617.ico" rel="shortcut icon" type="image/x-icon">
+<link href="https://assets.opencagedata.com/assets/favicon-32x32-d26ea3e85fc671067f21f2daa037b2a9b01b28755aba2b385e5879e2d23f76c8.png" rel="icon" sizes="32x32" type="image/png">
+<link href="https://assets.opencagedata.com/assets/favicon-16x16-8c2658452b18782f5b536fcac07be8af69f2fee4d121b3412e3cc43ee96cdcd9.png" rel="icon" sizes="16x16" type="image/png">
+<link href="https://assets.opencagedata.com/assets/favicon-192x192-90b5c3313f4d260427e23ab7b998993930af12f9d212e250ed3da0bb6d9a7e41.png" rel="icon" sizes="192x192" type="image/png">
+<link href="https://assets.opencagedata.com/assets/favicon-512x512-041882585a2625eef5ed16a9441dc7eb4834d391990f21f3505f4631ba0dec3c.png" rel="icon" sizes="512x512" type="image/png">
+
+<link rel="stylesheet" href="OpenCage%20Geocoding%20API%20Java%20Tutorial_files/visitors-edc40826abf61041c593ffc71444026a6c5eb3b6af689894641be4e62eeaacc2.css" media="all">
+
+<link as="font" crossorigin="anonymous" href="https://assets.opencagedata.com/assets/Roboto_100-d9ac5f7e5b7e3858a91e13c329523e5fa77b63341e538de9c9ce4bfed8be03ee.woff2" rel="preload" type="font/woff2">
+<link as="font" crossorigin="anonymous" href="https://assets.opencagedata.com/assets/Roboto_400-3164c7897247b1946a65bcbe79b0bacfde62a6f9e2a99a1bbbbbaa1df038c91f.woff2" rel="preload" type="font/woff2">
+<link as="font" crossorigin="anonymous" href="https://assets.opencagedata.com/assets/Roboto_700-3a3ce2d4880c951579be5b8e241dce7fd384a940c0530965c98d890ba936d571.woff2" rel="preload" type="font/woff2">
+<link as="font" crossorigin="anonymous" href="https://assets.opencagedata.com/assets/font-awesome/fa-solid-900-af71e64ffbef30bd2edbf5819a1130b91c6199cd729fa1d1a8a7f7e631e31668.woff2" rel="preload" type="font/woff2">
+<link href="https://opencagedata.com/tutorials/geocode-in-java" rel="canonical">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ms7ztZX2QPz5lk8XTVW90czgV6RFRt9io0JMEgahxjsbS4d9lrMicZUHOHdJ6r6qZFuK6IrJmSFnLLbtX3CApA">
+
+</head>
+<body>
+<header>
+<div class="green-world-bg">
+<div class="container" id="geocoder-header">
+<nav class="navbar navbar-dark navbar-expand-lg">
+<div class="container align-items-center">
+<a class="navbar-brand" href="https://opencagedata.com/">
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 310 154.1" style="enable-background:new 0 0 310 154.1;" xml:space="preserve" role="img" aria-labelledby="aqfa50y1596heu47subhfm3irqcqxffl" height="50" width="114"><title id="aqfa50y1596heu47subhfm3irqcqxffl"></title>
+<style type="text/css">
+	.st0{fill:#ffffff;}
+	.st1{fill:#ffffff;}
+</style>
+<g>
+	<rect x="125.6" y="124.2" class="st0" width="6.3" height="23.4"></rect>
+	<polyline class="st0" points="105.2,124.2 105.2,144.4 108.3,144.4  "></polyline>
+	<polygon class="st0" points="108.3,147.5 102.1,147.5 102.1,124.2 108.3,124.2  "></polygon>
+	<polygon class="st0" points="84.9,147.5 78.6,147.5 78.6,124.2 84.9,124.2  "></polygon>
+	<path class="st0" d="M125.5,53.8l0-0.7c0-16.5-13.9-30.8-33.6-37c8.5,8.3,14.5,21.4,16,37h0c0,0.2,0.1,0.5,0.1,0.7h-6.6   c-1.8-19-11.2-34.3-23.3-39.3c5.2,11.8,6,33.7,6.2,39.3l-6.2-0.1c-0.9-26.8-6.1-39.6-8.4-40.8c-3.1,1.4-8.6,18.5-8.6,47.6v87H55   v-87c0-13.9,1.5-34.7,6.5-46c-0.1,0-0.2,0.1-0.4,0.2c-0.3,0.1-0.5,0.2-0.8,0.3c-0.5,0.2-0.9,0.5-1.4,0.7c-0.1,0-0.1,0.1-0.2,0.1   c-0.2,0.1-0.4,0.2-0.6,0.4c-1.7,1-3.3,2.2-4.9,3.6c-0.2,0.2-0.4,0.3-0.6,0.5c-0.3,0.3-0.5,0.5-0.8,0.8c-0.2,0.2-0.4,0.4-0.6,0.6   c-1,1.1-1.9,2.2-2.8,3.4c-0.1,0.2-0.2,0.3-0.3,0.5c-1.1,1.5-2.1,3-3,4.7c-0.2,0.3-0.3,0.5-0.4,0.8c-0.1,0.1-0.1,0.2-0.2,0.3   c-0.3,0.5-0.5,1-0.7,1.5c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.3-0.2,0.5-0.4,0.8c-0.1,0.3-0.3,0.6-0.4,1c-0.1,0.3-0.3,0.6-0.4,1   c-0.1,0.3-0.2,0.5-0.3,0.8c0,0.1-0.1,0.2-0.1,0.3c-0.2,0.6-0.4,1.1-0.6,1.7c0,0.1-0.1,0.2-0.1,0.2c-0.1,0.3-0.2,0.7-0.3,1   c-0.1,0.3-0.2,0.7-0.3,1c-0.4,1.2-0.7,2.3-1,3.5c-0.1,0.3-0.1,0.5-0.2,0.8c-0.1,0.3-0.1,0.5-0.2,0.8c0,0.2-0.1,0.4-0.1,0.7   c-0.2,1-0.4,2-0.5,3.1c-0.1,0.8-0.2,1.5-0.3,2.3c-0.1,0.4-0.1,0.8-0.1,1.2c0,0.2,0,0.3,0,0.5c-0.1,0.6-0.1,1.1-0.1,1.7   c0,0.3,0,0.7-0.1,1c0,0.3,0,0.6-0.1,1c0,0.3,0,0.5,0,0.8c0,0.4,0,0.7,0,1.1c0,0.4,0,0.8,0,1.2v87h-6.3l0-87c0-1.2,0-2.5,0.1-3.7   c0-0.3,0-0.6,0.1-1c0-0.2,0-0.5,0-0.7c0.1-1.5,0.2-2.9,0.4-4.3c0-0.3,0.1-0.6,0.1-0.9c0-0.3,0.1-0.6,0.1-1c0.2-1.1,0.4-2.2,0.6-3.3   c0.1-0.2,0.1-0.5,0.2-0.7c0.1-0.3,0.1-0.5,0.2-0.8c0.4-1.7,0.8-3.4,1.3-5c0.1-0.3,0.2-0.7,0.3-1c0.1-0.3,0.2-0.6,0.3-1   c0.1-0.4,0.3-0.8,0.4-1.2c0.4-1.2,0.9-2.4,1.4-3.5c0.1-0.3,0.3-0.6,0.4-0.9c0.2-0.3,0.3-0.7,0.5-1c0.1-0.3,0.3-0.5,0.4-0.8   c0.1-0.2,0.2-0.4,0.3-0.7c0.2-0.3,0.4-0.7,0.5-1c0.2-0.4,0.5-0.9,0.7-1.3c0.2-0.3,0.4-0.7,0.6-1c0.1-0.2,0.2-0.4,0.3-0.6   c0.4-0.7,0.8-1.3,1.2-1.9c0.1-0.1,0.2-0.3,0.3-0.4c0.2-0.3,0.4-0.6,0.6-0.9c0,0,0-0.1,0.1-0.1c0.3-0.4,0.5-0.7,0.8-1.1   c0.3-0.4,0.6-0.7,0.9-1.1c0.2-0.3,0.4-0.5,0.7-0.8c0-0.1,0.1-0.1,0.1-0.2c0.2-0.3,0.4-0.5,0.7-0.8c0,0,0,0,0.1-0.1   c0.2-0.2,0.4-0.5,0.6-0.7c0.2-0.2,0.4-0.4,0.6-0.7c0.3-0.3,0.6-0.6,0.9-0.9c-20.1,6.1-34.2,20.5-34.2,37.2l0,94.4H7.8V53.2   c0-25.7,27.8-46.6,62-46.6h0l0,0.4l0,0.2V6.9l0-0.3c0.1,0,0.1,0,0.2,0v0c34,0.1,61.7,21.6,61.7,47.2L125.5,53.8z"></path>
+	<path class="st0" d="M69.8,6.6v0.7l0-0.2L69.8,6.6C69.8,6.6,69.8,6.6,69.8,6.6z"></path>
+	<polygon class="st0" points="69.8,6.9 69.8,7.3 69.8,7  "></polygon>
+	<polygon class="st0" points="31.6,147.5 31.6,147.5 31.6,60.6  "></polygon>
+	<polygon class="st0" points="37.8,147.5 37.8,147.5 37.8,60.6  "></polygon>
+	<path class="st1" d="M71.5,87c0-2.8,0.5-5.4,1.4-7.7c0.9-2.3,2.2-4.3,3.9-5.9c1.7-1.6,3.6-2.9,5.9-3.8c2.3-0.9,4.8-1.3,7.5-1.3   c2.8,0,5.3,0.4,7.6,1.2c2.3,0.9,4.3,2.1,6,3.7c1.7,1.6,3,3.6,3.9,5.9c0.9,2.3,1.4,4.9,1.4,7.7c0,2.8-0.5,5.3-1.4,7.6   c-0.9,2.3-2.2,4.2-3.9,5.9c-1.7,1.6-3.7,2.9-6,3.8c-2.3,0.9-4.8,1.4-7.6,1.4c-2.7,0-5.3-0.4-7.5-1.3c-2.3-0.9-4.3-2.1-5.9-3.8   c-1.7-1.6-2.9-3.6-3.9-5.8C72,92.3,71.5,89.8,71.5,87z M78.1,86.6c0,1.9,0.3,3.7,0.9,5.3c0.6,1.6,1.4,3,2.5,4.2   c1.1,1.2,2.3,2.1,3.8,2.8c1.5,0.7,3.1,1,5,1c1.8,0,3.5-0.3,5-1c1.5-0.7,2.8-1.6,3.9-2.8c1.1-1.2,1.9-2.6,2.5-4.2   c0.6-1.6,0.9-3.4,0.9-5.3c0-1.8-0.3-3.4-0.9-5c-0.6-1.5-1.4-2.9-2.5-4c-1.1-1.2-2.4-2.1-3.9-2.7c-1.5-0.7-3.2-1-5-1   c-1.8,0-3.5,0.3-5,1c-1.5,0.7-2.8,1.6-3.8,2.7c-1.1,1.2-1.9,2.5-2.5,4C78.4,83.2,78.1,84.9,78.1,86.6z"></path>
+	<path class="st1" d="M111.6,80.6h5.7v3.6h0.1c0.9-1.5,2-2.5,3.5-3.2c1.5-0.7,3.1-1,4.8-1c1.8,0,3.5,0.3,5,1c1.5,0.7,2.7,1.5,3.8,2.7   c1,1.1,1.8,2.5,2.4,4c0.5,1.5,0.8,3.2,0.8,5c0,1.8-0.3,3.4-0.9,5c-0.6,1.5-1.4,2.9-2.4,4c-1,1.1-2.2,2-3.7,2.7c-1.4,0.7-3,1-4.7,1   c-1.1,0-2.1-0.1-3-0.3c-0.9-0.2-1.6-0.5-2.3-0.9c-0.7-0.4-1.2-0.8-1.7-1.2c-0.5-0.4-0.9-0.8-1.2-1.2h-0.2v14.5h-6L111.6,80.6   L111.6,80.6z M131.5,92.6c0-0.9-0.2-1.8-0.5-2.7c-0.3-0.9-0.8-1.6-1.4-2.3c-0.6-0.7-1.4-1.2-2.2-1.6c-0.9-0.4-1.9-0.6-3-0.6   c-1.1,0-2.1,0.2-3,0.6c-0.9,0.4-1.6,0.9-2.2,1.6c-0.6,0.7-1.1,1.4-1.4,2.3c-0.3,0.9-0.5,1.8-0.5,2.7c0,0.9,0.2,1.8,0.5,2.7   c0.3,0.9,0.8,1.6,1.4,2.3c0.6,0.7,1.4,1.2,2.2,1.6c0.9,0.4,1.9,0.6,3,0.6c1.1,0,2.1-0.2,3-0.6c0.9-0.4,1.6-0.9,2.2-1.6   c0.6-0.7,1.1-1.4,1.4-2.3C131.3,94.4,131.5,93.5,131.5,92.6z"></path>
+	<path class="st1" d="M145.4,94.7c0.2,1.8,0.9,3.2,2.1,4.2c1.2,1,2.7,1.5,4.4,1.5c1.5,0,2.8-0.3,3.8-0.9c1-0.6,1.9-1.4,2.7-2.3l4.3,3.3   c-1.4,1.7-3,3-4.7,3.7c-1.7,0.7-3.6,1.1-5.5,1.1c-1.8,0-3.5-0.3-5.1-0.9c-1.6-0.6-3-1.5-4.2-2.6c-1.2-1.1-2.1-2.4-2.8-4   c-0.7-1.6-1-3.3-1-5.2c0-1.9,0.3-3.6,1-5.2c0.7-1.6,1.6-2.9,2.8-4c1.2-1.1,2.6-2,4.2-2.6c1.6-0.6,3.3-0.9,5.1-0.9   c1.7,0,3.2,0.3,4.6,0.9c1.4,0.6,2.6,1.4,3.6,2.5c1,1.1,1.8,2.5,2.3,4.1c0.6,1.6,0.8,3.5,0.8,5.6v1.7L145.4,94.7L145.4,94.7z    M157.8,90.2c0-1.8-0.6-3.2-1.7-4.2c-1.1-1-2.6-1.5-4.5-1.5c-1.8,0-3.2,0.5-4.3,1.6c-1.1,1-1.7,2.4-1.9,4.2L157.8,90.2L157.8,90.2z   "></path>
+	<path class="st1" d="M166.9,80.6h5.7v3.9h0.1c0.6-1.2,1.4-2.2,2.6-3.1c1.2-0.9,2.8-1.3,4.8-1.3c1.6,0,3,0.3,4.1,0.8c1.1,0.5,2,1.2,2.7,2.1   c0.7,0.9,1.2,1.9,1.5,3c0.3,1.1,0.5,2.3,0.5,3.6v15.2h-6V92.5c0-0.7,0-1.4-0.1-2.2c-0.1-0.8-0.2-1.6-0.5-2.3   c-0.3-0.7-0.7-1.3-1.3-1.8c-0.6-0.5-1.4-0.7-2.5-0.7c-1,0-1.8,0.2-2.5,0.5c-0.7,0.3-1.3,0.8-1.7,1.4c-0.5,0.6-0.8,1.2-1,2   c-0.2,0.7-0.3,1.5-0.3,2.3v13.1h-6L166.9,80.6L166.9,80.6z"></path>
+	<path class="st1" d="M218.1,77.5c-1.3-1.4-2.6-2.3-3.8-2.8c-1.2-0.5-2.4-0.7-3.7-0.7c-1.8,0-3.5,0.3-5,1c-1.5,0.7-2.8,1.6-3.8,2.7   c-1.1,1.2-1.9,2.5-2.5,4c-0.6,1.5-0.9,3.2-0.9,5c0,1.9,0.3,3.7,0.9,5.3c0.6,1.6,1.4,3,2.5,4.2c1.1,1.2,2.3,2.1,3.8,2.8   c1.5,0.7,3.1,1,5,1c1.4,0,2.8-0.3,4.2-1c1.4-0.7,2.6-1.8,3.8-3.3l5.2,3.7c-1.6,2.2-3.6,3.8-5.9,4.8c-2.3,1-4.8,1.5-7.4,1.5   c-2.7,0-5.3-0.4-7.5-1.3c-2.3-0.9-4.3-2.1-5.9-3.8c-1.7-1.6-2.9-3.6-3.9-5.8c-0.9-2.3-1.4-4.8-1.4-7.6c0-2.8,0.5-5.4,1.4-7.7   c0.9-2.3,2.2-4.3,3.9-5.9s3.6-2.9,5.9-3.8c2.3-0.9,4.8-1.3,7.5-1.3c2.4,0,4.6,0.4,6.7,1.3c2.1,0.9,4,2.3,5.7,4.3L218.1,77.5z"></path>
+	<path class="st1" d="M241.8,101.3h-0.1c-0.9,1.4-2,2.4-3.3,3c-1.3,0.6-2.8,0.9-4.4,0.9c-1.1,0-2.2-0.1-3.2-0.4c-1.1-0.3-2-0.8-2.8-1.4   c-0.8-0.6-1.5-1.4-2-2.3c-0.5-0.9-0.8-2-0.8-3.2c0-1.3,0.2-2.4,0.7-3.3c0.5-0.9,1.1-1.7,1.9-2.3c0.8-0.6,1.7-1.1,2.7-1.5   c1-0.4,2.1-0.6,3.2-0.8c1.1-0.2,2.2-0.3,3.4-0.4c1.1,0,2.2-0.1,3.2-0.1h1.5V89c0-1.5-0.5-2.6-1.6-3.4c-1-0.8-2.4-1.1-4-1.1   c-1.3,0-2.5,0.2-3.6,0.7c-1.1,0.4-2.1,1.1-2.9,1.8l-3.2-3.2c1.3-1.4,2.9-2.4,4.7-3c1.8-0.6,3.6-0.9,5.5-0.9c1.7,0,3.1,0.2,4.3,0.6   c1.2,0.4,2.1,0.9,2.9,1.5c0.8,0.6,1.4,1.3,1.8,2.1c0.4,0.8,0.7,1.6,0.9,2.4c0.2,0.8,0.3,1.6,0.3,2.3c0,0.8,0,1.4,0,2v13.8h-5.4   L241.8,101.3L241.8,101.3z M241.4,93.9h-1.3c-0.8,0-1.8,0-2.8,0.1c-1,0.1-2,0.2-2.9,0.5c-0.9,0.3-1.7,0.6-2.3,1.1   c-0.6,0.5-1,1.2-1,2c0,0.6,0.1,1,0.4,1.4c0.3,0.4,0.6,0.7,1,1c0.4,0.3,0.8,0.5,1.4,0.6c0.5,0.1,1,0.2,1.5,0.2   c2.1,0,3.6-0.5,4.6-1.5c1-1,1.5-2.3,1.5-4L241.4,93.9L241.4,93.9z"></path>
+	<path class="st1" d="M275.5,80.6v21.9c0,2.2-0.3,4.1-0.8,5.9c-0.5,1.8-1.4,3.2-2.5,4.5s-2.5,2.2-4.2,2.8c-1.7,0.7-3.7,1-6.1,1   c-2.2,0-4.4-0.3-6.4-0.9c-2-0.6-3.9-1.6-5.6-3.1l3.6-4.9c1.2,1.1,2.5,2,3.8,2.6c1.3,0.6,2.8,0.9,4.5,0.9c1.4,0,2.6-0.2,3.6-0.6   c1-0.4,1.8-1,2.4-1.7c0.6-0.7,1-1.5,1.3-2.5c0.3-1,0.4-2.1,0.4-3.3v-1.8h-0.1c-0.9,1.2-2,2-3.5,2.6c-1.4,0.6-2.9,0.9-4.4,0.9   c-1.8,0-3.4-0.3-4.9-1c-1.5-0.7-2.7-1.5-3.8-2.6c-1.1-1.1-1.9-2.4-2.4-3.9c-0.6-1.5-0.9-3.1-0.9-4.8c0-1.8,0.3-3.4,0.8-5   c0.5-1.5,1.3-2.9,2.4-4c1-1.1,2.3-2,3.7-2.7c1.5-0.7,3.1-1,5-1c1.7,0,3.3,0.3,4.8,1c1.5,0.7,2.6,1.7,3.5,3.2h0.1v-3.6L275.5,80.6   L275.5,80.6z M262.6,85.4c-1.1,0-2,0.2-2.9,0.5c-0.9,0.4-1.6,0.8-2.2,1.5c-0.6,0.6-1.1,1.4-1.4,2.3c-0.4,0.9-0.5,1.9-0.5,2.9   c0,1,0.2,1.9,0.5,2.7c0.3,0.8,0.8,1.6,1.5,2.2c0.6,0.6,1.4,1.1,2.3,1.5c0.9,0.4,1.8,0.6,2.8,0.6c1.1,0,2.1-0.2,3-0.6   c0.9-0.4,1.6-0.9,2.3-1.5c0.6-0.6,1.1-1.4,1.4-2.2c0.3-0.9,0.5-1.8,0.5-2.8c0-2.1-0.6-3.8-1.9-5.1C266.6,86,264.8,85.4,262.6,85.4z   "></path>
+	<path class="st1" d="M283.8,94.7c0.2,1.8,0.9,3.2,2.1,4.2c1.2,1,2.7,1.5,4.4,1.5c1.5,0,2.8-0.3,3.8-0.9c1-0.6,1.9-1.4,2.7-2.3l4.3,3.3   c-1.4,1.7-3,3-4.7,3.7c-1.7,0.7-3.6,1.1-5.5,1.1c-1.8,0-3.5-0.3-5.1-0.9c-1.6-0.6-3-1.5-4.2-2.6c-1.2-1.1-2.1-2.4-2.8-4   c-0.7-1.6-1-3.3-1-5.2c0-1.9,0.3-3.6,1-5.2c0.7-1.6,1.6-2.9,2.8-4c1.2-1.1,2.6-2,4.2-2.6c1.6-0.6,3.3-0.9,5.1-0.9   c1.7,0,3.2,0.3,4.6,0.9c1.4,0.6,2.6,1.4,3.6,2.5c1,1.1,1.8,2.5,2.3,4.1c0.6,1.6,0.8,3.5,0.8,5.6v1.7L283.8,94.7L283.8,94.7z    M296.1,90.2c0-1.8-0.6-3.2-1.7-4.2c-1.1-1-2.6-1.5-4.5-1.5c-1.8,0-3.2,0.5-4.3,1.6c-1.1,1-1.7,2.4-1.9,4.2L296.1,90.2L296.1,90.2z   "></path>
+</g>
+</svg>
+
+</a>
+<button aria-expanded="false" aria-label="Toggle navigation" class="btn navbar-toggler" data-bs-target="#navbar-collapsable" data-bs-toggle="collapse">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbar-collapsable">
+<ul class="navbar-nav">
+<li class="nav-item dropdown hover-dropdown">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="https://opencagedata.com/tutorials/geocode-in-java#" role="button">
+<span class="nav-link-inner-text">Products</span>
+</a>
+<ul class="dropdown-menu">
+<li class="px-2">
+GEOCODING API
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/api#quickstart">
+<div class="media-body align-self-center">
+<h5>Quick Start</h5>
+<div class="desc">start geocoding ASAP</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/api">
+<div class="media-body align-self-center">
+<h5>API Documentation</h5>
+<div class="desc">parameters, best practices, response codes</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/demo">
+<div class="media-body align-self-center">
+<h5>Demo</h5>
+<div class="desc">try the API out</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/sdks">
+<div class="media-body align-self-center">
+<h5>Libraries and SDKs</h5>
+<div class="desc">more than 30 programming languages</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/tutorials">
+<div class="media-body align-self-center">
+<h5>Tutorials</h5>
+<div class="desc">example code</div>
+</div>
+</a>
+</li>
+<li class="px-2">
+GEOSEARCH
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/geosearch">
+<div class="media-body align-self-center">
+<h5>Location Autosuggest</h5>
+<div class="desc">for forms or maps</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/geosearch/demo">
+<div class="media-body align-self-center">
+<h5>Demo</h5>
+<div class="desc">play with different configurations</div>
+</div>
+</a>
+</li>
+<li class="ps-4">
+add search to a map:
+<br>
+<a class="dropdown-item media" href="https://opencagedata.com/tutorials/leaflet-location-search">
+<h5>Leafletjs</h5>
+</a>
+<a class="dropdown-item media" href="https://opencagedata.com/tutorials/openlayers-location-search">
+<h5>OpenLayers</h5>
+</a>
+</li>
+<li class="dropdown-divider"></li>
+<li>
+<a class="dropdown-item" href="https://status.opencagedata.com/" rel="noopener" target="_blank">
+Service status
+<i class="fas fa-circle" id="server-status"></i>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item"><a class="nav-link" href="https://opencagedata.com/pricing">Pricing</a></li>
+<li class="nav-item dropdown hover-dropdown">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="https://opencagedata.com/tutorials/geocode-in-java#" role="button">
+<span class="nav-link-inner-text">Resources</span>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/why-use-open-data">
+Why open data?
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="https://opencagedata.com/guides/how-to-switch-from-google-maps-geocoding">
+Switching from Google Maps
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="https://opencagedata.com/guides/how-to-switch-from-nominatim">
+Switching from Nominatim
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/guides">
+<div class="media-body align-self-center">
+<h5>Guides</h5>
+<div class="desc">recipes for common scenarios</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/faq">
+<div class="media-body align-self-center">
+<h5>FAQ</h5>
+<div class="desc">technical, billing, legal</div>
+</div>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown hover-dropdown">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="https://opencagedata.com/tutorials/geocode-in-java#" role="button">
+<span class="nav-link-inner-text">Use cases</span>
+</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/vehicle-tracking">Fleet Tracking</a></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/internet-of-things">Internet of Things</a></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/data-enrichment">Data Enrichment</a></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/classifieds">Classifieds</a></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/academia">Academic Research</a></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/payment-processing">Payment Processing</a></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/solutions/image-processing">Image Processing</a></li>
+<li class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="https://opencagedata.com/enterprise">Enterprise Solutions</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown hover-dropdown">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="https://opencagedata.com/tutorials/geocode-in-java#" role="button">
+<span class="nav-link-inner-text">About</span>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item media" href="https://opencagedata.com/about">
+<div class="media-body align-self-center">
+<h5>About us</h5>
+<div class="desc">who we are, what we do</div>
+</div>
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="https://opencagedata.com/contact">Contact us / Support</a>
+</li>
+<li>
+<a class="dropdown-item" href="https://blog.opencagedata.com/" rel="noopener" target="_blank">Blog</a>
+</li>
+<li>
+<a class="dropdown-item" href="https://twitter.com/opencage" rel="noopener" target="_blank">@OpenCage on Twitter</a>
+</li>
+</ul>
+</li>
+
+</ul>
+<ul class="navbar-nav ms-auto" id="navbar-user-management">
+<li class="nav-item dropdown">
+<div class="btn-group">
+<a class="nav-link btn btn-sm btn-white" href="https://opencagedata.com/dashboard">Dashboard</a>
+<button class="nav-link btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" type="button">
+<span class="visually-hidden">Toggle Dropdown</span>
+</button>
+<ul class="dropdown-menu mt-2">
+<li>
+<a class="dropdown-item" rel="nofollow" data-method="delete" href="https://opencagedata.com/users/sign_out">Log out</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<div class="container" id="geocoder-title">
+<div class="row">
+<div class="col-md-12">
+<h1>Java Geocoding Tutorial</h1>
+
+</div>
+</div>
+</div>
+</div>
+
+</header>
+<main>
+
+<div id="solutions-page">
+<section class="container-fluid mt-0 pt-3 bg-lightgreen">
+<ul class="nav nav-tabs justify-content-center">
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/api">
+Geocoding API
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/demo">
+Demo
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/sdks">
+SDKs
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/tutorials">
+Tutorials
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/geosearch">
+Geosearch/Autosuggest
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/guides">
+Guides
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://opencagedata.com/faq">
+FAQ
+</a>
+</li>
+</ul>
+</section>
+
+<section>
+<div class="container geocoder-code">
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10 bg-white my-3">
+<div class="row">
+<div class="col-md-1">
+Tutorials:
+</div>
+<div class="col-md-11 text-start">
+<ol class="breadcrumb">
+<li class="breadcrumb-item active">
+<div class="dropdown">
+<button class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown" type="button">
+Java
+</button>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="https://dev.to/tsamaya/opencage-api-and-arcgis-api-for-javascript-55ga">
+ArcGIS API for Javascript
+*
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-shell-scripts">
+Command line
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-excel">
+Excel
+</a>
+<a class="dropdown-item" href="https://medium.com/@tsamaya/google-cloud-functions-with-opencage-geocoder-api-d9d1f7dde162">
+Google Cloud/Serverless
+*
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-googledocs">
+Google Docs
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-java">
+Java
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-javascript">
+Javascript
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-jquery">
+jQuery
+</a>
+<a class="dropdown-item" href="https://nbviewer.jupyter.org/gist/sbscully/c024c31c49ecfea8579f20bf025b50db/opencage-jupyter-notebook.ipynb">
+Jupyter Notebook
+*
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-insomnia">
+Insomnia REST Client
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-leaflet">
+Geocoding on a Leaflet map
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-matlab">
+MATLAB
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-nodejs">
+Node.js
+</a>
+<a class="dropdown-item" href="https://github.com/tsamaya/ol-opencage-geocoding">
+Geocoding on an OpenLayers map
+*
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/adding-an-address-to-openstreetmap">
+Adding an address to OpenStreetMap
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-perl">
+Perl
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-php">
+PHP
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-postman">
+Postman
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-python">
+Python
+</a>
+<a class="dropdown-item" href="https://docs.ropensci.org/opencage/">
+R
+*
+</a>
+<a class="dropdown-item" href="https://medium.com/@tsamaya/using-opencage-gecoder-api-with-react-e4fdc4d79da0">
+ReactJS
+*
+</a>
+<a class="dropdown-item" href="https://learnetto.com/tutorials/how-to-build-a-location-based-app-in-react-native-part-1">
+React Native
+*
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-ruby">
+Ruby
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-rust">
+Rust
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-device-coordinates-in-thingstream">
+Geocoding with Thingstream
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/configure-traccar-to-use-opencage-geocoding-api">
+Configure Traccar to use OpenCage
+</a>
+<a class="dropdown-item" href="https://opencagedata.com/tutorials/geocode-in-stata">
+Stata
+</a>
+<a class="dropdown-item" href="https://github.com/tsamaya/opencage-vue-guide">
+Vue.js
+*
+</a>
+<div class="text-muted">
+* third party site
+</div>
+<div class="dropdown-divider"></div>
+<div class="dropdown-item">
+<a href="https://opencagedata.com/sdks">SDKs for more languages</a>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+This is a tutorial for using the OpenCage Geocoding API in Java.
+<h2>Before we dive in to the tutorial ...</h2>
+<p>
+Spend two minutes ...
+</p>
+<ul>
+<li class="my-2">
+playing with the
+<a href="https://opencagedata.com/demo">demo page</a>,
+so that you see the actual response the API returns.
+</li>
+<li class="my-2">
+browing the
+<a href="https://opencagedata.com/api">API reference</a>,
+so you understand the
+<a href="https://opencagedata.com/api#forward-opt">optional parameters</a>,
+<a href="https://opencagedata.com/api#bestpractices">best practices</a>,
+<a href="https://opencagedata.com/api#codes">possible response codes</a>,
+and the
+<a href="https://opencagedata.com/api#rate-limiting">rate limiting</a>
+on free trial accounts.
+</li>
+</ul>
+<p>
+Ok, ready?
+</p>
+
+This document shows how to query the OpenCage geocoding API using Michael Oberwasserlechner's
+<a href="https://github.com/moberwasserlechner/jopencage">Java geocoder library</a>.
+<h2>Add JOpenCage as a dependency to your maven or gradle project</h2>
+Following the library's
+<a href="https://github.com/moberwasserlechner/jopencage#usage">usage instructions</a>
+<h2>Reverse (coordinates to address) Example</h2>
+Send a coordinate pair (latitude, longitude) and receive an address
+<p></p>
+<pre class="highlight add-highlight-copy"><button class="code-highlight-copy btn btn-sm btn-secondary">Copy</button><code class="add-highlight java hljs language-java"><span class="hljs-type">JOpenCageGeocoder</span> <span class="hljs-variable">jOpenCageGeocoder</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JOpenCageGeocoder</span>(<span class="hljs-string">"4769666a5a524068ae426602be567766"</span>);
+
+<span class="hljs-type">JOpenCageReverseRequest</span> <span class="hljs-variable">request</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JOpenCageReverseRequest</span>(<span class="hljs-number">41.40015</span>, <span class="hljs-number">2.15765</span>);
+request.setLanguage(<span class="hljs-string">"es"</span>); <span class="hljs-comment">// prioritize results in a specific language using an IETF format language code</span>
+request.setNoDedupe(<span class="hljs-literal">true</span>); <span class="hljs-comment">// don't return duplicate results</span>
+request.setLimit(<span class="hljs-number">5</span>); <span class="hljs-comment">// only return the first 5 results (default is 10)</span>
+request.setNoAnnotations(<span class="hljs-literal">true</span>); <span class="hljs-comment">// exclude additional info such as calling code, timezone, and currency</span>
+request.setMinConfidence(<span class="hljs-number">3</span>); <span class="hljs-comment">// restrict to results with a confidence rating of at least 3 (out of 10)</span>
+
+<span class="hljs-type">JOpenCageResponse</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> jOpenCageGeocoder.reverse(request);
+
+<span class="hljs-comment">// get the formatted address of the first result:</span>
+<span class="hljs-type">String</span> <span class="hljs-variable">formattedAddress</span> <span class="hljs-operator">=</span> response.getResults().get(<span class="hljs-number">0</span>).getFormatted();
+<span class="hljs-comment">// formattedAddress is now 'Travessera de Gràcia, 142, 08012 Barcelona, España'</span>
+
+
+</code></pre><h2>Forward (address to coordinates) Example</h2>
+Send an address and receive a coordinate pair.
+Format your address according to the steps laid out in our
+<a href="https://opencagedata.com/guides/how-to-format-your-geocoding-query">guide to query formatting</a>.
+<p></p>
+<pre class="highlight add-highlight-copy"><button class="code-highlight-copy btn btn-sm btn-secondary">Copy</button><code class="add-highlight java hljs language-java"><span class="hljs-type">JOpenCageGeocoder</span> <span class="hljs-variable">jOpenCageGeocoder</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JOpenCageGeocoder</span>(<span class="hljs-string">"4769666a5a524068ae426602be567766"</span>);
+<span class="hljs-type">JOpenCageForwardRequest</span> <span class="hljs-variable">request</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JOpenCageForwardRequest</span>(<span class="hljs-string">"375 Albert Rd, Woodstock, Cape Town, 7915, South Africa"</span>);
+request.setRestrictToCountryCode(<span class="hljs-string">"za"</span>); <span class="hljs-comment">// restrict results to a specific country</span>
+request.setBounds(<span class="hljs-number">18.367</span>, -<span class="hljs-number">34.109</span>, <span class="hljs-number">18.770</span>, -<span class="hljs-number">33.704</span>); <span class="hljs-comment">// restrict results to a geographic bounding box (southWestLng, southWestLat, northEastLng, northEastLat)</span>
+
+<span class="hljs-type">JOpenCageResponse</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> jOpenCageGeocoder.forward(request);
+<span class="hljs-type">JOpenCageLatLng</span> <span class="hljs-variable">firstResultLatLng</span> <span class="hljs-operator">=</span> response.getFirstPosition(); <span class="hljs-comment">// get the coordinate pair of the first result</span>
+System.out.println(firstResultLatLng.getLat().toString() + <span class="hljs-string">","</span> + firstResultLatLng.getLng().toString());
+<span class="hljs-comment">// prints -33.9275623,18.4571101</span>
+
+
+</code></pre><h2>Batch Geocode a List of Addresses from a File</h2>
+This example is for forward geocoding a list of addresses; the process to
+reverse geocode a list of coordinate pairs would be similar. Start with a
+text file of addresses formatted according to the steps laid out in our
+<a href="https://opencagedata.com/guides/how-to-format-your-geocoding-query">guide to query formatting</a>.
+<p></p>
+<pre class="highlight add-highlight-copy"><button class="code-highlight-copy btn btn-sm btn-secondary">Copy</button><code class="add-highlight java hljs language-java"><span class="hljs-comment">// myAddresses.txt</span>
+<span class="hljs-number">25</span> Queen Victoria St, Gardens, Cape Town, <span class="hljs-number">8001</span>, South Africa
+Via Giuseppe Garibaldi, <span class="hljs-number">183</span>, <span class="hljs-number">16032</span> Camogli GE, Italy
+<span class="hljs-number">1</span> Hacker Way, Menlo Park, CA <span class="hljs-number">94025</span>, USA
+Iguazu National Park, Brazil
+Stanford, <span class="hljs-number">7210</span>, South Africa
+
+<span class="hljs-comment">// Read the file and geocode the addresses:</span>
+<span class="hljs-type">JOpenCageGeocoder</span> <span class="hljs-variable">jOpenCageGeocoder</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JOpenCageGeocoder</span>(<span class="hljs-string">"4769666a5a524068ae426602be567766"</span>);
+
+<span class="hljs-type">InputStream</span> <span class="hljs-variable">inputFile</span> <span class="hljs-operator">=</span> getClass().getClassLoader().getResourceAsStream(<span class="hljs-string">"myAddresses.txt"</span>);
+
+List&lt;String&gt; listOfAddresses = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+<span class="hljs-keyword">try</span> (<span class="hljs-type">BufferedReader</span> <span class="hljs-variable">br</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedReader</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">InputStreamReader</span>(inputFile, StandardCharsets.UTF_8))) {
+  listOfAddresses = br.lines().collect(Collectors.toList());
+} <span class="hljs-keyword">catch</span> (IOException e) {
+  System.out.println(<span class="hljs-string">"Unable to read file"</span>);
+  e.printStackTrace();
+}
+
+System.out.println(<span class="hljs-string">"Latitude, Longitude:"</span>);
+<span class="hljs-keyword">for</span> (String address : listOfAddresses) {
+  <span class="hljs-type">JOpenCageForwardRequest</span> <span class="hljs-variable">request</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JOpenCageForwardRequest</span>(address);
+  request.setLimit(<span class="hljs-number">1</span>);
+  request.setNoAnnotations(<span class="hljs-literal">true</span>);
+  <span class="hljs-type">JOpenCageResponse</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> <span class="hljs-built_in">this</span>.jOpenCageGeocoder.forward(request);
+
+  <span class="hljs-keyword">if</span> (response != <span class="hljs-literal">null</span> &amp;&amp; response.getResults() != <span class="hljs-literal">null</span> &amp;&amp; !response.getResults().isEmpty()) {
+    <span class="hljs-type">JOpenCageLatLng</span> <span class="hljs-variable">coordinates</span> <span class="hljs-operator">=</span> response.getResults().get(<span class="hljs-number">0</span>).getGeometry();
+    System.out.println(coordinates.getLat().toString() + <span class="hljs-string">","</span> + coordinates.getLng().toString());
+  } <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">"Unable to geocode input address: "</span> + address);
+  }
+
+  <span class="hljs-keyword">try</span> {
+    Thread.sleep(<span class="hljs-number">1000</span>); <span class="hljs-comment">// free trial accounts limited to 1 request/sec</span>
+  } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+    e.printStackTrace();
+  }
+};
+
+
+
+</code></pre><h2>Error handling</h2>
+In the case of an error, an appropriate error message will be logged, such as:
+<ul>
+<li>
+<code>400: "Invalid request (bad request; a required parameter is missing)!"</code>
+</li>
+<li>
+<code>401: "Invalid or missing API key!"</code>
+</li>
+<li>
+<code>402: "Valid request but quota exceeded (payment required)!"</code>
+</li>
+<li>
+<code>403: "Forbidden. API key blocked"</code>
+</li>
+</ul>
+
+<h2>Further Reading</h2>
+<ul class="list-unstyled ps-4">
+<li class="my-3">
+<i class="far fa-file" aria-hidden="true"></i>
+<a href="https://opencagedata.com/api">OpenCage Geocoding API Reference</a>
+</li>
+<li class="my-3">
+<i class="far fa-file" aria-hidden="true"></i>
+<a href="https://opencagedata.com/reverse-geocoding">Guide to Reverse Geocoding</a>
+</li>
+<li class="my-3">
+<i class="far fa-file" aria-hidden="true"></i>
+<a href="https://opencagedata.com/guides/how-to-format-your-geocoding-query">Cleaning / formatting your query</a>
+</li>
+<li class="my-3">
+<i class="far fa-file" aria-hidden="true"></i>
+<a href="https://opencagedata.com/guides/how-to-geocode-more-quickly">Guide to geocoding more quickly</a>
+</li>
+<li class="my-3">
+<i class="far fa-file" aria-hidden="true"></i>
+<a href="https://opencagedata.com/guides/how-to-geocode-large-datasets">Guide to geocoding large datasets</a>
+</li>
+<li class="my-3">
+<i class="far fa-file" aria-hidden="true"></i>
+<a href="https://opencagedata.com/guides/how-to-preserve-privacy-by-showing-only-an-imprecise-location">Geocoding and preserving privacy</a>
+</li>
+</ul>
+</div>
+<div class="col-md-1"></div>
+</div>
+</div>
+</section>
+</div>
+
+<a href="https://opencagedata.com/tutorials/geocode-in-java#" id="back-to-top" style="opacity: 1; visibility: visible; transform: translateY(0px); transition: all 300ms ease 0ms;">
+<i class="fas fa-angle-up" aria-hidden="true"></i>
+</a>
+</main>
+<footer>
+<div class="container" id="footer">
+<div class="row">
+<div class="col-md-3">
+<h5>Background</h5>
+<ul>
+<li><a href="https://opencagedata.com/why-use-open-data">Why open data?</a></li>
+<li><a href="https://opencagedata.com/guides/the-difference-between-geocoding-and-geosearch">Geocoding vs Geosearch?</a></li>
+<li><a href="https://opencagedata.com/reverse-geocoding">Reverse Geocoding</a></li>
+<li><a href="https://opencagedata.com/credits">Credits, Data, and Sources</a></li>
+</ul>
+<h5>Use Cases</h5>
+<ul>
+<li><a href="https://opencagedata.com/solutions/academia">Academia</a></li>
+<li><a href="https://opencagedata.com/solutions/classifieds">Classifieds</a></li>
+<li><a href="https://opencagedata.com/solutions/data-enrichment">Data Enrichment</a></li>
+<li><a href="https://opencagedata.com/solutions/vehicle-tracking">Fleet Tracking</a></li>
+<li><a href="https://opencagedata.com/solutions/image-processing">Image Processing</a></li>
+<li><a href="https://opencagedata.com/solutions/internet-of-things">Internet of Things</a></li>
+<li><a href="https://opencagedata.com/solutions/logistics">Logistics</a></li>
+<li><a href="https://opencagedata.com/solutions/payment-processing">Payment Processing</a></li>
+<li><a href="https://opencagedata.com/solutions/micromobility">Shared / Micromobility</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h5>Geocoding API</h5>
+<ul>
+<li><a href="https://opencagedata.com/api">API Documentation</a></li>
+<li><a href="https://opencagedata.com/demo">Demo</a></li>
+<li>
+<a href="https://opencagedata.com/tutorials">Tutorials</a>
+/
+<a href="https://opencagedata.com/sdks">SDKs</a>
+/
+<a href="https://opencagedata.com/guides">Guides</a>
+</li>
+<li><a href="https://opencagedata.com/enterprise">Enterprise Solutions</a></li>
+</ul>
+<h5>Geosearch</h5>
+<ul>
+<li><a href="https://opencagedata.com/geosearch">Location Autosuggest</a></li>
+<li><a href="https://opencagedata.com/geosearch/demo">Demo</a></li>
+<li>
+Tutorials:
+<a href="https://opencagedata.com/tutorials/leaflet-location-search">LeafletJS</a>
+/
+<a href="https://opencagedata.com/tutorials/openlayers-location-search">OpenLayers</a>
+</li>
+</ul>
+<h5>General Info</h5>
+<ul>
+<li><a href="https://opencagedata.com/pricing">Pricing</a></li>
+<li><a href="https://opencagedata.com/faq">FAQ</a></li>
+<li>
+<a href="https://status.opencagedata.com/" rel="noopener" target="_blank">Uptime and Status</a>
+</li>
+</ul>
+</div>
+<div class="col-md-3">
+<h5>Company Info</h5>
+<ul>
+<li>
+<a href="https://opencagedata.com/about">About us / Imprint</a>
+</li>
+<li>
+<a href="https://blog.opencagedata.com/" rel="noopener" target="_blank">Our blog</a>
+</li>
+<li>
+<a href="https://twitter.com/opencage" rel="noopener" target="_blank">On Twitter: @OpenCage</a>
+</li>
+<li>
+Our commitment to:
+<ul class="disc">
+<li class="ml1">
+<a href="https://opencagedata.com/about#geo-innovation">
+geo-innovation
+</a>
+</li>
+<li class="ml1">
+<a href="https://opencagedata.com/about#environmental-commitment">
+the environment
+</a>
+</li>
+</ul>
+</li>
+<li>
+We organise Geomob
+<ul class="disc">
+<li class="ml1">
+<a href="https://thegeomob.com/" target="_blank">
+Events
+</a>
+</li>
+<li class="ml1">
+<a href="https://thegeomob.com/podcast/" target="_blank">
+Podcast
+</a>
+</li>
+</ul>
+</li>
+<li><a href="https://opencagedata.com/jobs">We're hiring</a></li>
+<li><a href="https://opencagedata.com/branding">Branding / Media Resources</a></li>
+</ul>
+<h5>Legal</h5>
+<ul>
+<li><a href="https://opencagedata.com/gdpr">GDPR / Privacy</a></li>
+<li><a href="https://opencagedata.com/terms">Terms &amp; Conditions</a></li>
+<li><a href="https://opencagedata.com/security-policy">Security Policy</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h5>OpenCage GmbH</h5>
+<p>
+Philipsbornstr. 2
+<br>
+30165 Hannover
+<br>
+Germany
+</p>
+<p>
+Company Reg. Hannover HRB 222547
+<br>
+VAT Reg No: DE323788688
+</p>
+<p>
+<a class="btn btn-outline-primary" href="https://opencagedata.com/contact">Contact Us</a>
+</p>
+<p>
+Proud corporate members of:
+</p>
+<ul class="disc">
+<li class="ml1">the OpenStreetMap Foundation</li>
+<li class="ml1">Association for Geoinformatics, GeoIT and Navigation e.V.</li>
+<li class="ml1">FOSSGIS e.V.</li>
+<li class="ml1">the OpenStreetMap UK CIC</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12">
+<div class="copyright">
+© 2013-2022 OpenCage GmbH
+</div>
+</div>
+</div>
+</div>
+
+</footer>
+<script src="OpenCage%20Geocoding%20API%20Java%20Tutorial_files/application-40f8197e01f2856d871b7c83116a05ffac3de73e941b2a2a920eb650eb0fbb29.js.download"></script>
+
+
+<script src="OpenCage%20Geocoding%20API%20Java%20Tutorial_files/script.js.download" defer="defer" data-site="UMKIX"></script>
+
+
+
+
+</body></html>

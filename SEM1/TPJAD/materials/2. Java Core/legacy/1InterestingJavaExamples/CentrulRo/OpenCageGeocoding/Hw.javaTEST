@@ -1,0 +1,28 @@
+import com.byteowls.jopencage.*;
+import com.byteowls.jopencage.model.*;
+import org.slf4j.*;
+public class Hw { 
+    public static void main(String[] args) {
+        System.out.println("Hello JOpenCage");
+        JOpenCageGeocoder jOpenCageGeocoder = 
+            new JOpenCageGeocoder("4769666a5a524068ae426602be567766");
+        //JOpenCageReverseRequest request = new JOpenCageReverseRequest(-22.6792, 14.5272);
+        JOpenCageReverseRequest request = new JOpenCageReverseRequest(46.76759136390458, 23.553502986625574);
+        //JOpenCageReverseRequest request = new JOpenCageReverseRequest(46.76648255526851, 23.552990743982313);
+        //JOpenCageReverseRequest request = new JOpenCageReverseRequest(46.123194401220395, 24.82131233169686);
+        //JOpenCageReverseRequest request = new JOpenCageReverseRequest(46.74364944050392, 23.43375680388741);
+        //JOpenCageReverseRequest request = new JOpenCageReverseRequest(46.78256616946208, 23.64246649574403);
+        //JOpenCageReverseRequest request = new JOpenCageReverseRequest(46.75087756323903, 23.518956135222115);
+        request.setNoAnnotations(true);
+        JOpenCageResponse response = jOpenCageGeocoder.reverse(request);
+        String res = response.getResults().get(0).getFormatted();
+        System.out.println(res);
+    }
+}
+//-22.6792, 14.5272 Beryl's Restaurant, Woermann St, Swakopmund 22001, Namibia
+//46.76759136390458, 23.553502986625574 Strada Profesor Tudor Ciortea 16, 400317 Cluj-Napoca, Romania
+//46.76648255526851, 23.552990743982313 GANG 7, 400317 Cluj-Napoca, Romania
+//46.123194401220395, 24.82131233169686 unnamed road, 547040 Apold, Romania
+//46.74364944050392, 23.43375680388741 M - ?coala Luna Sud, Strada Principal?, 407281 Luna de Sus, Romania
+//46.78256616946208, 23.64246649574403 Monumentul Maghiarilor din Ardeal, Strada Ghime?ului, 400601 Cluj-Napoca, Romania
+//46.75087756323903, 23.518956135222115 Strada Avram Iancu, 400520 Flore?ti, Romania

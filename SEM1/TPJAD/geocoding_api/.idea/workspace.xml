@@ -5,44 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="394f95fc-f415-4bed-95b2-c085411b7732" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../filter_forecasts/src/main/java/com/filter_forecasts/filter_forecasts/FilterForecastsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/GeocodingServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/models/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/models/Forecast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../run_proj_instructions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/java/com/weather_app/weather_api/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/java/com/weather_app/weather_api/WeatherAPIServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/WEB-INF/classes/com/weather_app/weather_api/GeocodingServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/WEB-INF/classes/com/weather_app/weather_api/HelloServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_api/src/main/webapp/weather_app.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../weather_validations_app/src/main/java/com/weather_validations_app/weather_validations_app/ValidationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed_dbs_proj/src/main/java/org/example/distributed_dbs_proj/services/ChampionshipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed_dbs_proj/src/main/java/org/example/distributed_dbs_proj/services/ChampionshipService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed_dbs_proj/src/main/java/org/example/distributed_dbs_proj/services/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed_dbs_proj/src/main/java/org/example/distributed_dbs_proj/services/TeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distributed_dbs_proj/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../distributed_dbs_proj/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../filter_forecasts/src/main/java/com/filter_forecasts/filter_forecasts/models/Forecast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../weather_app/src/main/java/com/example/weather_app/ForecastsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../weather_app/src/main/java/com/example/weather_app/WeatherServiceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../weather_app/src/main/java/com/example/weather_app/models/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../weather_app/src/main/java/com/example/weather_app/models/Forecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../filter_forecasts/src/main/java/com/filter_forecasts/filter_forecasts/FilterForecastsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../filter_forecasts/src/main/java/com/filter_forecasts/filter_forecasts/FilterForecastsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/GeocodingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/GeocodingServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_api/src/main/java/com/weather_app/weather_api/WeatherAPIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../weather_api/src/main/java/com/weather_app/weather_api/WeatherAPIServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/src/main/java/com/weather_validations_app/weather_validations_app/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/src/main/java/com/weather_validations_app/weather_validations_app/ValidationServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather_validations_app/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +66,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/UBB_Master_DistributedSystemsInInternet/SEM1/TPJAD/geocoding_api/src/main/java/com/weather_app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UBB_Master_DistributedSystemsInInternet/SEM1/TPJAD/geocoding_api&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -142,7 +130,10 @@
       <updated>1759761280660</updated>
       <workItem from="1759761281841" duration="10759000" />
       <workItem from="1759843668619" duration="619000" />
-      <workItem from="1761116273066" duration="18028000" />
+      <workItem from="1761116273066" duration="21050000" />
+      <workItem from="1761218089486" duration="6326000" />
+      <workItem from="1761292450369" duration="2087000" />
+      <workItem from="1761295361956" duration="3271000" />
     </task>
     <servers />
   </component>

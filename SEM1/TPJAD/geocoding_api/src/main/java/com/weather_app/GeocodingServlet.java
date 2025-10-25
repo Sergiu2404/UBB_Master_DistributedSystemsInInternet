@@ -3,6 +3,7 @@ package com.weather_app;
 import com.weather_app.models.Coordinates;
 import com.weather_app.models.Forecast;
 import jakarta.json.*;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -103,7 +104,7 @@ public class GeocodingServlet extends HttpServlet {
         }
     }
 
-    private List<Forecast> getFilteredForecastsFrom(JsonObject forecastsJsonObject) throws IOException {
+    private List<Forecast> getFilteredForecasts(JsonObject forecastsJsonObject) throws IOException {
         URL filterForecastsServletURL = new URL("http://localhost:8083/filter_forecasts/filter_forecasts");
         HttpURLConnection filterForecastsConnection = (HttpURLConnection) filterForecastsServletURL.openConnection();
 
@@ -142,36 +143,106 @@ public class GeocodingServlet extends HttpServlet {
                 JsonObject obj = v.asJsonObject();
                 filteredForecasts.add(new Forecast(
                         obj.getString("date"),
-                        obj.getJsonNumber("max").doubleValue(),
-                        obj.getJsonNumber("min").doubleValue()
+                        obj.getJsonNumber("min").doubleValue(),
+                        obj.getJsonNumber("max").doubleValue()
                 ));
             }
             return filteredForecasts;
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String location = request.getParameter("location");
-        if(location == null || location.isEmpty())
-        {
-            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            response.getWriter().println("Please enter a location");
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+//        String location = request.getParameter("location");
+//        String minParam = request.getParameter("min_temp");
+//        String maxParam = request.getParameter("max_temp");
+//
+//        Double minTemp = null;
+//        Double maxTemp = null;
+//
+//        if (minParam != null && !minParam.isEmpty()) {
+//            minTemp = Double.parseDouble(minParam);
+//        }
+//        if (maxParam != null && !maxParam.isEmpty()) {
+//            maxTemp = Double.parseDouble(maxParam);
+//        }
+//
+//
+//        if(location == null || location.isEmpty())
+//        {
+//            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+//            response.getWriter().println("Please enter a location");
+//            return;
+//        }
+//
+//        try{
+//            Coordinates coordinates = this.getGeocodingAPIData(location);
+//            double latitude = coordinates.getLatitude();
+//            double longitude = coordinates.getLongitude();
+//
+//            JsonObject forecastsObject = this.getWeatherAPIDataFromServlet(longitude, latitude);
+//            JsonObjectBuilder builder = Json.createObjectBuilder(forecastsObject);
+//
+//            builder.add("userMinTemp", minTemp);
+//            builder.add("userMaxTemp", maxTemp);
+//
+//            forecastsObject = builder.build();
+//            List<Forecast> filteredForecasts = this.getFilteredForecastsFrom(forecastsObject);
+//
+//            request.setAttribute("filteredForecasts", filteredForecasts);
+//            request.setAttribute("location", location);
+//
+//            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+//            dispatcher.forward(request, response);
+//
+//        } catch(Exception exception){
+//            response.getWriter().println("Getting data form APIs went wrong: " + exception.getMessage());
+//            return;
+//        }
+//    }
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    String location = request.getParameter("location");
+    String minParam = request.getParameter("min_temp");
+    String maxParam = request.getParameter("max_temp");
+
+    Double minTemp = null;
+    Double maxTemp = null;
+
+    try {
+        if (location == null || location.isEmpty()) {
+            request.setAttribute("error", "Please enter a location.");
+            forwardToIndex(request, response);
             return;
         }
 
-        try{
-            Coordinates coordinates = this.getGeocodingAPIData(location);
-            double latitude = coordinates.getLatitude();
-            double longitude = coordinates.getLongitude();
+        if (minParam != null && !minParam.isEmpty()) minTemp = Double.parseDouble(minParam);
+        if (maxParam != null && !maxParam.isEmpty()) maxTemp = Double.parseDouble(maxParam);
 
-            JsonObject forecastsObject = this.getWeatherAPIDataFromServlet(longitude, latitude);
-            List<Forecast> filteredForecasts = this.getFilteredForecastsFrom(forecastsObject);
+        Coordinates coordinates = this.getGeocodingAPIData(location);
+        JsonObject forecastsObject = this.getWeatherAPIDataFromServlet(
+                coordinates.getLongitude(),
+                coordinates.getLatitude()
+        );
 
+        List<Forecast> filteredForecasts = this.getFilteredForecasts(
+                forecastsObject,
+                minTemp,
+                maxTemp
+        );
 
-        } catch(Exception exception){
-            response.getWriter().println("Getting data form APIs went wrong: " + exception.getMessage());
-            return;
-        }
+        request.setAttribute("filteredForecasts", filteredForecasts);
+        request.setAttribute("location", location);
 
+        forwardToIndex(request, response);
+
+    } catch (Exception e) {
+        request.setAttribute("error", "Something went wrong: " + e.getMessage());
+        forwardToIndex(request, response);
+    }
+}
+
+    private void forwardToIndex(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        dispatcher.forward(request, response);
     }
 }

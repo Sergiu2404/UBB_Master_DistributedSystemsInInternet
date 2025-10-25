@@ -1,0 +1,7 @@
+apply plugin: 'java'
+repositories {mavenCentral()}
+repositories { jcenter()}
+dependencies { compile 'mysql:mysql-connector-java:+', 'org.hibernate:hibernate-core:+' }
+jar { from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) }
+//java -cp build/libs/mysql+hibernate.jar Load <in.txt
+//java -cp build/libs/mysql+hibernate.jar Consult numeSectie varstaMinima

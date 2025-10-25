@@ -1,0 +1,22 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java"
+        copy { from "Set.java" into "src/main/java" }
+        copy { from "Pagini.java" into "src/main/java" }
+        copy { from "BigSieve.java" into "src/main/java" }
+    }
+}
+apply plugin: 'java'
+repositories { jcenter() }
+repositories { mavenCentral() }
+jar { archiveName = "BigSieve.jar" 
+    manifest { attributes 'Main-Class': 'BigSieve' }
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}

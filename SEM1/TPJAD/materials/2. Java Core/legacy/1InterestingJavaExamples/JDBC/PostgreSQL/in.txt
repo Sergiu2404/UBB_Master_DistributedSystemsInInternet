@@ -1,0 +1,12 @@
+S|turnatorie|Sectie proasta
+S|servere|Numai pentru cine stie
+S|avioane|Pentru amatori
+A|pop|30|turnatorie|bun
+A|stan|15|turnatorie|f.b
+A|vasile|60|turnatorie|Habar nu am
+A|ion|50|turnatorie|rau de tot
+A|gheorghe|30|turnatorie|Hmm
+A|steff|21|servere|BUN (la prima vedere)
+A|adi|31|servere|satisfacator
+A|gabi|45|servere|acceptabil spre bun
+A|fraier|25|avioane|Numai un fraier se angajeaza aici

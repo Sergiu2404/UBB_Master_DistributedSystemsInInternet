@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="integration-test" />
+        <module name="hello (4)" />
+        <module name="hello-web (1)" />
+        <module name="hello-service" />
+        <module name="hello-service (2)" />
+        <module name="hello (1)" />
+        <module name="hello-service (1)" />
+        <module name="hello-web" />
+        <module name="hello-util" />
+        <module name="hello-util (2)" />
+        <module name="hello-util (1)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

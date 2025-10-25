@@ -1,0 +1,30 @@
+
+['arii.py', 'east=24.36', 'west=22.45', 'south=46.33', 'north=47.46', 'step=0.05', 'key=admin1', 'value=Cluj']
+m 26 n 42
+Loading formatted geocoded file...
+Aria: 5574.077109739133
+Centrul: 46.814162215643336 23.55739575182364 [{'lat': '46.8', 'lon': '23.51667', 'name': 'Baciu', 'admin1': 'Cluj', 'admin2': 'Comuna Baciu', 'cc': 'RO'}]
+
+['arii.py', 'east=30.0', 'west=20.0', 'south=43.0', 'north=49.0', 'step=0.5', 'key=cc', 'value=RO']
+m 16 n 24
+Loading formatted geocoded file...
+Aria: 229857.0058617488
+Centrul: 45.688159063467566 25.53319804790306 [{'lat': '45.66667', 'lon': '25.5', 'name': 'Ghimbav', 'admin1': 'Brasov', 'admin2': 'Comuna Ghimbav', 'cc': 'RO'}]
+
+['arii.py', 'east=30.0', 'west=20.0', 'south=43.0', 'north=49.0', 'step=0.05', 'key=cc', 'value=RO']
+m 124 n 204
+Loading formatted geocoded file...
+Aria: 259207.49091189465
+Centrul: 45.71794068116372 25.318473137673635 [{'lat': '45.69457', 'lon': '25.24348', 'name': 'Sinca Noua', 'admin1': 'Brasov', 'admin2': 'Comuna Sinca Noua', 'cc': 'RO'}]
+
+['arii.py', 'east=30.0', 'west=20.0', 'south=43.0', 'north=49.0', 'step=0.005', 'key=cc', 'value=RO']
+m 1204 n 2004
+Loading formatted geocoded file...
+Aria: 263203.05146405805
+Centrul: 45.7242750067169 25.28201859208745 [{'lat': '45.69457', 'lon': '25.24348', 'name': 'Sinca Noua', 'admin1': 'Brasov', 'admin2': 'Comuna Sinca Noua', 'cc': 'RO'}]
+
+['arii.py', 'east=30.0', 'west=20.0', 'south=43.0', 'north=49.0', 'step=0.0025', 'key=cc', 'value=RO']
+m 2404 n 4004
+Loading formatted geocoded file...
+Aria: 263418.4221584224
+Centrul: 45.724593697890974 25.28029509522292 [{'lat': '45.69457', 'lon': '25.24348', 'name': 'Sinca Noua', 'admin1': 'Brasov', 'admin2': 'Comuna Sinca Noua', 'cc': 'RO'}]

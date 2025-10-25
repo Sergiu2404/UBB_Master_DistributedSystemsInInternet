@@ -1,0 +1,101 @@
+m 7 6.800000000000002 n 14 13.333333333333334
+(0,0) lat=48.5, lon=20.0 2777, 980 26 Kraskovo, Slovakia
+(0,1) lat=48.5, lon=20.75 Bódvarákó, 3764, Hungary
+(0,2) lat=48.5, lon=21.5 Füzérkajata, Borsod-Abaúj-Zemplén, Hungary
+(0,3) lat=48.5, lon=22.25 Siurte Rural Hromada, Uzhhorod Raion, Ukraine
+(0,4) lat=48.5, lon=23.0 Svaliava Urban Hromada, Mukachevo Raion, Ukraine
+(0,5) lat=48.5, lon=23.75 Kolochava Rural Hromada, Khust Raion, Ukraine
+(0,6) lat=48.5, lon=24.5 Deliatyn Settlement Hromada, Nadvirna Raion, Ukraine
+(0,7) lat=48.5, lon=25.25 unnamed road, Kolomyia Raion, Borshchivska Turka, 78317, Ukraine
+(0,8) lat=48.5, lon=26.0 Chernivtsi Raion, Dobrynivtsi, 59444, Ukraine
+(0,9) lat=48.5, lon=26.75 unnamed road, Dnistrovskyi Raion, Lenkivtsi, 60111, Ukraine
+(0,10) lat=48.5, lon=27.5 unnamed road, Mohyliv-Podilskyi Raion, Bernashivka, 24022, Ukraine
+(0,11) lat=48.5, lon=28.25 unnamed road, Mohyliv-Podilskyi Raion, Borivka, 24123, Ukraine
+(0,12) lat=48.5, lon=29.0 unnamed road, Haisyn Raion, Kytaihorod, 24335, Ukraine
+(0,13) lat=48.5, lon=29.75 unnamed road, Haisyn Raion, Dzhulynka Rural Hromada, 24430, Ukraine
+(1,0) lat=47.75, lon=20.0 Visonta, 3271, Hungary
+(1,1) lat=47.75, lon=20.75 Szentistván, 3418, Hungary
+(1,2) lat=47.75, lon=21.5 Hajdúböszörmény, Krúdy Gyula utca, 4086, Hungary
+(1,3) lat=47.75, lon=22.25 Bátorliget, 49149, 4343, Hungary
+(1,4) lat=47.75, lon=23.0 447118 Corod, Romania
+(1,5) lat=47.75, lon=23.75 Maramure?, Romania
+(1,6) lat=47.75, lon=24.5 Vi?eu de Sus, Maramure?, Romania
+(1,7) lat=47.75, lon=25.25 DJ176A, 727330 Izvoarele Sucevei, Romania
+(1,8) lat=47.75, lon=26.0 DC42B, 727320 Iaslov??, Romania
+(1,9) lat=47.75, lon=26.75 717356 Sili?tea, Romania
+(1,10) lat=47.75, lon=27.5 Glodeni-Du?mani, MD-4901 Glodeni, Moldova
+(1,11) lat=47.75, lon=28.25 Flore?ti District, Moldova
+(1,12) lat=47.75, lon=29.0 unnamed road, MD-5507 Rybnitsa, Moldova
+(1,13) lat=47.75, lon=29.75 ?????????? ?????? ???????, Podilsk Raion, Ukraine
+(2,0) lat=47.0, lon=20.0 Tiszakécske, Sárhalom d?l?, 6060, Hungary
+(2,1) lat=47.0, lon=20.75 Gyomaendr?d, unnamed road, 5502, Hungary
+(2,2) lat=47.0, lon=21.5 Vegyesbolt, Komádi, Munkás utca, 4138, Hungary
+(2,3) lat=47.0, lon=22.25 417623 ?erghi?, Romania
+(2,4) lat=47.0, lon=23.0 457051 Bogdana, Romania
+(2,5) lat=47.0, lon=23.75 407251 Bârlea, Romania
+(2,6) lat=47.0, lon=24.5 unnamed road, 427153 M?ri?elu, Romania
+(2,7) lat=47.0, lon=25.25 Stânceni, Mure?, Romania
+(2,8) lat=47.0, lon=26.0 Bicaz, Neam?, Romania
+(2,9) lat=47.0, lon=26.75 unnamed road, 617178 Cârlig, Romania
+(2,10) lat=47.0, lon=27.5 Mogo?e?ti, Ia?i, Romania
+(2,11) lat=47.0, lon=28.25 Hînce?ti District, Moldova
+(2,12) lat=47.0, lon=29.0 unnamed road, Moldova
+(2,13) lat=47.0, lon=29.75 Rozdilna Raion, Maloploske, 67141, Ukraine
+(3,0) lat=46.25, lon=20.0 Domaszék - József Attila utca, Domaszék, József Attila utca, 6781, Hungary
+(3,1) lat=46.25, lon=20.75 315500 N?dlac, Romania
+(3,2) lat=46.25, lon=21.5 Vladimirescu, Arad, Romania
+(3,3) lat=46.25, lon=22.25 317152 Muste?ti, Romania
+(3,4) lat=46.25, lon=23.0 unnamed road, 517253 Bogle?ti, Romania
+(3,5) lat=46.25, lon=23.75 517587 Me?creac, Romania
+(3,6) lat=46.25, lon=24.5 unnamed road, 547057 Bahnea, Romania
+(3,7) lat=46.25, lon=25.25 DJ137A, 537344 O?eni, Romania
+(3,8) lat=46.25, lon=26.0 Harghita, Romania
+(3,9) lat=46.25, lon=26.75 Strada Sfin?ii Apostoli, 601095 One?ti, Romania
+(3,10) lat=46.25, lon=27.5 DJ243E, 737135 Coroie?ti, Romania
+(3,11) lat=46.25, lon=28.25 Hîrtop, Cantemir District, Moldova
+(3,12) lat=46.25, lon=29.0 Bolhrad Raion, Pidhirne, 68524, Ukraine
+(3,13) lat=46.25, lon=29.75 ??????????? ???????? ???????, Bilhorod-Dnistrovskyi Raion, Ukraine
+(4,0) lat=45.5, lon=20.0 21238 Zabalj Municipality, Serbia
+(4,1) lat=45.5, lon=20.75 ?????? ??????, Zitiste Municipality, Central Banat Administrative District, Serbia
+(4,2) lat=45.5, lon=21.5 DJ592A, 307430 Tormac, Romania
+(4,3) lat=45.5, lon=22.25 327286 Ciuta, Romania
+(4,4) lat=45.5, lon=23.0 337429 Râu Mic, Romania
+(4,5) lat=45.5, lon=23.75 Voineasa, Vâlcea, Romania
+(4,6) lat=45.5, lon=24.5 Izvor, Peri?ani, Vâlcea, Romania
+(4,7) lat=45.5, lon=25.25 unnamed road, 507136 Fundata, Romania
+(4,8) lat=45.5, lon=26.0 BA, Vama Buz?ului, Romania
+(4,9) lat=45.5, lon=26.75 DJ204C, 127545 S?rule?ti, Romania
+(4,10) lat=45.5, lon=27.5 DN23, 627190 M?ic?ne?ti, Romania
+(4,11) lat=45.5, lon=28.25 ????????? ?????? ???????, Izmail Raion, Ukraine
+(4,12) lat=45.5, lon=29.0 Safiany Rural Hromada, Izmail Raion, Ukraine
+(4,13) lat=45.5, lon=29.75 Odesa Oblast, Ukraine
+(5,0) lat=44.75, lon=20.0 Pecinci Municipality, Srem Administrative District, Serbia
+(5,1) lat=44.75, lon=20.75 ??????? ?????????, ????? ????? ?????, 26230 Pancevo City, Serbia
+(5,2) lat=44.75, lon=21.5 HMZ Srbije, Požareva?ki put 37, 12220 Veliko Gradiste, Serbia
+(5,3) lat=44.75, lon=22.25 227195 E?elni?a, Romania
+(5,4) lat=44.75, lon=23.0 unnamed road, 227076 Bro?teni, Romania
+(5,5) lat=44.75, lon=23.75 217192 H?l?nge?ti, Romania
+(5,6) lat=44.75, lon=24.5 Spineni, Olt, Romania
+(5,7) lat=44.75, lon=25.25 DC91A, 137172 Crângurile de Jos, Romania
+(5,8) lat=44.75, lon=26.0 unnamed road, 107431 C?rbunari, Romania
+(5,9) lat=44.75, lon=26.75 927160 Manasia, Romania
+(5,10) lat=44.75, lon=27.5 Scânteia, Ialomi?a, Romania
+(5,11) lat=44.75, lon=28.25 Saraiu, Constan?a, Romania
+(5,12) lat=44.75, lon=29.0 Jurilovca, Tulcea, Romania
+(5,13) lat=44.75, lon=29.75 Romania
+(6,0) lat=44.0, lon=20.0 unnamed road, Kosjeric Municipality, Serbia
+(6,1) lat=44.0, lon=20.75 unnamed road, Knic Municipality, Serbia
+(6,2) lat=44.0, lon=21.5 unnamed road, Cuprija Municipality, Serbia
+(6,3) lat=44.0, lon=22.25 Zajecar City, Zajecar Administrative District, Serbia
+(6,4) lat=44.0, lon=23.0 Strada Câmpului, 205201 Calafat, Romania
+(6,5) lat=44.0, lon=23.75 Valea Stanciului, Dolj, Romania
+(6,6) lat=44.0, lon=24.5 237490 Traian, Romania
+(6,7) lat=44.0, lon=25.25 DN6, 147050 Buzescu, Romania
+(6,8) lat=44.0, lon=26.0 Plop?oru, Giurgiu, Romania
+(6,9) lat=44.0, lon=26.75 Bogdantsi, Silistra, Bulgaria
+(6,10) lat=44.0, lon=27.5 unnamed road, Kaynardzha, Bulgaria
+(6,11) lat=44.0, lon=28.25 907031 Casicea, Romania
+(6,12) lat=44.0, lon=29.0 Black Sea
+(6,13) lat=44.0, lon=29.75 Black Sea
+31 partial areas. Total area: 75482.48766504286
+Center: lat=45.7822902807264, lon=24.853420114778245 unnamed road, 507268 Voivodeni, Romania

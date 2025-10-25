@@ -1,0 +1,25 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java"
+        copy { from "P.java" into "src/main/java" }
+        copy { from "HaversineDistance.java" into "src/main/java" }
+        copy { from "CenterRo.java" into "src/main/java" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies { 
+    implementation 'com.byteowls:jopencage:+','org.slf4j:slf4j-simple:+'
+}
+jar {
+    manifest { attributes 'Main-Class': 'CenterRo' }
+    from(configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) })
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}

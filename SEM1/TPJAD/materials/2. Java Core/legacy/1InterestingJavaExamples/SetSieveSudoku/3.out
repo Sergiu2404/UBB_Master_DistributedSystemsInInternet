@@ -1,0 +1,1359 @@
+Alfabet: ACDEILORX
+
+Harta grupurilor de celule: 
+
+aaaabbbbc
+aaaabbbcc
+addebbccc
+dddeeefcc
+gdddefffc
+ggdeeefff
+ggghheffi
+gghhhiiii
+ghhhhiiii
+
+Partial 0, parinte -1, total 0, active 1. Problema initiala
+
+-R---E-I-
+--X--O-D-
+-X--DA---
+--R-I---C
+CLE-O-RA-
+----C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,C,D,L,O,X]
+ml[1]= [A,C,E,I,L,R]
+ml[2]= [C,E,I,L,O,R]
+ml[3]= [A,D,E,L,O,X]
+ml[4]= [D,I,X]
+ml[5]= [A,D,E,I,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [A,D,E,I,L,O,R,X]
+mc[1]= [D,E,I,O]
+mc[2]= [A,C,D,I,L,O]
+mc[3]= [A,C,D,E,L,O]
+mc[4]= [E,L,R,X]
+mc[5]= [C,D,I,L,R,X]
+mc[6]= [A,C,D,E,I,L]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R,X]
+
+mg[a]= [A,C,D,E,I,L,O]
+mg[b]= [C,L,R,X]
+mg[c]= [A,E,I,L,O,R,X]
+mg[d]= [A,C,D,I,O]
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,I,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 0, parinte -1, total 2, active 3. Ramificare in (0,4) cu [L,X]
+
+-R---E-I-
+--X--O-D-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,C,D,L,O,X]
+ml[1]= [A,C,E,I,L,R]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L,O]
+mc[3]= [A,C,E,L,O]
+mc[4]= [E,L,R,X]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,C,D,E,I,L]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R]
+
+mg[a]= [A,C,D,E,I,L,O]
+mg[b]= [C,L,R,X]
+mg[c]= [A,E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 2, parinte 0, total 4, active 4. Ramificare in (0,6) cu [C,L]
+
+-R--XE-I-
+--X--O-D-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,C,D,L,O]
+ml[1]= [A,C,E,I,L,R]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L,O]
+mc[3]= [A,C,E,L,O]
+mc[4]= [E,L,R]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,C,D,E,I,L]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R]
+
+mg[a]= [A,C,D,E,I,L,O]
+mg[b]= [C,L,R]
+mg[c]= [A,E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 1, parinte 0, total 4, active 3. ESEC nr: 1
+
+-R--LECI-
+--X--O-D-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,D,O,X]
+ml[1]= [A,C,E,I,L,R]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L,O]
+mc[3]= [A,C,E,L,O]
+mc[4]= [E,R,X]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I,L]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R]
+
+mg[a]= [A,C,D,E,I,L,O]
+mg[b]= [R,X]
+mg[c]= [A,E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 4, parinte 2, total 6, active 4. Ramificare in (0,0) cu [D,O]
+
+-R--XELI-
+--X-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,C,D,O]
+ml[1]= [A,E,I,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L,O]
+mc[3]= [A,C,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R]
+
+mg[a]= [A,C,D,E,I,L,O]
+mg[b]= []
+mg[c]= [A,E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 3, parinte 2, total 8, active 5. Ramificare in (1,0) cu [E,I]
+
+-R--XECI-
+--X-ROLD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,D,L,O]
+ml[1]= [A,C,E,I]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L,O]
+mc[3]= [A,C,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R]
+
+mg[a]= [A,C,D,E,I,L,O]
+mg[b]= []
+mg[c]= [A,E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 6, parinte 4, total 8, active 4. ESEC nr: 2
+
+ORDCXELIA
+--X-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+--OXA--C-
+-ALR--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= [A,E,I,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,R]
+ml[7]= [C,D,E,I,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,I,L,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,O,R]
+
+mg[a]= [A,E,I,L]
+mg[b]= []
+mg[c]= [E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,R,X]
+mg[h]= [D,E,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 5, parinte 4, total 10, active 5. Ramificare in (0,2) cu [A,O]
+
+DR--XELI-
+--X-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,C,O]
+ml[1]= [A,E,I,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L,O]
+mc[3]= [A,C,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,O,R]
+
+mg[a]= [A,C,E,I,L,O]
+mg[b]= []
+mg[c]= [A,E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 8, parinte 3, total 12, active 6. Ramificare in (0,8) cu [L,O]
+
+-R--XECI-
+IEXCROLDA
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-I-XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,D,L,O]
+ml[1]= []
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,L,O,R,X]
+mc[1]= []
+mc[2]= [A,D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,O,R]
+
+mg[a]= [A,D,L,O]
+mg[b]= []
+mg[c]= [E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 7, parinte 3, total 14, active 7. Ramificare in (0,8) cu [L,O]
+
+-R--XECI-
+EIXCROLDA
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,D,L,O]
+ml[1]= []
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,I,L,O,R,X]
+mc[1]= [D,E]
+mc[2]= [A,D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,O,R]
+
+mg[a]= [A,D,L,O]
+mg[b]= []
+mg[c]= [E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 12, parinte 8, total 16, active 8. Ramificare in (0,0) cu [D,L]
+
+-R--XECIO
+IEXCROLDA
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-I-XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,D,L]
+ml[1]= []
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,L,O,R,X]
+mc[1]= []
+mc[2]= [A,D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= [A,D,L,O]
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 10, parinte 5, total 18, active 9. Ramificare in (1,1) cu [E,I]
+
+DROCXELIA
+--X-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= [A,E,I,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [A,D,L]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,O,R]
+
+mg[a]= [A,E,I,L]
+mg[b]= []
+mg[c]= [E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 11, parinte 8, total 18, active 8. ESEC nr: 3
+
+DRAOXECIL
+IEXCROLDA
+LXCEDAIOR
+AORLIXDEC
+CLEDOIRAX
+-DIACRXL-
+-I-XADEC-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= []
+ml[3]= []
+ml[4]= []
+ml[5]= [E,O]
+ml[6]= [L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,O,R,X]
+mc[1]= []
+mc[2]= [D,L,O]
+mc[3]= []
+mc[4]= [E,L]
+mc[5]= [C,L]
+mc[6]= [A]
+mc[7]= [X]
+mc[8]= [D,E,I,O]
+
+mg[a]= []
+mg[b]= []
+mg[c]= []
+mg[d]= []
+mg[e]= []
+mg[f]= [O]
+mg[g]= [E,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 9, parinte 5, total 20, active 9. Ramificare in (1,1) cu [E,I]
+
+DRACXELIO
+--X-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= [A,E,I,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,L,O,R,X]
+mc[1]= [D,E,I]
+mc[2]= [D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,R]
+
+mg[a]= [E,I,L,O]
+mg[b]= []
+mg[c]= [A,E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 14, parinte 7, total 22, active 10. Ramificare in (0,0) cu [D,L]
+
+-R--XECIO
+EIXCROLDA
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,D,L]
+ml[1]= []
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,I,L,O,R,X]
+mc[1]= [D,E]
+mc[2]= [A,D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= [A,D,L,O]
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 16, parinte 12, total 22, active 9. ESEC nr: 4
+
+LRDAXECIO
+IEXCROLDA
+OXC-DA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-IOXA--C-
+-ALR--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [E,I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,L,R]
+ml[7]= [C,D,E,I,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,E,R,X]
+mc[1]= []
+mc[2]= [A]
+mc[3]= [E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,L,R,X]
+mg[h]= [D,E,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 17, parinte 10, total 22, active 8. ESEC nr: 5
+
+DROCXELIA
+-EX-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-ILXA--C-
+-ADR--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= [A,I,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,O,R]
+ml[7]= [C,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,L,O,R,X]
+mc[1]= []
+mc[2]= [A]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,O,R]
+
+mg[a]= [A,I,L]
+mg[b]= []
+mg[c]= [E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,O,R,X]
+mg[h]= [E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 15, parinte 12, total 25, active 11. Ramificare in (0,2) cu [A,L]
+
+DR--XECIO
+IEXCROLDA
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-I-XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,L]
+ml[1]= []
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,L,O,R,X]
+mc[1]= []
+mc[2]= [A,D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= [A,L,O]
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 19, parinte 9, total 25, active 10. ESEC nr: 6
+
+DRACXELIO
+IEXLROCDA
+OXCEDA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,L,R,X]
+mc[1]= [D,I]
+mc[2]= [D,L,O]
+mc[3]= [A,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 20, parinte 9, total 27, active 11. Ramificare in (1,0) cu [E,L]
+
+DRACXELIO
+-IX-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= [A,E,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,L,O,R,X]
+mc[1]= [D,E]
+mc[2]= [D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [A,D,E,I,L,R]
+
+mg[a]= [E,L,O]
+mg[b]= []
+mg[c]= [A,E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 13, parinte 7, total 27, active 10. SOLUTIA nr: 1
+
+DRAOXECIL
+EIXCROLDA
+LXCEDAIOR
+AORLIXDEC
+CLEDOIRAX
+REIACDXLO
+ODLXARECI
+IADRLCOXE
+XCOIELARD
+
+ml[0]= []
+ml[1]= []
+ml[2]= []
+ml[3]= []
+ml[4]= []
+ml[5]= []
+ml[6]= []
+ml[7]= []
+ml[8]= []
+
+mc[0]= []
+mc[1]= []
+mc[2]= []
+mc[3]= []
+mc[4]= []
+mc[5]= []
+mc[6]= []
+mc[7]= []
+mc[8]= []
+
+mg[a]= []
+mg[b]= []
+mg[c]= []
+mg[d]= []
+mg[e]= []
+mg[f]= []
+mg[g]= []
+mg[h]= []
+mg[i]= []
+
+Partial 18, parinte 10, total 28, active 9. Ramificare in (1,0) cu [E,L]
+
+DROCXELIA
+-IX-ROCD-
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= [A,E,L]
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,L,O,R,X]
+mc[1]= [D,E]
+mc[2]= [A,D,L]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,O,R]
+
+mg[a]= [A,E,L]
+mg[b]= []
+mg[c]= [E,I,L,O,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 21, parinte 14, total 30, active 10. Ramificare in (0,2) cu [A,L]
+
+DR--XECIO
+EIXCROLDA
+-XC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= [A,L]
+ml[1]= []
+ml[2]= [E,I,L,O,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [I,L,O,R,X]
+mc[1]= [D,E]
+mc[2]= [A,D,L,O]
+mc[3]= [A,E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= [A,L,O]
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 22, parinte 14, total 30, active 9. ESEC nr: 7
+
+LRDAXECIO
+EIXCROLDA
+OXC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+--OXA--C-
+-ALR--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [E,I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,R]
+ml[7]= [C,D,E,I,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [D,I,R,X]
+mc[1]= [D,E]
+mc[2]= [A]
+mc[3]= [E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,R,X]
+mg[h]= [D,E,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 24, parinte 15, total 30, active 8. ESEC nr: 8
+
+DRALXECIO
+IEXCROLDA
+OXCEDA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-I-XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,L,R,X]
+mc[1]= []
+mc[2]= [D,L,O]
+mc[3]= [A,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 25, parinte 15, total 30, active 7. ESEC nr: 9
+
+DRLAXECIO
+IEXCROLDA
+OXC-DA---
+AOR-I---C
+CLEDOIRAX
+-DI-C-X--
+-IOXA--C-
+-ADR--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [E,I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,E,L,O,R]
+ml[6]= [D,E,L,R]
+ml[7]= [C,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,L,R,X]
+mc[1]= []
+mc[2]= [A]
+mc[3]= [E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [E,L,R,X]
+mg[h]= [E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 26, parinte 20, total 30, active 6. ESEC nr: 10
+
+DRACXELIO
+EIXLROCDA
+OXCEDA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [I,L,R,X]
+mc[1]= [D,E]
+mc[2]= [D,L,O]
+mc[3]= [A,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 27, parinte 20, total 30, active 5. ESEC nr: 11
+
+DRACXELIO
+LIXEROCDA
+OXCLDA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [E,I,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [E,I,R,X]
+mc[1]= [D,E]
+mc[2]= [D,L,O]
+mc[3]= [A,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 23, parinte 18, total 30, active 4. ESEC nr: 12
+
+DROCXELIA
+EIXAROCDL
+LXCEDAIOR
+AORLI---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= []
+ml[3]= [D,E,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [I,O,R,X]
+mc[1]= [D,E]
+mc[2]= [A,D,L]
+mc[3]= [O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E]
+mc[7]= [E,L,X]
+mc[8]= [D,E,I,O]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E]
+mg[d]= []
+mg[e]= [A,D,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 28, parinte 18, total 30, active 3. ESEC nr: 13
+
+DROCXELIA
+LIXAROCDE
+EXCLDAIOR
+AOREI---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= []
+ml[3]= [D,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [I,O,R,X]
+mc[1]= [D,E]
+mc[2]= [A,D,L]
+mc[3]= [O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E]
+mc[7]= [E,L,X]
+mc[8]= [D,I,L,O]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [L]
+mg[d]= []
+mg[e]= [A,D,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 29, parinte 21, total 30, active 2. ESEC nr: 14
+
+DRALXECIO
+EIXCROLDA
+OXCEDA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+---XA--C-
+-A-R--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,O,R]
+ml[7]= [C,D,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [I,L,R,X]
+mc[1]= [D,E]
+mc[2]= [D,L,O]
+mc[3]= [A,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,O,R,X]
+mg[h]= [D,E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partial 30, parinte 21, total 30, active 1. ESEC nr: 15
+
+DRLAXECIO
+EIXCROLDA
+OXC-DA---
+AOR-I---C
+CLEDOIRAX
+--I-C-X--
+--OXA--C-
+-ADR--O--
+-C-I---R-
+
+ml[0]= []
+ml[1]= []
+ml[2]= [E,I,L,R]
+ml[3]= [D,E,L,X]
+ml[4]= []
+ml[5]= [A,D,E,L,O,R]
+ml[6]= [D,E,I,L,R]
+ml[7]= [C,E,I,L,X]
+ml[8]= [A,D,E,L,O,X]
+
+mc[0]= [I,L,R,X]
+mc[1]= [D,E]
+mc[2]= [A]
+mc[3]= [E,L,O]
+mc[4]= [E,L]
+mc[5]= [C,D,L,R,X]
+mc[6]= [A,D,E,I]
+mc[7]= [E,L,O,X]
+mc[8]= [D,E,I,L,R]
+
+mg[a]= []
+mg[b]= []
+mg[c]= [E,I,L,R]
+mg[d]= []
+mg[e]= [A,D,E,L,R,X]
+mg[f]= [D,E,L,O]
+mg[g]= [D,E,I,L,R,X]
+mg[h]= [E,L,O]
+mg[i]= [A,C,D,E,I,L,X]
+
+Partiale 31, esecuri 15, solutii 1

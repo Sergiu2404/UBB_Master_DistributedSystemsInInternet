@@ -1,0 +1,11 @@
+CorrelationId: 5e81dbd3-1a58-4fac-9ed3-261025329f0c
+UTC DateTime: 10/24/2025 08:36:09
+
+The following files/folders have not been downloaded
+0. 2. Java Core/java-core-io/src/test/resources/copiedWithApacheCommons.txt
+1. 2. Java Core/java-core-io/src/test/resources/copiedWithIo.txt
+2. 2. Java Core/java-core-io/src/test/resources/copiedWithNio.txt
+3. 2. Java Core/java-core-io/src/test/resources/original.txt
+4. 2. Java Core/legacy/1InterestingJavaExamples/CentrulRo/OpenCageGeocoding/CenterRo/.gradle/8.0/gc.properties
+5. 2. Java Core/legacy/1InterestingJavaExamples/CentrulRo/OpenCageGeocoding/CenterRo/.gradle/configuration-cache/gc.properties
+6. 2. Java Core/legacy/1InterestingJavaExamples/CentrulRo/OpenCageGeocoding/CenterRo/.gradle/vcs-1/gc.properties
