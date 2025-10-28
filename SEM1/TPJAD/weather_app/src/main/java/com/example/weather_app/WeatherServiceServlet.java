@@ -13,22 +13,23 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 @WebServlet(name = "weather_service", urlPatterns = {"/weather_service"})
 public class WeatherServiceServlet extends HttpServlet {
-    private final String API_KEY = "2844d71109c245fbb01dad5afa62b5a8";
-
     private Coordinates getGeocodingAPICoordinates(String location) throws IOException {
-        URL geocodingURL = new URL("https://api.geoapify.com/v1/geocode/search?text=" + location + "&apiKey=" + API_KEY);
+        Properties props = new Properties();
+        props.load(new FileInputStream("D:\\UBB_Master_DistributedSystemsInInternet\\SEM1\\TPJAD\\weather_app\\local.properties"));
+        String apiKey = props.getProperty("API_KEY");
+
+        URL geocodingURL = new URL("https://api.geoapify.com/v1/geocode/search?text=" + location + "&apiKey=" + apiKey);
         HttpURLConnection geocodingHttpConnection = (HttpURLConnection) geocodingURL.openConnection();
         geocodingHttpConnection.setRequestMethod("GET");
         geocodingHttpConnection.setRequestProperty("Accept", "application/json");
