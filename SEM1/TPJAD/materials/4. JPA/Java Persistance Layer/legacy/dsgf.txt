@@ -1,0 +1,2 @@
+create-jdbc-connection-pool --restype javax.sql.DataSource --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource --property "url=jdbc\\:mysql\\://localhost\\:3306/test" MySqlPool
+create-jdbc-resource --connectionpoolid MySqlPool jdbc/mysql

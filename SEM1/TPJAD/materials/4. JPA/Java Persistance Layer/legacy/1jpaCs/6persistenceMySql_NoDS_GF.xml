@@ -1,0 +1,15 @@
+<!-- Pana in prezent nu am gasit un persistence similar care sa functioneze pentru GlassFish -->
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="1jpa">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>p.entities.IdNameEntity</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/test" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <!-- Doar la primul deploy. La urmatoarele se elimina proprietatea -->
+        </properties>
+    </persistence-unit>
+</persistence>

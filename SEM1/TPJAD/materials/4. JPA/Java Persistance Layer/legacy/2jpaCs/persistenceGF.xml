@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <persistence-unit name ="2jpa">
+        <!--jta-data-source>jdbc/MyDB2DB</jta-data-source 
+        In absenta lui jta-data-source se va lua Derby, cea implicita la GlassFish
+        Baza de date trebuie pornita explicit la asadmin: start-database
+        -->
+        <class>p.entities.DepartmentEntity</class>
+        <class>p.entities.EmployeeEntity</class>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.create-target" value="create.ddl"/>
+            <property name="javax.persistence.schema-generation.scripts.drop-target" value="drop.ddl"/>
+        </properties>
+    </persistence-unit>
+</persistence>

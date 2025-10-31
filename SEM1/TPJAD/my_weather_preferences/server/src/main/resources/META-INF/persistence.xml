@@ -1,0 +1,44 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+
+    <!-- postgres -->
+    <persistence-unit name="PU_Postgres" transaction-type="RESOURCE_LOCAL">
+        <class>com.example.server.entities.Location</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/my_weather_preferences"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="password"/>
+<!--            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+<!--            disable hibernate from includign each entity in each db-->
+            <property name="hibernate.archive.autodetection" value="none"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- SQL Server -->
+    <persistence-unit name="PU_SQLServer" transaction-type="RESOURCE_LOCAL">
+        <class>com.example.server.entities.Country</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:sqlserver://DESKTOP-QC2B0HM;databaseName=my_weather_preferences;encrypt=true;trustServerCertificate=true;instanceName=SQLEXPRESS"/>
+            <property name="jakarta.persistence.jdbc.user" value="sergiu"/>
+            <property name="jakarta.persistence.jdbc.password" value="password"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.archive.autodetection" value="none"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- Oracle -->
+<!--    <persistence-unit name="PU_Oracle" transaction-type="RESOURCE_LOCAL">-->
+<!--        <class>com.example.server.entities.Preference</class>-->
+<!--        <properties>-->
+<!--            <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>-->
+<!--            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>-->
+<!--            <property name="jakarta.persistence.jdbc.user" value="system"/>-->
+<!--            <property name="jakarta.persistence.jdbc.password" value="mypassword"/>-->
+<!--            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>-->
+<!--        </properties>-->
+<!--    </persistence-unit>-->
+
+</persistence>

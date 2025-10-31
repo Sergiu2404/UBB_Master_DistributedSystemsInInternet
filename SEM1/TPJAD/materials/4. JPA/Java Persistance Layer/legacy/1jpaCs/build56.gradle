@@ -1,0 +1,35 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/beans"
+        mkdir "src/main/java/p/clients"
+        mkdir "src/main/java/p/dtos"
+        mkdir "src/main/java/p/entities"
+        mkdir "src/main/java/p/interfaces"
+        mkdir "src/main/resources/META-INF"
+        mkdir "src/main/webapp/WEB-INF"
+        copy { from "IdNameBean.java" into "src/main/java/p/beans" }
+        copy { from "ServletClient.java" into "src/main/java/p/clients" }
+        copy { from "IdNameDTO.java" into "src/main/java/p/dtos" }
+        copy { from "IdNameEntity.java" into "src/main/java/p/entities" }
+        copy { from "IdName.java" into "src/main/java/p/interfaces" }
+        copy { from "IdNameR.java" into "src/main/java/p/interfaces" }
+        copy { from "persistence.xml" into "src/main/resources/META-INF" }
+        copy { from "client.html" into "src/main/webapp" }
+    }
+}
+apply plugin: 'war'
+repositories { mavenCentral() }
+dependencies { providedCompile 'javax:javaee-api:8.0'
+    implementation 'org.hibernate:hibernate-core:5.6.0.Final','org.hibernate:hibernate-entitymanager:5.5.6.Final',
+                   'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+        delete "persistence.xml"
+        delete "build.gradle"
+    }
+}

@@ -1,0 +1,21 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/clients"
+        mkdir "src/main/java/p/dtos"
+        mkdir "src/main/java/p/interfaces"
+        copy { from "Client1GF.java" into "src/main/java/p/clients" }
+        copy { from "IdNameDTO.java" into "src/main/java/p/dtos" }
+        copy { from "IdNameR.java" into "src/main/java/p/interfaces" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies {implementation 'org.glassfish.main.common:glassfish-naming:6.2.5'}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "src"
+        delete "build"
+    }
+}

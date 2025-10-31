@@ -1,0 +1,187 @@
+﻿<?xml version="1.0"?>
+
+<!-- ======================================================================= -->
+<!-- JBoss build file                                                        -->
+<!-- ======================================================================= -->
+<project name="Example21" default="usage" basedir=".">
+  <property file="build.properties"/>
+  <property name="build.dir" value="${basedir}/build"/>
+  <property name="build.classes.dir" value="${build.dir}/classes"/>
+  <property name="name" value="${ant.project.name}" />
+  <!-- ===================================================================== -->
+  <!-- Define classpath                                                      -->
+  <!-- ===================================================================== -->
+  <path id="classpath">
+    <fileset dir="${appserver.home}/lib">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="${appserver.home}/server/default/lib">
+      <include name="**/*.jar"/>
+    </fileset>
+    <pathelement location="${build.classes.dir}"/>
+    <!-- So that we can get jndi.properties for InitialContext               -->
+    <pathelement location="${basedir}"/>
+  </path>
+  
+  <!-- ===================================================================== -->
+  <!-- Usage                                                                 -->
+  <!-- ===================================================================== -->
+  <target name="usage">
+    <echo message="" />
+    <echo message="-------------------------------------------------------" />
+    <echo message="PROJECT: ${name}" />
+    <echo message="-------------------------------------------------------" />
+    <echo message="" />
+    <echo message="Available targets are:" />
+    <echo message="" />
+    <echo message="compile -----> Compile java sources" />
+    <echo message="war ---------> Package the application as a WAR archive" />
+    <echo message="jar ---------> Package the application as a JAR archive" />
+    <echo message="ear ---------> Package the application as a EAR archive" />
+    <echo message="deploy ------> Deploy application as directory" />
+    <echo message="run ---------> Run a standalone file" />
+    <echo message="doc ---------> Java Doc generation" />
+    <echo message="clean -------> Remove all, except the input files" />
+    <echo message="" />
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Compiles the source code                                              -->
+  <!-- ===================================================================== -->
+  <target name="compile">
+    <delete dir="${build.dir}" quiet="true"/>
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${build.classes.dir}"/>
+    <javac srcdir="${src.dir}"
+           destdir="${build.classes.dir}"
+           debug="on"
+           deprecation="on"
+           optimize="off"
+           includes="**/*.java">
+      <classpath refid="classpath"/>
+    </javac>
+    <copy file="${src.dir}/jndi.properties" todir="${build.classes.dir}" failonerror="false"/>
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Creat a war archive                                                   -->
+  <!-- ===================================================================== -->
+  <target name="war">
+    <delete file="${name}.war" quiet="true"/>
+    <war destfile="${name}.war" webxml="${src.dir}/web.xml">
+      <classes dir="${build.classes.dir}"/>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.jsp"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.js"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.html"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.htm"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.jpg"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.gif"/>
+      </fileset>
+    </war>
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Create a jar archive                                                  -->
+  <!-- ===================================================================== -->
+  <target name="jar">
+    <delete file="${name}.jar" quiet="true"/>
+    <jar destfile="${name}.jar">
+      <metainf dir="${src.dir}">
+        <!--include name="persistence.xml"/-->
+        <include name="ejb-jar.xml"/>
+        <include name="jboss.xml"/>
+        <include name="jbosscmp-jdbc.xml"/>
+      </metainf>
+      <fileset dir="${build.classes.dir}">
+        <include name="**/*.class"/>
+      </fileset>
+    </jar>
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Create an ear archive                                                 -->
+  <!-- ===================================================================== -->
+  <target name="ear">
+    <delete file="${name}.ear" quiet="true"/>
+    <ear destfile="${name}.ear" appxml="${src.dir}/application.xml">
+      <fileset dir="${basedir}">
+        <filename name="**/*.jar **/*.war"/>
+      </fileset>
+      <!--fileset dir="${build.classes.dir}">
+        <include name="**/*.class"/>
+      </fileset-->
+      <!--fileset dir="${src.dir}">
+        <filename name="**/*.jsp"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.js"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.html"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.htm"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.jpg"/>
+      </fileset>
+      <fileset dir="${src.dir}">
+        <filename name="**/*.gif"/>
+      </fileset-->
+    </ear>
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Deploy: put jar, war or ear in the deploy zone                        -->
+  <!-- ===================================================================== -->
+  <target name="deploy">
+    <copy file="${name}.jar" todir="${appserver.home}/server/default/deploy" failonerror="false"/>
+    <copy file="${name}.war" todir="${appserver.home}/server/default/deploy" failonerror="false"/>
+    <copy file="${name}.ear" todir="${appserver.home}/server/default/deploy" failonerror="false"/>          
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Run a standalone client                                               -->
+  <!-- ===================================================================== -->
+  <target name="run">
+    <java classname="p.clients.${name}" fork="yes" dir=".">
+      <classpath refid="classpath"/>
+      <arg value="localhost"/>
+    </java>
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Edit a javadoc documentation                                          -->
+  <!-- ===================================================================== -->
+  <target name="doc">
+    <delete dir="${basedir}/doc" quiet="true"/>
+    <javadoc sourcepath="${src.dir}" destdir="${basedir}/doc" packagenames="*" 
+             author="true" private="true" version="true" windowtitle="API Documentation" 
+             bottom="Copyright � Boian, 2005-2006" doctitle="Documentation">
+      <fileset dir="${src.dir}" includes="**/*.java"/>
+    </javadoc>
+  </target>
+  
+  <!-- ===================================================================== -->
+  <!-- Sterge totul, cu exceptia fisierelor de intrare                       -->
+  <!-- ===================================================================== -->
+  <target name="clean">
+    <delete file="${name}.jar" quiet="true"/>
+    <delete file="${name}.war" quiet="true"/>
+    <delete file="${name}.ear" quiet="true"/>
+    <delete dir="${build.dir}" quiet="true"/>
+    <delete dir="${basedir}/doc" quiet="true"/>
+  </target>
+  
+</project>
