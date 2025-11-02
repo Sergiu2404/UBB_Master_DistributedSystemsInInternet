@@ -35,7 +35,7 @@
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
 <!--            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>-->
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1541/orcl"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/orcl"/>
             <property name="jakarta.persistence.jdbc.user" value="system"/>
             <property name="jakarta.persistence.jdbc.password" value="password"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
