@@ -13,10 +13,6 @@ public class CountryService {
     @PersistenceContext(unitName = "PU_SQLServer")
     private EntityManager entityManager;
 
-//    public CountryService() {
-//        this.entityManager = JPAInitializer.getEmfSQLServer().createEntityManager();
-//    }
-
     public Country getById(Long id){
         return this.entityManager.find(Country.class, id);
     }
@@ -33,21 +29,15 @@ public class CountryService {
     }
 
     public void save(Country country) {
-        this.entityManager.getTransaction().begin();
         this.entityManager.persist(country);
-        this.entityManager.getTransaction().commit();
     }
 
     public void remove(Country country){
-        this.entityManager.getTransaction().begin();
         this.entityManager.remove(country);
-        this.entityManager.getTransaction().commit();
     }
 
     public void update(Country country, String name, String region){
-        this.entityManager.getTransaction().begin();
         this.entityManager.merge(country);
-        this.entityManager.getTransaction().commit();
     }
 }
 

@@ -1,24 +1,25 @@
-import { useState } from 'react';
-import LoginPage from './pages/auth/LoginPage';
-import RegisterPage from './pages/auth/RegisterPage';
 import './App.css';
+import {BrowserRouter, Routes, Route, Link, Navigate} from "react-router-dom";
+import CountriesPage from './pages/country/CountriesPage';
+import LocationsPage from './pages/location/LocationsPage';
+import PreferencesPage from './pages/preferences/PreferencesPage';
 
 export default function App() {
-  // const [user, setUser] = useState(null);
-  // const [page, setPage] = useState('login');
 
   return (
-    <div className="app">
-      {/* {user ? (
-        <div className="welcome">
-          <h1>Welcome, {user.username}!</h1>
-          <button onClick={() => setUser(null)}>Logout</button>
-        </div>
-      ) : page === 'login' ? (
-        <LoginPage setUser={setUser} setPage={setPage} />
-      ) : (
-        <RegisterPage setUser={setUser} setPage={setPage} />
-      )} */}
-    </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/countries">Countries</Link> |{" "}
+        <Link to="/locations">Locations</Link> |{" "}
+        <Link to="/preferences">Preferences</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Navigate to="/countries" />} /> {/* default */}
+        <Route path="/countries" element={<CountriesPage />} />
+        <Route path="/locations" element={<LocationsPage />} />
+        <Route path="/preferences" element={<PreferencesPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

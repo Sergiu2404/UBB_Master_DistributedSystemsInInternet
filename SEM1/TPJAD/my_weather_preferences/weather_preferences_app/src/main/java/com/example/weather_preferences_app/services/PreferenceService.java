@@ -12,10 +12,6 @@ public class PreferenceService {
     @PersistenceContext(unitName = "PU_Postgres")
     private EntityManager entityManager;
 
-//    public PreferenceService() {
-//        this.entityManager = JPAInitializer.getEmfPostgres().createEntityManager();
-//    }
-
     public List<Preference> getAll(){
         return this.entityManager.createQuery("select p from Preference p", Preference.class)
                 .getResultList();
@@ -39,20 +35,14 @@ public class PreferenceService {
     }
 
     public void save(Preference pref) {
-        this.entityManager.getTransaction().begin();
         this.entityManager.persist(pref);
-        this.entityManager.getTransaction().commit();
     }
 
     public void remove(Preference preference){
-        this.entityManager.getTransaction().begin();
         this.entityManager.remove(preference);
-        this.entityManager.getTransaction().commit();
     }
 
     public void update(Preference preference){
-        this.entityManager.getTransaction().begin();
         this.entityManager.merge(preference);
-        this.entityManager.getTransaction().commit();
     }
 }

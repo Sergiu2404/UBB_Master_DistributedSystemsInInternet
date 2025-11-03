@@ -12,10 +12,6 @@ public class LocationService {
     @PersistenceContext(unitName = "PU_Oracle")
     private EntityManager entityManager;
 
-//    public LocationService(){
-//        this.entityManager = JPAInitializer.getEmfOracle().createEntityManager();
-//    }
-
     public List<Location> getAll(){
         return this.entityManager.createQuery("select l from Location l", Location.class)
                 .getResultList();
@@ -32,20 +28,14 @@ public class LocationService {
     }
 
     public void save(Location location){
-        this.entityManager.getTransaction().begin();
         this.entityManager.persist(location);
-        this.entityManager.getTransaction().commit();
     }
 
     public void remove(Location location){
-        this.entityManager.getTransaction().begin();
         this.entityManager.remove(location);
-        this.entityManager.getTransaction().commit();
     }
 
     public void update(Location location){
-        this.entityManager.getTransaction().begin();
         this.entityManager.merge(location);
-        this.entityManager.getTransaction().commit();
     }
 }

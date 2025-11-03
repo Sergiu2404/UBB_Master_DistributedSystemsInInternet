@@ -8,4 +8,24 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  server: {
+    port: 5173,
+    proxy: {
+      '/countries': {
+        target: 'http://localhost:8083/weather_preferences_app',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/locations': {
+        target: 'http://localhost:8083/weather_preferences_app',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/preferences': {
+        target: 'http://localhost:8083/weather_preferences_app',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
 })
