@@ -1,18 +1,21 @@
-package com.example.server.services;
+package com.example.weather_preferences_app.services;
 
-import com.example.server.config.JPAInitializer;
-import com.example.server.entities.Country;
+
+import com.example.weather_preferences_app.entities.Country;
+import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.TypedQuery;
+import jakarta.persistence.PersistenceContext;
 
 import java.util.List;
 
+@Stateless
 public class CountryService {
-    private final EntityManager entityManager;
+    @PersistenceContext(unitName = "PU_SQLServer")
+    private EntityManager entityManager;
 
-    public CountryService() {
-        this.entityManager = JPAInitializer.getEmfSQLServer().createEntityManager();
-    }
+//    public CountryService() {
+//        this.entityManager = JPAInitializer.getEmfSQLServer().createEntityManager();
+//    }
 
     public Country getById(Long id){
         return this.entityManager.find(Country.class, id);

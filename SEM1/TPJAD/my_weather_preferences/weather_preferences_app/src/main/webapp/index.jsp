@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>My weather preferences app</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "App built for your weather preferences" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="countries">Countries Servlet</a>
 </body>
 </html>

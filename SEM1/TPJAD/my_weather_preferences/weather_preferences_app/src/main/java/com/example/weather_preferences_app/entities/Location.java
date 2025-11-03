@@ -1,4 +1,4 @@
-package com.example.my_weather_preferences_server.entities;
+package com.example.weather_preferences_app.entities;
 
 import jakarta.persistence.*;
 
@@ -64,11 +64,11 @@ public class Location {
         this.longitude = longitude;
     }
 
-    public Long getCountry() {
+    public Long getCountryId() {
         return countryId;
     }
 
-    public void setCountry(Long countryId) {
+    public void setCountryId(Long countryId) {
         this.countryId = countryId;
     }
 }

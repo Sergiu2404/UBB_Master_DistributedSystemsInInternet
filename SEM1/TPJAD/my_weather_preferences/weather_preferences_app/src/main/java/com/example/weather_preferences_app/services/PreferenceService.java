@@ -1,17 +1,20 @@
-package com.example.server.services;
+package com.example.weather_preferences_app.services;
 
-import com.example.server.config.JPAInitializer;
-import com.example.server.entities.Preference;
+import com.example.weather_preferences_app.entities.Preference;
+import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
 import java.util.List;
 
+@Stateless
 public class PreferenceService {
-    private final EntityManager entityManager;
+    @PersistenceContext(unitName = "PU_Postgres")
+    private EntityManager entityManager;
 
-    public PreferenceService() {
-        this.entityManager = JPAInitializer.getEmfPostgres().createEntityManager();
-    }
+//    public PreferenceService() {
+//        this.entityManager = JPAInitializer.getEmfPostgres().createEntityManager();
+//    }
 
     public List<Preference> getAll(){
         return this.entityManager.createQuery("select p from Preference p", Preference.class)

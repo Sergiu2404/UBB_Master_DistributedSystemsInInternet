@@ -1,4 +1,4 @@
-package com.example.my_weather_preferences_server.entities;
+package com.example.weather_preferences_app.entities;
 
 import jakarta.persistence.*;
 
@@ -21,11 +21,12 @@ public class Preference {
     private Long locationId;
 
     public Preference(){}
-    public Preference(String description, double minTemperature, double maxTemperature, Long locationId){
-        this.locationId = locationId;
+
+    public Preference(String description, double minTemperature, double maxTemperature, Long locationId) {
         this.description = description;
         this.minTemperature = minTemperature;
         this.maxTemperature = maxTemperature;
+        this.locationId = locationId;
     }
 
     public void setId(Long id) {
@@ -60,11 +61,11 @@ public class Preference {
         this.maxTemperature = maxTemperature;
     }
 
-    public Long getLocation() {
+    public Long getLocationId() {
         return locationId;
     }
 
-    public void setLocation(Long locId) {
-        this.locationId = locId;
+    public void setLocationId(Long locationId) {
+        this.locationId = locationId;
     }
 }

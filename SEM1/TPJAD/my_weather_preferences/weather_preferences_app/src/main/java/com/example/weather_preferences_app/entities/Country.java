@@ -1,4 +1,4 @@
-package com.example.my_weather_preferences_server.entities;
+package com.example.weather_preferences_app.entities;
 
 import jakarta.persistence.*;
 
