@@ -2,7 +2,7 @@ package com.example.weather_preferences_app.entities;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name="Preference")
 @Table(name = "preferences")
 public class Preference {
     @Id

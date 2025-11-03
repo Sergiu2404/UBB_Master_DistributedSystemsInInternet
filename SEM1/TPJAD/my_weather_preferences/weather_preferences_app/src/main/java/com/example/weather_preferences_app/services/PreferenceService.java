@@ -2,6 +2,8 @@ package com.example.weather_preferences_app.services;
 
 import com.example.weather_preferences_app.entities.Preference;
 import jakarta.ejb.Stateless;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -9,7 +11,7 @@ import java.util.List;
 
 @Stateless
 public class PreferenceService {
-    @PersistenceContext(unitName = "PU_Postgres")
+    @PersistenceContext(unitName = "PU_Oracle")
     private EntityManager entityManager;
 
     public List<Preference> getAll(){
@@ -21,10 +23,18 @@ public class PreferenceService {
         return this.entityManager.find(Preference.class, id);
     }
 
-    public List<Preference> getPreferencesByLocationId(Long locationId){
-        return this.entityManager.createQuery("select p from Preference p where p.locationId = :locationId", Preference.class)
+    public List<Preference> getPreferencesByLocationId(Long locationId) {
+        return entityManager.createQuery("SELECT p FROM Preference p WHERE p.locationId = :locationId", Preference.class)
                 .setParameter("locationId", locationId)
                 .getResultList();
+    }
+
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    public void deletePreferencesByLocationId(Long locationId) {
+        entityManager.createQuery("DELETE FROM Preference p WHERE p.locationId = :locationId")
+                .setParameter("locationId", locationId)
+                .executeUpdate();
+        entityManager.flush();
     }
 
     public List<Preference> getPreferencesByMinTempMaxTemp(double minTemp, double maxTemp){

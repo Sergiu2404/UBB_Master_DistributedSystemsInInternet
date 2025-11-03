@@ -9,15 +9,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link to="/countries">Countries</Link> |{" "}
-        <Link to="/locations">Locations</Link> |{" "}
-        <Link to="/preferences">Preferences</Link>
+        <Link to="/countries">Countries</Link>
+        {/* <Link to="/locations">Locations</Link> |{" "}
+        <Link to="/preferences">Preferences</Link> */}
       </nav>
 
       <Routes>
         <Route path="/" element={<Navigate to="/countries" />} /> {/* default */}
         <Route path="/countries" element={<CountriesPage />} />
-        <Route path="/locations" element={<LocationsPage />} />
+        <Route path="/locations/:countryId" element={<LocationsPage />} />
         <Route path="/preferences" element={<PreferencesPage />} />
       </Routes>
     </BrowserRouter>

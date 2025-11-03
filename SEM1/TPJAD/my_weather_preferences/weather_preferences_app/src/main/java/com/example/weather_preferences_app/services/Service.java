@@ -1,12 +1,12 @@
 package com.example.weather_preferences_app.services;
 
-
 import com.example.weather_preferences_app.entities.Country;
 import com.example.weather_preferences_app.entities.Location;
 import com.example.weather_preferences_app.entities.Preference;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
-import oracle.jdbc.proxy.annotation.Pre;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
 
 import java.util.List;
 
@@ -14,92 +14,165 @@ import java.util.List;
 public class Service {
     @EJB
     private PreferenceService preferenceService;
+
     @EJB
     private CountryService countryService;
+
     @EJB
     private LocationService locationService;
 
-//    public Service(CountryService countryService, LocationService locationService, PreferenceService preferenceService){
-//        this.countryService = countryService;
-//        this.locationService = locationService;
-//        this.preferenceService = preferenceService;
-//    }
-
-    // country
-    public List<Country> getAllCountries(){
-        return this.countryService.getAll();
+    public List<Country> getAllCountries() {
+        return countryService.getAll();
     }
 
-    public Country getCountryById(Long id){
-        return this.countryService.getById(id);
-    }
-    public void saveCountry(Country country) {
-        countryService.save(country);
+    public Country getCountryById(Long id) {
+        return countryService.getById(id);
     }
 
-    public void updateCountry(Country country, String name, String region) {
-        countryService.update(country, name, region);
-    }
-
-    public void removeCountry(Country country) {
-        List<Location> locations = locationService.getLocationsByCountryId(country.getId());
-        for (Location loc : locations) {
-            List<Preference> prefs = preferenceService.getPreferencesByLocationId(loc.getId());
-            for (Preference p : prefs) {
-                preferenceService.remove(p);
+    public boolean saveCountry(Country country) {
+        try {
+            if (country == null || country.getName() == null || country.getRegion() == null
+                    || country.getName().isBlank() || country.getRegion().isBlank()) {
+                return false;
             }
-            locationService.remove(loc);
+            countryService.save(country);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
-        countryService.remove(country);
     }
 
-    //locations
-    public List<Location> getAllLocations(){
-        return this.locationService.getAll();
+    public boolean updateCountry(Country country, String name, String region) {
+        try {
+            if (country == null) return false;
+            if (name != null && !name.isBlank()) country.setName(name);
+            if (region != null && !region.isBlank()) country.setRegion(region);
+
+            countryService.update(country, name, region);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean removeCountry(Long countryId) {
+        try {
+            // Step 1: Get locations first (read-only)
+            List<Location> locations = locationService.getLocationsByCountryId(countryId);
+
+            // Step 2: Delete preferences for each location (separate transactions)
+            for (Location loc : locations) {
+                preferenceService.deletePreferencesByLocationId(loc.getId());
+            }
+
+            // Step 3: Delete all locations for this country (separate transaction)
+            locationService.deleteLocationsByCountryId(countryId);
+
+            // Step 4: Delete country (separate transaction)
+            countryService.deleteCountryById(countryId);
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+
+    public List<Location> getAllLocations() {
+        return locationService.getAll();
     }
 
     public Location getLocationById(Long id) {
         return locationService.getById(id);
     }
 
-    public void saveLocation(Location location) {
-        locationService.save(location);
-    }
-
-    public void updateLocation(Location location) {
-        locationService.update(location);
-    }
-
-    public void removeLocation(Location location) {
-        List<Preference> prefs = preferenceService.getPreferencesByLocationId(location.getId());
-        for (Preference p : prefs) {
-            preferenceService.remove(p);
+    public boolean saveLocation(Location location) {
+        try {
+            if (location == null || location.getName() == null || location.getName().isBlank()) {
+                return false;
+            }
+            locationService.save(location);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
-        locationService.remove(location);
     }
 
-    //preferences
-    public List<Preference> getAllPreferences(){
-        return this.preferenceService.getAll();
+    public boolean updateLocation(Location location) {
+        try {
+            if (location == null) return false;
+            locationService.update(location);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean removeLocation(Location location) {
+        try {
+            if (location == null) return false;
+
+            List<Preference> prefs = preferenceService.getPreferencesByLocationId(location.getId());
+            for (Preference p : prefs) {
+                preferenceService.remove(p);
+            }
+            locationService.remove(location);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+    public List<Preference> getAllPreferences() {
+        return preferenceService.getAll();
     }
 
     public Preference getPreferenceById(Long id) {
         return preferenceService.getById(id);
     }
 
-    public List<Preference> getPreferencesByLocationId(Long id){
-        return this.preferenceService.getPreferencesByLocationId(id);
+    public List<Preference> getPreferencesByLocationId(Long id) {
+        return preferenceService.getPreferencesByLocationId(id);
     }
 
-    public void savePreference(Preference preference) {
-        preferenceService.save(preference);
+    public boolean savePreference(Preference preference) {
+        try {
+            if (preference == null) return false;
+            preferenceService.save(preference);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
-    public void updatePreference(Preference preference) {
-        preferenceService.update(preference);
+    public boolean updatePreference(Preference preference) {
+        try {
+            if (preference == null) return false;
+            preferenceService.update(preference);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
-    public void removePreference(Preference preference) {
-        preferenceService.remove(preference);
+    public boolean removePreference(Preference preference) {
+        try {
+            if (preference == null) return false;
+            preferenceService.remove(preference);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

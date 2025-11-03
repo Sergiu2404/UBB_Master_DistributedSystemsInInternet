@@ -3,6 +3,8 @@ package com.example.weather_preferences_app.services;
 
 import com.example.weather_preferences_app.entities.Country;
 import jakarta.ejb.Stateless;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -32,8 +34,18 @@ public class CountryService {
         this.entityManager.persist(country);
     }
 
-    public void remove(Country country){
-        this.entityManager.remove(country);
+    public void remove(Country country) {
+        // Use JPQL delete to avoid detached entity issues
+        entityManager.createQuery("DELETE FROM Country c WHERE c.id = :id")
+                .setParameter("id", country.getId())
+                .executeUpdate();
+    }
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    public void deleteCountryById(Long countryId) {
+        entityManager.createQuery("DELETE FROM Country c WHERE c.id = :id")
+                .setParameter("id", countryId)
+                .executeUpdate();
+        entityManager.flush(); // Force immediate execution
     }
 
     public void update(Country country, String name, String region){
