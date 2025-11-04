@@ -4,11 +4,17 @@ import { useNavigate } from "react-router-dom";
 function AddCountryModal({ onClose, onSave }) {
     const [name, setName] = useState("");
     const [region, setRegion] = useState("");
+    const [error, setError] = useState("");
 
-    const handleSave = () => {
-        onSave(name, region);
-        setName("");
-        setRegion("");
+    const handleSave = async () => {
+        try {
+            await onSave(name, region);
+            setName("");
+            setRegion("");
+            setError("");
+        } catch (err) {
+            setError(err.message || "Failed to add country");
+        }
     };
 
     return (
@@ -16,17 +22,25 @@ function AddCountryModal({ onClose, onSave }) {
             <h3>Add Country</h3>
             <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" />
             <input value={region} onChange={e => setRegion(e.target.value)} placeholder="Region" />
+            {error && <p style={{ color: "red" }}>{error}</p>}
             <button onClick={handleSave}>Save</button>
             <button onClick={onClose}>Cancel</button>
         </div>
     );
 }
+
 function EditCountryModal({ country, onClose, onSave }) {
     const [name, setName] = useState(country.name);
     const [region, setRegion] = useState(country.region);
+    const [error, setError] = useState("");
 
-    const handleSave = () => {
-        onSave(country.id, name, region); // send id for PUT
+    const handleSave = async () => {
+        try {
+            await onSave(country.id, name, region);
+            setError("");
+        } catch (err) {
+            setError(err.message || "Failed to update country");
+        }
     };
 
     return (
@@ -34,11 +48,13 @@ function EditCountryModal({ country, onClose, onSave }) {
             <h3>Edit Country</h3>
             <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" />
             <input value={region} onChange={e => setRegion(e.target.value)} placeholder="Region" />
+            {error && <p style={{ color: "red" }}>{error}</p>}
             <button onClick={handleSave}>Save</button>
             <button onClick={onClose}>Cancel</button>
         </div>
     );
 }
+
 
 function CountriesPage() {
     const [countries, setCountries] = useState([]);
@@ -49,7 +65,7 @@ function CountriesPage() {
     const navigate = useNavigate();
 
     const fetchCountries = () => {
-        fetch("/countries")
+        fetch("/api/countries")
             .then(res => res.json())
             .then(data => setCountries(data));
     };
@@ -59,29 +75,35 @@ function CountriesPage() {
     }, []);
 
     const addCountry = (name, region) => {
-        fetch("/countries", {
+        return fetch("/api/countries", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: `name=${encodeURIComponent(name)}&region=${encodeURIComponent(region)}`
-        }).then(() => {
-            setAddModalOpen(false);
-            fetchCountries();
-        });
+        })
+            .then(async res => {
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || "Failed to add country");
+                setAddModalOpen(false);
+                fetchCountries();
+            });
     };
 
     const editCountry = (id, name, region) => {
-        fetch(`/countries?countryId=${id}`, {
+        return fetch(`/api/countries?countryId=${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: `name=${encodeURIComponent(name)}&region=${encodeURIComponent(region)}`
-        }).then(() => {
-            setEditModalOpen(null);
-            fetchCountries();
-        });
+        })
+            .then(async res => {
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || "Failed to update country");
+                setEditModalOpen(null);
+                fetchCountries();
+            });
     };
 
     const deleteCountry = (id) => {
-        fetch(`/countries?countryId=${id}`, { method: "DELETE" })
+        fetch(`/api/countries?countryId=${id}`, { method: "DELETE" })
             .then(() => {
                 setDeleteConfirm(null);
                 fetchCountries();
@@ -95,11 +117,11 @@ function CountriesPage() {
 
             <ul>
                 {countries.map(c => (
-                    <li key={c.id} style={{display: "flex", alignItems: "center", justifyContent: "space-between", padding: "5px 0", borderBottom: "1px solid #ccc"}}>
+                    <li key={c.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "5px 0", borderBottom: "1px solid #ccc" }}>
                         <span>{c.name} ({c.region})</span>
                         <div style={{ display: "flex", gap: "5px" }}>
                             <button onClick={() => setEditModalOpen(c)}>Edit</button>
-                            <button style={{ backgroundColor: "red", color: "white"}} onClick={() => setDeleteConfirm(c.id)}>Delete</button>
+                            <button style={{ backgroundColor: "red", color: "white" }} onClick={() => setDeleteConfirm(c.id)}>Delete</button>
                             <button onClick={() => navigate(`/locations/${c.id}`)}>See locations</button>
                         </div>
                     </li>

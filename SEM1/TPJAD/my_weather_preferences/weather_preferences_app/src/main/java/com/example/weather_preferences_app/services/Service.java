@@ -5,10 +5,11 @@ import com.example.weather_preferences_app.entities.Location;
 import com.example.weather_preferences_app.entities.Preference;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
-import jakarta.ejb.TransactionAttribute;
-import jakarta.ejb.TransactionAttributeType;
+import jakarta.persistence.PersistenceException;
+import org.hibernate.exception.ConstraintViolationException;
 
 import java.util.List;
+import java.util.Objects;
 
 @Stateless
 public class Service {
@@ -43,6 +44,7 @@ public class Service {
         }
     }
 
+
     public boolean updateCountry(Country country, String name, String region) {
         try {
             if (country == null) return false;
@@ -59,19 +61,18 @@ public class Service {
 
     public boolean removeCountry(Long countryId) {
         try {
-            // Step 1: Get locations first (read-only)
             List<Location> locations = locationService.getLocationsByCountryId(countryId);
 
-            // Step 2: Delete preferences for each location (separate transactions)
+            // del pref for each location: separate transaction to avoid detached entity exception (JPA cant delete objects from diff persistence contexts)
             for (Location loc : locations) {
-                preferenceService.deletePreferencesByLocationId(loc.getId());
+                preferenceService.removePreferencesByLocationId(loc.getId());
             }
 
-            // Step 3: Delete all locations for this country (separate transaction)
-            locationService.deleteLocationsByCountryId(countryId);
+            // del locations for this country (separate transaction)
+            locationService.removeLocationsByCountryId(countryId);
 
-            // Step 4: Delete country (separate transaction)
-            countryService.deleteCountryById(countryId);
+            // del country (separate transaction)
+            countryService.removeCountryById(countryId);
 
             return true;
         } catch (Exception e) {
@@ -81,9 +82,12 @@ public class Service {
     }
 
 
-
     public List<Location> getAllLocations() {
         return locationService.getAll();
+    }
+
+    public List<Location> getLocationsByCountryId(Long countryId) {
+        return locationService.getLocationsByCountryId(countryId);
     }
 
     public Location getLocationById(Long id) {
@@ -114,15 +118,16 @@ public class Service {
         }
     }
 
-    public boolean removeLocation(Location location) {
+    public boolean removeLocation(Long locationId) {
         try {
-            if (location == null) return false;
+            List<Preference> preferences = this.preferenceService.getPreferencesByLocationId(locationId);
 
-            List<Preference> prefs = preferenceService.getPreferencesByLocationId(location.getId());
-            for (Preference p : prefs) {
-                preferenceService.remove(p);
-            }
-            locationService.remove(location);
+            // del pref for each location: separate transaction to avoid detached entity exception (JPA cant delete objects from diff persistence contexts)
+            this.preferenceService.removePreferencesByLocationId(locationId);
+
+            // del country (separate transaction)
+            this.locationService.removeLocationById(locationId);
+
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -145,7 +150,7 @@ public class Service {
 
     public boolean savePreference(Preference preference) {
         try {
-            if (preference == null) return false;
+            if (preference == null || preference.getDescription() == null || Objects.equals(preference.getDescription(), "")) return false;
             preferenceService.save(preference);
             return true;
         } catch (Exception e) {
@@ -165,10 +170,19 @@ public class Service {
         }
     }
 
-    public boolean removePreference(Preference preference) {
+//    public boolean removePreference(Preference preference) {
+//        try {
+//            if (preference == null) return false;
+//            preferenceService.remove(preference);
+//            return true;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
+    public boolean removePreference(Long preferenceId) {
         try {
-            if (preference == null) return false;
-            preferenceService.remove(preference);
+            preferenceService.removePreferenceById(preferenceId);
             return true;
         } catch (Exception e) {
             e.printStackTrace();

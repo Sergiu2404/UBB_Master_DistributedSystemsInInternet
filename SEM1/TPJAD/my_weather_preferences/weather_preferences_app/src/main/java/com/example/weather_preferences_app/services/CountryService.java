@@ -35,17 +35,17 @@ public class CountryService {
     }
 
     public void remove(Country country) {
-        // Use JPQL delete to avoid detached entity issues
         entityManager.createQuery("DELETE FROM Country c WHERE c.id = :id")
                 .setParameter("id", country.getId())
                 .executeUpdate();
     }
+
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void deleteCountryById(Long countryId) {
+    public void removeCountryById(Long countryId) {
         entityManager.createQuery("DELETE FROM Country c WHERE c.id = :id")
                 .setParameter("id", countryId)
                 .executeUpdate();
-        entityManager.flush(); // Force immediate execution
+        entityManager.flush(); // force immediate execution to ensure is made in this transaction
     }
 
     public void update(Country country, String name, String region){

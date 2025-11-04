@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/" element={<Navigate to="/countries" />} /> {/* default */}
         <Route path="/countries" element={<CountriesPage />} />
         <Route path="/locations/:countryId" element={<LocationsPage />} />
-        <Route path="/preferences" element={<PreferencesPage />} />
+        <Route path="/preferences/:locationId" element={<PreferencesPage />} />
       </Routes>
     </BrowserRouter>
   );

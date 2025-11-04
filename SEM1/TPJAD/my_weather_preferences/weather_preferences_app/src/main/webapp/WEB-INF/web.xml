@@ -11,4 +11,31 @@
         <servlet-name>CountryServlet</servlet-name>
         <url-pattern>/countries/*</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LocationsServlet</servlet-name>
+        <servlet-class>com.example.weather_preferences_app.servlets.location.LocationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LocationsServlet</servlet-name>
+        <url-pattern>/locations/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PreferencesServlet</servlet-name>
+        <servlet-class>com.example.weather_preferences_app.servlets.preference.PreferencesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PreferencesServlet</servlet-name>
+        <url-pattern>/preferences</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ForecastsServlet</servlet-name>
+        <servlet-class>com.example.weather_preferences_app.servlets.ForecastsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForecastsServlet</servlet-name>
+        <url-pattern>/forecasts</url-pattern>
+    </servlet-mapping>
 </web-app>

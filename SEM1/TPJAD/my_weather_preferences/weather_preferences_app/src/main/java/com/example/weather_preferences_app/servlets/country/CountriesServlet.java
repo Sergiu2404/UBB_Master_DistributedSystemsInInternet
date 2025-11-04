@@ -4,6 +4,8 @@ import com.example.weather_preferences_app.entities.Country;
 import com.example.weather_preferences_app.services.Service;
 import com.google.gson.Gson;
 import jakarta.ejb.EJB;
+import jakarta.ejb.EJBTransactionRolledbackException;
+import jakarta.persistence.PersistenceException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Map;
 
 
 @WebServlet("/countries")
@@ -48,48 +51,127 @@ public class CountriesServlet extends HttpServlet {
         }
     }
 
+//    @Override
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//        System.out.println("POST /countries called");
+//
+//        String name = request.getParameter("name");
+//        String region = request.getParameter("region");
+//
+//        if (name == null || name.isBlank() || region == null || region.isBlank()) {
+//            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Name and region are required");
+//            return;
+//        }
+//
+//        Country country = new Country(name, region);
+//
+//        boolean success = service.saveCountry(country);
+//        if (success) {
+//            response.setStatus(HttpServletResponse.SC_CREATED);
+//            response.getWriter().write("{\"message\": \"Country created successfully\"}");
+//        } else {
+//            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to create country");
+//        }
+//    }
+//
+//    @Override
+//    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//        System.out.println("PUT /countries called");
+//
+//        String idParam = request.getParameter("countryId");
+//        String name = request.getParameter("name");
+//        String region = request.getParameter("region");
+//
+//        if (idParam == null) {
+//            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing country ID");
+//            return;
+//        }
+//
+//        try {
+//            Long id = Long.parseLong(idParam);
+//            Country existing = service.getCountryById(id);
+//
+//            if (existing == null) {
+//                response.sendError(HttpServletResponse.SC_NOT_FOUND, "Country not found");
+//                return;
+//            }
+//
+//            boolean success = service.updateCountry(existing, name, region);
+//
+//            if (success) {
+//                response.setStatus(HttpServletResponse.SC_OK);
+//                response.getWriter().write("{\"message\": \"Country updated successfully\"}");
+//            } else {
+//                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to update country");
+//            }
+//
+//        } catch (NumberFormatException e) {
+//            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid country ID");
+//        }
+//    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("POST /countries called");
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
 
         String name = request.getParameter("name");
         String region = request.getParameter("region");
 
         if (name == null || name.isBlank() || region == null || region.isBlank()) {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Name and region are required");
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            out.print(new Gson().toJson(Map.of("error", "Name and region are required")));
             return;
         }
 
         Country country = new Country(name, region);
 
-        boolean success = service.saveCountry(country);
-        if (success) {
-            response.setStatus(HttpServletResponse.SC_CREATED);
-            response.getWriter().write("{\"message\": \"Country created successfully\"}");
-        } else {
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to create country");
+        try {
+            boolean success = service.saveCountry(country);
+            if (success) {
+                response.setStatus(HttpServletResponse.SC_CREATED);
+                out.print(new Gson().toJson(Map.of("message", "Country created successfully", "country", country)));
+            } else {
+                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                out.print(new Gson().toJson(Map.of("error", "Failed to create country")));
+            }
+        } catch (PersistenceException | EJBTransactionRolledbackException e) {
+            Throwable cause = e.getCause();
+            if (cause != null && cause.getMessage().contains("UK1pyiwrqimi3hnl3vtgsypj5r")) {
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                out.print(new Gson().toJson(Map.of("error", "Country with name '" + country.getName() + "' already exists")));
+            } else {
+                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                out.print(new Gson().toJson(Map.of("error", "Unexpected error: " + e.getMessage())));
+            }
+        } catch (Exception e) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.print(new Gson().toJson(Map.of("error", "Unexpected error: " + e.getMessage())));
         }
+
     }
 
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("PUT /countries called");
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
 
         String idParam = request.getParameter("countryId");
         String name = request.getParameter("name");
         String region = request.getParameter("region");
 
         if (idParam == null) {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing country ID");
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            out.print(new Gson().toJson(Map.of("error", "Missing country ID")));
             return;
         }
 
         try {
             Long id = Long.parseLong(idParam);
             Country existing = service.getCountryById(id);
-
             if (existing == null) {
-                response.sendError(HttpServletResponse.SC_NOT_FOUND, "Country not found");
+                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                out.print(new Gson().toJson(Map.of("error", "Country not found")));
                 return;
             }
 
@@ -97,15 +179,29 @@ public class CountriesServlet extends HttpServlet {
 
             if (success) {
                 response.setStatus(HttpServletResponse.SC_OK);
-                response.getWriter().write("{\"message\": \"Country updated successfully\"}");
+                out.print(new Gson().toJson(Map.of("message", "Country updated successfully", "country", existing)));
             } else {
-                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to update country");
+                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                out.print(new Gson().toJson(Map.of("error", "Failed to update country")));
             }
-
         } catch (NumberFormatException e) {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid country ID");
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            out.print(new Gson().toJson(Map.of("error", "Invalid country ID")));
+        } catch (PersistenceException | EJBTransactionRolledbackException e) {
+            Throwable cause = e.getCause();
+            if (cause != null && cause.getMessage().contains("UK1pyiwrqimi3hnl3vtgsypj5r")) {
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                out.print(new Gson().toJson(Map.of("error", "Country with name '" + name + "' already exists")));
+            } else {
+                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                out.print(new Gson().toJson(Map.of("error", "Unexpected database error: " + e.getMessage())));
+            }
+        } catch (Exception e) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.print(new Gson().toJson(Map.of("error", "Unexpected error: " + e.getMessage())));
         }
     }
+
 
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {

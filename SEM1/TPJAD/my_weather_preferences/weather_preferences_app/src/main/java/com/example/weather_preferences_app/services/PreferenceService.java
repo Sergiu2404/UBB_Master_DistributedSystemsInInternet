@@ -30,7 +30,7 @@ public class PreferenceService {
     }
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void deletePreferencesByLocationId(Long locationId) {
+    public void removePreferencesByLocationId(Long locationId) {
         entityManager.createQuery("DELETE FROM Preference p WHERE p.locationId = :locationId")
                 .setParameter("locationId", locationId)
                 .executeUpdate();
@@ -50,6 +50,13 @@ public class PreferenceService {
 
     public void remove(Preference preference){
         this.entityManager.remove(preference);
+    }
+
+    public void removePreferenceById(Long preferenceId) {
+        this.entityManager.createQuery("DELETE FROM Preference p WHERE p.id = :preferenceId")
+                .setParameter("preferenceId", preferenceId)
+                .executeUpdate();
+        this.entityManager.flush(); // force immediate execution to ensure is made in this transaction
     }
 
     public void update(Preference preference){

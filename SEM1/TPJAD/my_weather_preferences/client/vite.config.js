@@ -11,21 +11,13 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/countries': {
-        target: 'http://localhost:8083/weather_preferences_app',
-        changeOrigin: true,
-        secure: false,
-      },
-      '/locations': {
-        target: 'http://localhost:8083/weather_preferences_app',
-        changeOrigin: true,
-        secure: false,
-      },
-      '/preferences': {
-        target: 'http://localhost:8083/weather_preferences_app',
-        changeOrigin: true,
-        secure: false,
-      }
-    }
+    '/api': {
+      target: 'http://localhost:8083/weather_preferences_app',
+      changeOrigin: true,
+      secure: false,
+      rewrite: (path) => path.replace(/^\/api/, ''),
+    },
+  },
+    historyApiFallback: true,
   }
 })

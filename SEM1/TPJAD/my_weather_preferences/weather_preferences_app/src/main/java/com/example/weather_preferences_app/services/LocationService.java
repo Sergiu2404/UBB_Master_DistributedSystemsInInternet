@@ -24,11 +24,6 @@ public class LocationService {
         return this.entityManager.find(Location.class, id);
     }
 
-//    public List<Location> getLocationsByCountryId(Long countryId){
-//        return this.entityManager.createQuery("select l from Location l where l.countryId = :countryId", Location.class)
-//                .setParameter("countryId", countryId)
-//                .getResultList();
-//    }
     public List<Location> getLocationsByCountryId(Long countryId) {
         return entityManager.createQuery("SELECT l FROM Location l WHERE l.countryId = :countryId", Location.class)
                 .setParameter("countryId", countryId)
@@ -36,7 +31,7 @@ public class LocationService {
     }
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void deleteLocationsByCountryId(Long countryId) {
+    public void removeLocationsByCountryId(Long countryId) {
         entityManager.createQuery("DELETE FROM Location l WHERE l.countryId = :countryId")
                 .setParameter("countryId", countryId)
                 .executeUpdate();
@@ -47,8 +42,12 @@ public class LocationService {
         this.entityManager.persist(location);
     }
 
-    public void remove(Location location){
-        this.entityManager.remove(location);
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    public void removeLocationById(Long locationId) {
+        this.entityManager.createQuery("DELETE FROM Location l WHERE l.id = :locationId")
+                .setParameter("locationId", locationId)
+                .executeUpdate();
+        this.entityManager.flush(); // force immediate execution to ensure is made in this transaction
     }
 
     public void update(Location location){
