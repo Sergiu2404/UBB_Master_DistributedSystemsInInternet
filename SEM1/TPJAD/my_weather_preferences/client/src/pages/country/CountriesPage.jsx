@@ -61,6 +61,7 @@ function CountriesPage() {
     const [addModalOpen, setAddModalOpen] = useState(false);
     const [editModalOpen, setEditModalOpen] = useState(null); // country object
     const [deleteConfirm, setDeleteConfirm] = useState(null);
+    const [searchName, setSearchName] = useState("");
 
     const navigate = useNavigate();
 
@@ -115,24 +116,37 @@ function CountriesPage() {
             <h1>Countries</h1>
             <button onClick={() => setAddModalOpen(true)}>Add Country</button>
 
+            <div style={{ margin: "10px 0" }}>
+                <input
+                    type="text"
+                    value={searchName}
+                    onChange={e => setSearchName(e.target.value)}
+                    placeholder="Search by name"
+                />
+                <button onClick={fetchCountries}>Reset</button>
+            </div>
+
             <ul>
-                {countries.map(c => (
-                    <li key={c.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "5px 0", borderBottom: "1px solid #ccc" }}>
-                        <span>{c.name} ({c.region})</span>
-                        <div style={{ display: "flex", gap: "5px" }}>
-                            <button onClick={() => setEditModalOpen(c)}>Edit</button>
-                            <button style={{ backgroundColor: "red", color: "white" }} onClick={() => setDeleteConfirm(c.id)}>Delete</button>
-                            <button onClick={() => navigate(`/locations/${c.id}`)}>See locations</button>
-                        </div>
-                    </li>
-                ))}
+                {countries
+                    .filter(c => c.name.toLowerCase().includes(searchName.toLowerCase()) || searchName === "")
+                    .map(c => (
+                        <li key={c.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "5px 0", borderBottom: "1px solid #ccc" }}>
+                            <span>{c.name} ({c.region})</span>
+                            <div style={{ display: "flex", gap: "5px" }}>
+                                <button onClick={() => setEditModalOpen(c)}>Edit</button>
+                                <button style={{ backgroundColor: "red", color: "white" }} onClick={() => setDeleteConfirm(c.id)}>Delete</button>
+                                <button onClick={() => navigate(`/locations/${c.id}`)}>See locations</button>
+                            </div>
+                        </li>
+                    ))}
             </ul>
 
-            {/* Modals */}
+
+            {/* modals */}
             {addModalOpen && <AddCountryModal onClose={() => setAddModalOpen(false)} onSave={addCountry} />}
             {editModalOpen && <EditCountryModal country={editModalOpen} onClose={() => setEditModalOpen(null)} onSave={editCountry} />}
 
-            {/* Delete confirmation */}
+            {/* delete confirmation */}
             {deleteConfirm !== null && (
                 <div style={{ border: "1px solid red", padding: "10px", marginTop: "10px" }}>
                     <p>Are you sure you want to delete this country?</p>

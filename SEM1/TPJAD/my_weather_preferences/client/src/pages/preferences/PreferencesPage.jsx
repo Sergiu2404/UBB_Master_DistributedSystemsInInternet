@@ -106,8 +106,8 @@ function PreferencesPage() {
     const [location, setLocation] = useState(null);
     const [preferences, setPreferences] = useState([]);
     const [forecastData, setForecastData] = useState([]);
-    const [forecastVisible, setForecastVisible] = useState({}); //{[pref.id]: true/false}
-
+    const [forecastVisible, setForecastVisible] = useState({}); // {[pref.id]: true/false}
+    const [searchDescription, setSearchDescription] = useState("");
 
     const [addModalOpen, setAddModalOpen] = useState(false);
     const [editModalOpen, setEditModalOpen] = useState(null);
@@ -115,13 +115,13 @@ function PreferencesPage() {
 
     const navigate = useNavigate();
 
-
     const fetchLocationById = () => {
         fetch(`/api/locations?locationId=${locationId}`)
             .then(res => res.json())
             .then(data => setLocation(data))
             .catch(err => console.error("Error fetching location:", err));
-    }
+    };
+
     const fetchPreferencesForLocation = () => {
         fetch(`/api/preferences?locationId=${locationId}`)
             .then(res => res.json())
@@ -134,6 +134,10 @@ function PreferencesPage() {
         fetchPreferencesForLocation();
     }, [locationId]);
 
+    const filteredPreferences = preferences.filter(pref =>
+        pref.description.toLowerCase().includes(searchDescription.toLowerCase())
+    );
+
     const handleSeeForecasts = async (pref) => {
         if (!location) return;
 
@@ -144,7 +148,9 @@ function PreferencesPage() {
 
         const { latitude, longitude } = location;
         try {
-            const res = await fetch(`/api/forecasts?lat=${latitude}&lon=${longitude}&minTemp=${pref.minTemperature}&maxTemp=${pref.maxTemperature}`);
+            const res = await fetch(
+                `/api/forecasts?lat=${latitude}&lon=${longitude}&minTemp=${pref.minTemperature}&maxTemp=${pref.maxTemperature}`
+            );
             const data = await res.json();
 
             setForecastData(prev => ({
@@ -154,7 +160,7 @@ function PreferencesPage() {
             setForecastVisible(prev => ({
                 ...prev,
                 [pref.id]: true
-            }))
+            }));
         } catch (err) {
             console.error("Error fetching forecasts:", err);
         }
@@ -188,7 +194,6 @@ function PreferencesPage() {
             });
     };
 
-
     const deletePreference = (id) => {
         fetch(`/api/preferences?preferenceId=${id}`, { method: "DELETE" })
             .then(() => {
@@ -204,8 +209,17 @@ function PreferencesPage() {
             <h3>Weather preferences for {location.name}</h3>
             <button onClick={() => setAddModalOpen(true)}>Add Preference</button>
 
+            <div style={{ margin: "10px 0" }}>
+                <input
+                    type="text"
+                    value={searchDescription}
+                    onChange={e => setSearchDescription(e.target.value)}
+                    placeholder="Search by description"
+                />
+            </div>
+
             <ul>
-                {preferences.map(pref => (
+                {filteredPreferences.map(pref => (
                     <li
                         key={pref.id}
                         style={{
@@ -232,6 +246,7 @@ function PreferencesPage() {
                                 See Forecasts
                             </button>
                         </div>
+
                         {forecastVisible[pref.id] && forecastData[pref.id] && (
                             <div
                                 style={{

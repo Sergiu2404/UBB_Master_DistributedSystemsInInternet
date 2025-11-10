@@ -80,7 +80,6 @@
             <version>19.14.0.0</version>
         </dependency>
 
-        <!-- JPA -->
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>

@@ -68,6 +68,7 @@ function LocationsPage() {
     const [addModalOpen, setAddModalOpen] = useState(false);
     const [editModalOpen, setEditModalOpen] = useState(null);
     const [deleteConfirm, setDeleteConfirm] = useState(null);
+    const [searchName, setSearchName] = useState("");
 
     const navigate = useNavigate();
 
@@ -134,35 +135,47 @@ function LocationsPage() {
             <h3>Locations for {country.name} ({country.region})</h3>
             <button onClick={() => setAddModalOpen(true)}>Add Location</button>
 
+            <div style={{ margin: "10px 0" }}>
+                <input
+                    type="text"
+                    value={searchName}
+                    onChange={e => setSearchName(e.target.value)}
+                    placeholder="Search by location name"
+                />
+            </div>
+
+            
             <ul>
-                {locations.map(loc => (
-                    <li
-                        key={loc.id}
-                        style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                            padding: "5px 0",
-                            borderBottom: "1px solid #ccc"
-                        }}
-                    >
-                        <span>
-                            {loc.name} (Lat: {loc.latitude}, Lon: {loc.longitude})
-                        </span>
-                        <div style={{ display: "flex", gap: "5px" }}>
-                            <button onClick={() => setEditModalOpen(loc)}>Edit</button>
-                            <button
-                                style={{ backgroundColor: "red", color: "white" }}
-                                onClick={() => setDeleteConfirm(loc.id)}
-                            >
-                                Delete
-                            </button>
-                            <button onClick={() => navigate(`/preferences/${loc.id}`)}>
-                                See Preferences
-                            </button>
-                        </div>
-                    </li>
-                ))}
+                {locations
+                    .filter(loc => loc.name.toLowerCase().includes(searchName.toLowerCase()) || searchName === "")
+                    .map(loc => (
+                        <li
+                            key={loc.id}
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                padding: "5px 0",
+                                borderBottom: "1px solid #ccc"
+                            }}
+                        >
+                            <span>
+                                {loc.name} (Lat: {loc.latitude}, Lon: {loc.longitude})
+                            </span>
+                            <div style={{ display: "flex", gap: "5px" }}>
+                                <button onClick={() => setEditModalOpen(loc)}>Edit</button>
+                                <button
+                                    style={{ backgroundColor: "red", color: "white" }}
+                                    onClick={() => setDeleteConfirm(loc.id)}
+                                >
+                                    Delete
+                                </button>
+                                <button onClick={() => navigate(`/preferences/${loc.id}`)}>
+                                    See Preferences
+                                </button>
+                            </div>
+                        </li>
+                    ))}
             </ul>
 
 

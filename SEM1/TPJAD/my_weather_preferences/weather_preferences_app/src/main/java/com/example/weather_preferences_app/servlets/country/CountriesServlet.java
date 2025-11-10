@@ -51,65 +51,6 @@ public class CountriesServlet extends HttpServlet {
         }
     }
 
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        System.out.println("POST /countries called");
-//
-//        String name = request.getParameter("name");
-//        String region = request.getParameter("region");
-//
-//        if (name == null || name.isBlank() || region == null || region.isBlank()) {
-//            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Name and region are required");
-//            return;
-//        }
-//
-//        Country country = new Country(name, region);
-//
-//        boolean success = service.saveCountry(country);
-//        if (success) {
-//            response.setStatus(HttpServletResponse.SC_CREATED);
-//            response.getWriter().write("{\"message\": \"Country created successfully\"}");
-//        } else {
-//            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to create country");
-//        }
-//    }
-//
-//    @Override
-//    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        System.out.println("PUT /countries called");
-//
-//        String idParam = request.getParameter("countryId");
-//        String name = request.getParameter("name");
-//        String region = request.getParameter("region");
-//
-//        if (idParam == null) {
-//            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing country ID");
-//            return;
-//        }
-//
-//        try {
-//            Long id = Long.parseLong(idParam);
-//            Country existing = service.getCountryById(id);
-//
-//            if (existing == null) {
-//                response.sendError(HttpServletResponse.SC_NOT_FOUND, "Country not found");
-//                return;
-//            }
-//
-//            boolean success = service.updateCountry(existing, name, region);
-//
-//            if (success) {
-//                response.setStatus(HttpServletResponse.SC_OK);
-//                response.getWriter().write("{\"message\": \"Country updated successfully\"}");
-//            } else {
-//                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to update country");
-//            }
-//
-//        } catch (NumberFormatException e) {
-//            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid country ID");
-//        }
-//    }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");

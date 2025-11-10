@@ -11,11 +11,11 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-    '/api': {
+    '/api': { //any requests starting with /api are forwarded to backnd target
       target: 'http://localhost:8083/weather_preferences_app',
       changeOrigin: true,
       secure: false,
-      rewrite: (path) => path.replace(/^\/api/, ''),
+      rewrite: (path) => path.replace(/^\/api/, ''), //remove api prefix before forwrd
     },
   },
     historyApiFallback: true,
