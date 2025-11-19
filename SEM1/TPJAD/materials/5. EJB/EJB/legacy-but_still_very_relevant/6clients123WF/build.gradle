@@ -1,0 +1,30 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/interfaces"
+        mkdir "src/main/java/p/clients"
+        copy { from "Abac1.java" into "src/main/java/p/interfaces" }
+        copy { from "Abac2.java" into "src/main/java/p/interfaces" }
+        copy { from "AbacR.java" into "src/main/java/p/interfaces" }
+        copy { from "Counter1.java" into "src/main/java/p/interfaces" }
+        copy { from "Counter2.java" into "src/main/java/p/interfaces" }
+        copy { from "CounterR.java" into "src/main/java/p/interfaces" }
+        copy { from "Client1WF.java" into "src/main/java/p/clients" }
+        copy { from "Client2WF.java" into "src/main/java/p/clients" }
+        copy { from "Client3WF.java" into "src/main/java/p/clients" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies {implementation 'org.wildfly:wildfly-ejb-client-bom:26.1.2.Final'}
+jar { 
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
+    from(configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }) 
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "src"
+        //delete "build"
+    }
+}

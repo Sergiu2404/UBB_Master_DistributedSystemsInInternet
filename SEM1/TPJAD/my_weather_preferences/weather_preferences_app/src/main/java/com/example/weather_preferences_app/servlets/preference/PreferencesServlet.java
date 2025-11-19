@@ -99,7 +99,6 @@ public class PreferencesServlet extends HttpServlet {
         }
     }
 
-
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
@@ -137,8 +136,10 @@ public class PreferencesServlet extends HttpServlet {
                 preference.setMaxTemperature(maxTemp);
             }
 
-            boolean success = service.updatePreference(preference);
-            if (success) {
+            boolean found = this.service.existsPreferenceByDescription(description);
+
+            if (!found) {
+                service.updatePreference(preference);
                 out.print(new Gson().toJson(preference));
             } else {
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);

@@ -48,8 +48,16 @@ public class CountryService {
         entityManager.flush(); // force immediate execution to ensure is made in this transaction
     }
 
-    public void update(Country country, String name, String region){
+    public void update(Country country){
         this.entityManager.merge(country);
+    }
+
+    public boolean existsByName(String name) {
+        Long count = entityManager.createQuery(
+                        "SELECT COUNT(c) FROM Country c WHERE LOWER(c.name) = LOWER(:name)", Long.class)
+                .setParameter("name", name)
+                .getSingleResult();
+        return count > 0;
     }
 }
 

@@ -1,0 +1,25 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/beans"
+        mkdir "src/main/java/p/interfaces"
+        copy { from "JmsSend.java" into "src/main/java/p/interfaces" }
+        copy { from "Client8WF.java" into "src/main/java/p/clients" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies { implementation 'org.wildfly:wildfly-ejb-client-bom:26.1.2.Final' }
+jar {
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
+    from(configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }) 
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        //delete "build"
+        delete "src"
+    }
+}
+// gradle clean build
+// java -cp build/libs/clients5WF.jar p.clients.Client5WF

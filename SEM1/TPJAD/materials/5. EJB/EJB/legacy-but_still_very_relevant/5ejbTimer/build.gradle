@@ -1,0 +1,17 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p"
+        copy { from "OraExacta.java" into "src/main/java/p" }
+    }
+}
+apply plugin: 'war'
+repositories { mavenCentral() }
+dependencies { implementation 'javax:javaee-api:8.0' }
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}

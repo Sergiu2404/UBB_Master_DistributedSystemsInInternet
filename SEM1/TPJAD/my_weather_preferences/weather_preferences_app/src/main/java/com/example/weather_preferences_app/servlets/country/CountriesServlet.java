@@ -26,7 +26,6 @@ public class CountriesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("GET /countries called");
-
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
 
@@ -69,27 +68,25 @@ public class CountriesServlet extends HttpServlet {
 
         try {
             boolean success = service.saveCountry(country);
+
             if (success) {
                 response.setStatus(HttpServletResponse.SC_CREATED);
-                out.print(new Gson().toJson(Map.of("message", "Country created successfully", "country", country)));
+                out.print(new Gson().toJson(Map.of(
+                        "message", "Country created successfully",
+                        "country", country
+                )));
             } else {
-                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                out.print(new Gson().toJson(Map.of("error", "Failed to create country")));
-            }
-        } catch (PersistenceException | EJBTransactionRolledbackException e) {
-            Throwable cause = e.getCause();
-            if (cause != null && cause.getMessage().contains("UK1pyiwrqimi3hnl3vtgsypj5r")) {
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                out.print(new Gson().toJson(Map.of("error", "Country with name '" + country.getName() + "' already exists")));
-            } else {
-                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                out.print(new Gson().toJson(Map.of("error", "Unexpected error: " + e.getMessage())));
+                out.print(new Gson().toJson(Map.of(
+                        "error", "Country already exists or invalid data"
+                )));
             }
         } catch (Exception e) {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            out.print(new Gson().toJson(Map.of("error", "Unexpected error: " + e.getMessage())));
+            out.print(new Gson().toJson(Map.of(
+                    "error", "Unexpected server error: " + e.getMessage()
+            )));
         }
-
     }
 
     @Override
@@ -110,37 +107,34 @@ public class CountriesServlet extends HttpServlet {
         try {
             Long id = Long.parseLong(idParam);
             Country existing = service.getCountryById(id);
+
             if (existing == null) {
                 response.setStatus(HttpServletResponse.SC_NOT_FOUND);
                 out.print(new Gson().toJson(Map.of("error", "Country not found")));
                 return;
             }
 
-            boolean success = service.updateCountry(existing, name, region);
+            boolean found = service.existsCountryByName(name);
 
-            if (success) {
+            if (!found) {
+                this.service.updateCountry(existing, name, region);
                 response.setStatus(HttpServletResponse.SC_OK);
-                out.print(new Gson().toJson(Map.of("message", "Country updated successfully", "country", existing)));
+                out.print(new Gson().toJson(Map.of(
+                        "message", "Country updated successfully",
+                        "country", existing
+                )));
             } else {
-                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                out.print(new Gson().toJson(Map.of("error", "Failed to update country")));
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                out.print(new Gson().toJson(Map.of("error", "Update failed, possibly duplicate name or invalid data")));
             }
         } catch (NumberFormatException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             out.print(new Gson().toJson(Map.of("error", "Invalid country ID")));
-        } catch (PersistenceException | EJBTransactionRolledbackException e) {
-            Throwable cause = e.getCause();
-            if (cause != null && cause.getMessage().contains("UK1pyiwrqimi3hnl3vtgsypj5r")) {
-                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                out.print(new Gson().toJson(Map.of("error", "Country with name '" + name + "' already exists")));
-            } else {
-                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                out.print(new Gson().toJson(Map.of("error", "Unexpected database error: " + e.getMessage())));
-            }
         } catch (Exception e) {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            out.print(new Gson().toJson(Map.of("error", "Unexpected error: " + e.getMessage())));
+            out.print(new Gson().toJson(Map.of("error", "Unexpected server error: " + e.getMessage())));
         }
+
     }
 
 

@@ -50,6 +50,14 @@ public class LocationService {
         this.entityManager.flush(); // force immediate execution to ensure is made in this transaction
     }
 
+    public boolean existsByName(String name) {
+        Long count = entityManager.createQuery(
+                        "SELECT COUNT(l) FROM Location l WHERE l.name = :name", Long.class)
+                .setParameter("name", name)
+                .getSingleResult();
+        return count != null && count > 0;
+    }
+
     public void update(Location location){
         this.entityManager.merge(location);
     }

@@ -59,6 +59,14 @@ public class PreferenceService {
         this.entityManager.flush(); // force immediate execution to ensure is made in this transaction
     }
 
+    public boolean existsByDescription(String description) {
+        Long count = entityManager.createQuery(
+                        "SELECT COUNT(p) FROM Preference p WHERE p.description = :desc", Long.class)
+                .setParameter("desc", description)
+                .getSingleResult();
+        return count != null && count > 0;
+    }
+
     public void update(Preference preference){
         this.entityManager.merge(preference);
     }

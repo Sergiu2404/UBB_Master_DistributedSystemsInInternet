@@ -1,0 +1,20 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/beans"
+        mkdir "src/main/java/p/clients"
+        copy { from "AbacBean.java" into "src/main/java/p/beans" }
+        copy { from "CounterBean.java" into "src/main/java/p/beans" }
+        copy { from "ServletClient.java" into "src/main/java/p/clients" }
+    }
+}
+apply plugin: 'war'
+repositories { mavenCentral() }
+dependencies { implementation 'javax:javaee-api:8.0' }
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}

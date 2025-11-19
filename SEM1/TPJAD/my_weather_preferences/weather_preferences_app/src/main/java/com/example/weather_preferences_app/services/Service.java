@@ -36,6 +36,10 @@ public class Service {
                     || country.getName().isBlank() || country.getRegion().isBlank()) {
                 return false;
             }
+            if (countryService.existsByName(country.getName())) {
+                System.out.println("Country with this name already exists: " + country.getName());
+                return false;
+            }
             countryService.save(country);
             return true;
         } catch (Exception e) {
@@ -50,8 +54,12 @@ public class Service {
             if (country == null) return false;
             if (name != null && !name.isBlank()) country.setName(name);
             if (region != null && !region.isBlank()) country.setRegion(region);
+            if(countryService.existsByName(name)){
+                System.out.println("Cannot rename — country with this name already exists: " + name);
+                return false;
+            }
 
-            countryService.update(country, name, region);
+            countryService.update(country);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,15 +71,12 @@ public class Service {
         try {
             List<Location> locations = locationService.getLocationsByCountryId(countryId);
 
-            // del pref for each location: separate transaction to avoid detached entity exception (JPA cant delete objects from diff persistence contexts)
             for (Location loc : locations) {
                 preferenceService.removePreferencesByLocationId(loc.getId());
             }
 
-            // del locations for this country (separate transaction)
             locationService.removeLocationsByCountryId(countryId);
 
-            // del country (separate transaction)
             countryService.removeCountryById(countryId);
 
             return true;
@@ -99,6 +104,11 @@ public class Service {
             if (location == null || location.getName() == null || location.getName().isBlank()) {
                 return false;
             }
+            if (locationService.existsByName(location.getName())) {
+                System.out.println("Location with this name already exists: " + location.getName());
+                return false;
+            }
+
             locationService.save(location);
             return true;
         } catch (Exception e) {
@@ -120,12 +130,8 @@ public class Service {
 
     public boolean removeLocation(Long locationId) {
         try {
-            List<Preference> preferences = this.preferenceService.getPreferencesByLocationId(locationId);
-
-            // del pref for each location: separate transaction to avoid detached entity exception (JPA cant delete objects from diff persistence contexts)
             this.preferenceService.removePreferencesByLocationId(locationId);
 
-            // del country (separate transaction)
             this.locationService.removeLocationById(locationId);
 
             return true;
@@ -151,6 +157,11 @@ public class Service {
     public boolean savePreference(Preference preference) {
         try {
             if (preference == null || preference.getDescription() == null || Objects.equals(preference.getDescription(), "")) return false;
+            if (preferenceService.existsByDescription(preference.getDescription())) {
+                System.out.println("Preference with this description already exists: " + preference.getDescription());
+                return false;
+            }
+
             preferenceService.save(preference);
             return true;
         } catch (Exception e) {
@@ -170,16 +181,16 @@ public class Service {
         }
     }
 
-//    public boolean removePreference(Preference preference) {
-//        try {
-//            if (preference == null) return false;
-//            preferenceService.remove(preference);
-//            return true;
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return false;
-//        }
-//    }
+    public boolean existsPreferenceByDescription(String description){
+        return this.preferenceService.existsByDescription(description);
+    }
+    public boolean existsCountryByName(String name){
+        return this.countryService.existsByName(name);
+    }
+    public boolean existsLocationByName(String name){
+        return this.locationService.existsByName(name);
+    }
+
     public boolean removePreference(Long preferenceId) {
         try {
             preferenceService.removePreferenceById(preferenceId);

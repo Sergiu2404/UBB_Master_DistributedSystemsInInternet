@@ -116,7 +116,7 @@ public class LocationsServlet extends HttpServlet {
 
         try {
             Long countryId = Long.parseLong(countryIdParam);
-            Coordinates coords = getGeocodingAPICoordinates(name);
+            Coordinates coords = this.getGeocodingAPICoordinates(name);
 
             Location location = new Location();
             location.setName(name);
@@ -152,7 +152,7 @@ public class LocationsServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String locationIdParam = request.getParameter("locationId");
-        String name = request.getParameter("name");
+        String newName = request.getParameter("name");
 
         if (locationIdParam == null) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
@@ -163,26 +163,30 @@ public class LocationsServlet extends HttpServlet {
         try {
             Long locationId = Long.parseLong(locationIdParam);
             Location location = service.getLocationById(locationId);
+
             if (location == null) {
                 response.setStatus(HttpServletResponse.SC_NOT_FOUND);
                 out.print(new Gson().toJson(Map.of("error", "Location not found")));
                 return;
             }
 
-            if (name != null && !name.isBlank()) {
-                location.setName(name);
-                Coordinates coords = getGeocodingAPICoordinates(name);
+            // Update name and coordinates if provided
+            if (newName != null && !newName.isBlank()) {
+                Coordinates coords = getGeocodingAPICoordinates(newName);
                 location.setLatitude(coords.getLatitude());
                 location.setLongitude(coords.getLongitude());
             }
 
-            boolean success = service.updateLocation(location);
-            if (success) {
+            boolean found = this.service.existsLocationByName(newName);
+
+            if (!found) {
+                service.updateLocation(location);
                 out.print(new Gson().toJson(location));
             } else {
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                out.print(new Gson().toJson(Map.of("error", "Failed to update location")));
+                out.print(new Gson().toJson(Map.of("error", "Failed to update location — name might already exist")));
             }
+
         } catch (IOException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             out.print(new Gson().toJson(Map.of("error", "Invalid location or API error: " + e.getMessage())));

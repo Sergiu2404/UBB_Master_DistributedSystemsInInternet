@@ -17,7 +17,7 @@ public class CorsFilter implements Filter {
         // allow from port 5173
         response.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
 
-        // allow HTTP methods
+        // allow all methods
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
 
         // allow headers from frontend

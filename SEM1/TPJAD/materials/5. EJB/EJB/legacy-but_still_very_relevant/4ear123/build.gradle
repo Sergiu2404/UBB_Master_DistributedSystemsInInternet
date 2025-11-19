@@ -1,0 +1,14 @@
+apply plugin: 'ear'
+repositories { mavenCentral() }
+dependencies {
+    deploy files('../1ejbSession/1ejbSession.jar')
+    deploy files('../2ejbSingleton/2ejbSingleton.jar')
+    deploy files('../3ejbCs/3ejbCs.war')
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+    }
+}
+// Clientul servlet se apeleaza http://localhost:8080/ejb3cs/client

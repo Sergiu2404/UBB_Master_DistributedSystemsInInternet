@@ -1,0 +1,21 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/beans"
+        mkdir "src/main/java/p/interfaces"
+        copy { from "JmsSend.java" into "src/main/java/p/interfaces" }
+        copy { from "JmsSendBean.java" into "src/main/java/p/beans" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies { implementation 'javax:javaee-api:8.0'}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}
+// Pentru a folosi MDBean, wildfly trebuie lansat cu 
+// standalone --server-config=standalone-full.xml

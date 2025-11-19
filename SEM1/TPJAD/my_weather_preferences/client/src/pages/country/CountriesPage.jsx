@@ -141,12 +141,10 @@ function CountriesPage() {
                     ))}
             </ul>
 
-
-            {/* modals */}
+            {/* whenever state changes  */}
             {addModalOpen && <AddCountryModal onClose={() => setAddModalOpen(false)} onSave={addCountry} />}
             {editModalOpen && <EditCountryModal country={editModalOpen} onClose={() => setEditModalOpen(null)} onSave={editCountry} />}
 
-            {/* delete confirmation */}
             {deleteConfirm !== null && (
                 <div style={{ border: "1px solid red", padding: "10px", marginTop: "10px" }}>
                     <p>Are you sure you want to delete this country?</p>

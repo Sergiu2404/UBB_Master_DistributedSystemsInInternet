@@ -1,0 +1,25 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/beans"
+        mkdir "src/main/java/p/interfaces"
+        mkdir "src/main/java/p/clients"
+        copy { from "Abac.java" into "src/main/java/p/interfaces" }
+        copy { from "Counter.java" into "src/main/java/p/interfaces" }
+        copy { from "AbacR.java" into "src/main/java/p/interfaces" }
+        copy { from "CounterR.java" into "src/main/java/p/interfaces" }
+        copy { from "AbacBean.java" into "src/main/java/p/beans" }
+        copy { from "CounterBean.java" into "src/main/java/p/beans" }
+        copy { from "ServletClient.java" into "src/main/java/p/clients" }
+    }
+}
+apply plugin: 'war'
+repositories { mavenCentral() }
+dependencies { implementation 'javax:javaee-api:8.0' }
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}

@@ -1,0 +1,23 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java"
+        copy { from "JmsRecv.java" into "src/main/java" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies { implementation 'org.apache.activemq:activemq-all:5.15.16' }
+jar {
+    archiveFileName = "Recv.jar" 
+    manifest { attributes 'Main-Class': 'JmsRecv' }
+    from(configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }) {
+    }
+}
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "src"
+        //delete "build"
+    }
+}

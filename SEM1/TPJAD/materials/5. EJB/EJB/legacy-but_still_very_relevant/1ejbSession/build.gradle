@@ -1,0 +1,21 @@
+task pre {
+    doFirst {
+        delete "src"
+        mkdir "src/main/java/p/beans"
+        mkdir "src/main/java/p/interfaces"
+        copy { from "Abac1.java" into "src/main/java/p/interfaces" }
+        copy { from "Counter1.java" into "src/main/java/p/interfaces" }
+        copy { from "Abac1Bean.java" into "src/main/java/p/beans" }
+        copy { from "Counter1Bean.java" into "src/main/java/p/beans" }
+    }
+}
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies { implementation 'javax:javaee-api:8.0' }
+task post {
+    doLast {
+        copy { from "build/libs" into "." }
+        delete "build"
+        delete "src"
+    }
+}
