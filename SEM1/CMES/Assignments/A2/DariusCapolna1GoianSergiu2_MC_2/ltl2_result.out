@@ -1,0 +1,39 @@
+pan: ltl formula ltl2
+
+(Spin Version 6.5.2 -- 6 December 2019)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (ltl2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 52 byte, depth reached 25, errors: 0
+       10 states, stored
+        6 states, matched
+       16 transitions (= stored+matched)
+       15 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.001	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.283	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.730	total actual memory usage
+
+
+unreached in proctype Sensor
+	smart_lighting.pml:42, state 18, "sensor_to_controller!roomEmpty"
+	smart_lighting.pml:46, state 25, "-end-"
+	(2 of 25 states)
+unreached in proctype Controller
+	smart_lighting.pml:74, state 20, "-end-"
+	(1 of 20 states)
+unreached in claim ltl2
+	_spin_nvr.tmp:19, state 10, "(!(!(lightIsOn)))"
+	_spin_nvr.tmp:21, state 13, "-end-"
+	(2 of 13 states)
+
+pan: elapsed time 0 seconds
