@@ -14,11 +14,11 @@ x_e = exprnd(2, 1, 8) % 2 is avg waiting time until event occurs, waiting time e
 x_n = normrnd(10, 3, 1, 5) % floats centered aorund mean 10, sigma = std dev (variability around mean), simulated 5 times
 
 % BASIC random functions:
-% Uniform(0, 1): only nums between 0 and 1
+% Uniform(0, 1): all nums have the same chance to be chosen
 rand() % one num
 rand(1,5) % 5 floats between 0 and 1
 rand(3,3) % 3x3 matrix of floats between 0 and 1
-% Standard Normal N(0, 1)
+% Standard Normal N(0, 1): nr near the mean more likely to be chosen
 randn() % one sample
 randn(1,5) % row of 5 samples
 randn(3,3) % 3x3 matrix
@@ -143,29 +143,73 @@ endfor
 disp(X_Poisson);
 
 
+
 % 3)
+p = input('p in (0, 1): ');
+err = input('error: ');
+alpha = input('alpha (level of significance): ');
+
+N = ceil(0.25 * (norminv(alpha / 2, 0, 1) / err)^2);
+fprintf('nr of simulations: %d', N);
+
 % a) Use the DITM to generate a Geo(p), p ∈ (0, 1), variable
-p = 0.4;
-num_samples = 10;
-q = 1 - p;
-% Uniform samples U
-U = rand(1, num_samples);
-% Inverse CDF formula for Geo(p)
-X_Geom = floor(log(U) ./ log(q));
-disp('a) Geometric(0.4) 1x10 Samples (Failures before 1st Success):');
-disp(X_Geom);
+X = ceil(log(1 - rand(1, N)) ./ log(1 - p) - 1) % Geo variables
+
+fprintf('simulated probab. P(X = 2) = %1.5f\n', mean(X == 2));
+fprintf('true probab. P(X = 2) = %1.5f\n', geopdf(2, p));
+fprintf('error = %e\n\n', abs(geopdf(2, p) - mean(X == 2)));
+
+fprintf('simulated probab. P(X <= 2) = %1.5f\n', mean(X <= 2));
+fprintf('true probab. P(X <= 2) = %1.5f\n', geocdf(2, p));
+fprintf('error = %e\n\n', abs(geocdf(2, p) - mean(X <= 2)));
+
+fprintf('simulated probab. P(X < 2) = %1.5f\n', mean(X < 2));
+fprintf('true probab. P(X < 2) = %1.5f\n', geocdf(1, p));
+fprintf('error = %e\n\n', abs(geocdf(1, p) - mean(X < 2)));
+
+fprintf('simulated mean E(X) = %5.5f\n', mean(X));
+fprintf('true mean E(X) = %5.5f\n', (1 - p) / p);
+fprintf('error = %e\n\n', abs((1 - p) / p - mean(X)));
+
+
 
 % b) Then use that to generate a NB(n, p), n ∈ IN, p ∈ (0, 1), variable
-n = 3; % Number of succ required
-p = 0.4;
-num_samples = 10;
-q = 1 - p;
-% generate n rows of indep Geo samples (3 rows for n=3)
-% U_matrix is 3x10
-U_matrix = rand(n, num_samples);
-% calculate the n indep Geo samples (rows)
-G_samples = floor(log(U_matrix) ./ log(q));
-% sum the n Geo samples along the rows (dim 1)
-X_NegBinom = sum(G_samples, 1);
-disp('b) Negative Binomial(3, 0.4) 1x10 Samples (Failures before 3rd Success):');
-disp(X_NegBinom);
+p = input('p (in (0, 1)) = ');
+n = input('n (positive integer) = ');
+
+X = zeros(1, N);
+
+% simulations
+for i = 1:N
+    % Generate n independent Geometric(p) variables (Y)
+    % Each Y is the number of failures before the first success
+    % Inverse Transform Method: X = floor(log(U) / log(1-p)).
+    % The expression below is an algebraically equivalent form:
+    Y = ceil(log(1 - rand(n, 1))/log(1 - p) - 1); % Geo variables
+
+    % X(i) is the sum of the n Geometric variables (i.e., the Negative Binomial variable)
+    X(i) = sum(Y);
+end
+
+% --- RESULTS OUTPUT (Matching the combined image logic) ---
+
+% P(X = 2)
+fprintf('simulated probab. P(X = 2) = %1.5f\n', mean(X == 2));
+fprintf('true probab. P(X = 2) = %1.5f\n', nbinpdf(2, n, p));
+fprintf('error = %e\n\n', abs(nbinpdf(2, n, p) - mean(X == 2)));
+
+% P(X <= 2)
+fprintf('simulated probab. P(X <= 2) = %1.5f\n', mean(X <= 2));
+fprintf('true probab. P(X <= 2) = %1.5f\n', nbincdf(2, n, p));
+fprintf('error = %e\n\n', abs(nbincdf(2, n, p) - mean(X <= 2)));
+
+% P(X < 2) which is P(X <= 1)
+fprintf('simulated probab. P(X < 2) = %1.5f\n', mean(X < 2));
+fprintf('true probab. P(X < 2) = %1.5f\n', nbincdf(1, n, p));
+fprintf('error = %e\n\n', abs(nbincdf(1, n, p) - mean(X < 2)));
+
+% E(X)
+fprintf('simulated mean E(X) = %5.5f\n', mean(X));
+% Analytical Mean of Negative Binomial (failures before n successes): E(X) = n*(1-p)/p
+fprintf('true mean E(X) = %5.5f\n', n * (1 - p) / p);
+fprintf('error = %e\n\n', abs(n * (1 - p) / p - mean(X)));

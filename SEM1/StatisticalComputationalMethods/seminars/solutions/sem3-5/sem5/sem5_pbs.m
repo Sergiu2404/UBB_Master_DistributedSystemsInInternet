@@ -2,9 +2,10 @@ pkg load statistics
 % SEM5 pb
 % 1)
 lambda = 6;
-p_max = 0.1; % ladning prob
 
 % a)
+p_max = 0.1; % ladning prob
+
 frames_per_min = lambda / p_max;
 delta_min = 1 / frames_per_min;
 delta_sec = delta_min * 60;
