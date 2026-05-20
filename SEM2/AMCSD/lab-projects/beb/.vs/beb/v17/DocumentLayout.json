@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\beb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\beb\\node_0.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|solutionrelative:node_0.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\beb\\node_1.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|solutionrelative:node_1.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\beb\\config.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|solutionrelative:config.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\beb\\config10.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|solutionrelative:config10.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\beb\\startnodes.sh||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2E0B798E-BA4B-4025-9018-442875D7DA27}|beb.csproj|solutionrelative:startnodes.sh||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_2.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:node_2.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "node_2.log",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_2.log",
+              "RelativeDocumentMoniker": "node_2.log",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_2.log",
+              "RelativeToolTip": "node_2.log",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:05:27.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "node_1.log",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_1.log",
+              "RelativeDocumentMoniker": "node_1.log",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_1.log",
+              "RelativeToolTip": "node_1.log",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:05:25.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "node_0.log",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_0.log",
+              "RelativeDocumentMoniker": "node_0.log",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\node_0.log",
+              "RelativeToolTip": "node_0.log",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:05:22.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "config.txt",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\config.txt",
+              "RelativeDocumentMoniker": "config.txt",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\config.txt",
+              "RelativeToolTip": "config.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-01T17:10:59.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "startnodes.sh",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\startnodes.sh",
+              "RelativeDocumentMoniker": "startnodes.sh",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\startnodes.sh",
+              "RelativeToolTip": "startnodes.sh",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2026-03-25T09:41:19.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T09:28:15.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "config10.txt",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\config10.txt",
+              "RelativeDocumentMoniker": "config10.txt",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\beb\\config10.txt",
+              "RelativeToolTip": "config10.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-25T09:29:03.895Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\bin\Debug\net9.0\beb.exe
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\bin\Debug\net9.0\beb.deps.json
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\bin\Debug\net9.0\beb.runtimeconfig.json
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\bin\Debug\net9.0\beb.dll
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\bin\Debug\net9.0\beb.pdb
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.GeneratedMSBuildEditorConfig.editorconfig
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.AssemblyInfoInputs.cache
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.AssemblyInfo.cs
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.csproj.CoreCompileInputs.cache
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.sourcelink.json
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.dll
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\refint\beb.dll
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.pdb
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\beb.genruntimeconfig.cache
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Debug\net9.0\ref\beb.dll

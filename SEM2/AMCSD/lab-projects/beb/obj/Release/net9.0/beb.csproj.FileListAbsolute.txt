@@ -1,0 +1,1 @@
+D:\UBB_Master_DistributedSystemsInInternet\SEM2\AMCSD\lab-projects\beb\obj\Release\net9.0\beb.GeneratedMSBuildEditorConfig.editorconfig

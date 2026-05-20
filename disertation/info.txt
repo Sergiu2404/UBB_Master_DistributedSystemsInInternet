@@ -1,0 +1,8 @@
+proiect cercetare: problema, de ce e importanta problema, discuție pe baza a ce gasim, oferim solutii si discutam evaluari dezavantaje
+
+cercetare != implementare (proiect)
+Intrebari proiect de cercetare, cea mai potrivita metoda pentru implementare (async vs event based vs ...), solutii de compensare si leverage a avantajelor, cum le putem evalua (scris ca un articol cu biblio relevanta, introducere, literature review, abordare, concluzie)
+
+de exemplu abordari in web care sunt mai scalabile fata de altele
+
+practica legata de proiectul de cercetare sau cercetara legata de dizertatie - ideal
