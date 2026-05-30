@@ -1,0 +1,4 @@
+./maelstrom test -w broadcast \
+  --bin ~/amcsd/ReliableBroadcast/run.sh \
+  --nodes n1,n2,n3 \
+  --time-limit 20 --rate 10

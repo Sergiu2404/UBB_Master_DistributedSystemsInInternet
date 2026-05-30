@@ -6,22 +6,13 @@ using System.Collections.Concurrent;
 
 namespace ReliableBroadcast;
 
-/// <summary>
-/// The central event processor — single-threaded event loop.
-///
-/// Runs on the main thread and processes events from the global
-/// <see cref="BlockingCollection{T}"/> one at a time.
-/// All state mutation in the application stack happens here.
-///
-/// Synchronous callbacks (no queue hop needed):
-///   RB.OnRbDeliver → APP.HandleRbDeliver   (value arrives before broadcast_ok)
-///
-/// Asynchronous (via queue):
-///   STDIN reader thread  → PlDeliverEvent
-///   PFD timer thread     → PfdTimeoutEvent
-///   BEB inbound message  → BebDeliverEvent (enqueued by BEB.HandleBebMessage)
-///   PFD timeout result   → PfdCrashEvent   (nested, TryAdd)
-/// </summary>
+// processes events from blcking collection one by one (state mutation)
+// sync callback without queue needed rb.OnRbDeliver -> app.HandleRbDeliver (value arrives before broadcast_ok)
+// async with queue: 
+// -stdin reader -> PlDeliverEvent,
+// -pfd timer -> PfdTimeoutEvent, 
+// -beb inbound message -> BebDeliverEvent enqueued by beb.HandleBebMessage
+// -pfd timeout result -> PfdCrashEvent (nested, TryAdd)
 public sealed class EventProcessor
 {
     private readonly BlockingCollection<Event> _queue;
@@ -72,6 +63,7 @@ public sealed class EventProcessor
                 break;
 
             case PfdTimeoutEvent:
+                // dont handle timeouts before init_ok sent
                 if (!_initialized) break;
                 var crashes = _pfd.HandleTimeout();
                 foreach (var c in crashes)
@@ -80,12 +72,6 @@ public sealed class EventProcessor
 
             case PfdCrashEvent { ProcessId: var pid }:
                 _rb.HandleCrash(pid);
-                break;
-
-            // RbDeliverEvent is now handled via synchronous callback — kept here
-            // only for completeness / future use.
-            case RbDeliverEvent rbd:
-                _app.HandleRbDeliver(rbd.From, rbd.Value);
                 break;
 
             default:
@@ -101,16 +87,16 @@ public sealed class EventProcessor
 
         switch (type)
         {
-            case "init":
+            case "init": // each node finds its own id
                 HandleInit(msg);
                 break;
 
             case "broadcast":
-                {
-                    var value = msg.Body.GetProperty("message").GetInt32();
-                    _app.HandleBroadcastRequest(new AppBroadcastRequestEvent(msg, value));
-                    break;
-                }
+            {
+                var value = msg.Body.GetProperty("message").GetInt32();
+                _app.HandleBroadcastRequest(new AppBroadcastRequestEvent(msg, value));
+                break;
+            }
             case "read":
                 _app.HandleReadRequest(new AppReadRequestEvent(msg));
                 break;
@@ -124,11 +110,11 @@ public sealed class EventProcessor
                 break;
 
             case "hb_request":
-                {
-                    var msgId = BodyHelper.GetMsgId(msg.Body) ?? 0;
-                    _pfd.HandleHeartbeatRequest(msg.Src, msgId);
-                    break;
-                }
+            {
+                var msgId = BodyHelper.GetMsgId(msg.Body) ?? 0;
+                _pfd.HandleHeartbeatRequest(msg.Src, msgId);
+                break;
+            }
             case "hb_reply":
                 _pfd.HandleHeartbeatReply(msg.Src);
                 break;
@@ -149,12 +135,11 @@ public sealed class EventProcessor
 
         Log($"[EP] init node_id={_selfId} peers=[{string.Join(",", allNodes)}]");
 
-        _pfd.Init(_selfId, allNodes);
-        _beb.Init(_selfId, allNodes);
+        _pfd.Init(_selfId, allNodes); // init peers as all alive
+        _beb.Init(_selfId, allNodes); // init peers
         _rb.Init(_selfId);
         _app.Init(_selfId);
 
-        // Wire RB → APP synchronous callback
         _rb.OnRbDeliver = (sender, value) => _app.HandleRbDeliver(sender, value);
 
         var inReplyTo = BodyHelper.GetMsgId(msg.Body) ?? 0;
@@ -164,7 +149,9 @@ public sealed class EventProcessor
             MsgId = _pl.NextMsgId()
         });
 
+        // send hb to all peers
         _pfd.StartTimerThread();
+        // initialized after all steps ready
         _initialized = true;
     }
 

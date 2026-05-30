@@ -1,0 +1,14 @@
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.GeneratedMSBuildEditorConfig.editorconfig
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.AssemblyInfoInputs.cache
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.AssemblyInfo.cs
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.csproj.CoreCompileInputs.cache
+/home/sergiu/amcsd/ReliableBroadcast/bin/Release/net10.0/ReliableBroadcast
+/home/sergiu/amcsd/ReliableBroadcast/bin/Release/net10.0/ReliableBroadcast.deps.json
+/home/sergiu/amcsd/ReliableBroadcast/bin/Release/net10.0/ReliableBroadcast.runtimeconfig.json
+/home/sergiu/amcsd/ReliableBroadcast/bin/Release/net10.0/ReliableBroadcast.dll
+/home/sergiu/amcsd/ReliableBroadcast/bin/Release/net10.0/ReliableBroadcast.pdb
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.dll
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/refint/ReliableBroadcast.dll
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.pdb
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ReliableBroadcast.genruntimeconfig.cache
+/home/sergiu/amcsd/ReliableBroadcast/obj/Release/net10.0/ref/ReliableBroadcast.dll

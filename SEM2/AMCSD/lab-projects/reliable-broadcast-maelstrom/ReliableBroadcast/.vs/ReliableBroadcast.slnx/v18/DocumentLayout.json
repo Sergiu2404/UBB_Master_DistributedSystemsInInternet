@@ -3,44 +3,44 @@
   "WorkspaceRootPath": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\run.sh||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:run.sh||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\besteffortbroadcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:besteffortbroadcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\eventprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:eventprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\rblayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:rblayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\run.sh||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:run.sh||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\perfectfailuredetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:perfectfailuredetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\eventprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:eventprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\besteffortbroadcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:besteffortbroadcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\rblayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:rblayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\perfectlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:perfectlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\perfectfailuredetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:perfectfailuredetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\perfectlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:perfectlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF06FE26-0AF3-4BB1-9909-4C221BC07F96}|ReliableBroadcast.csproj|solutionrelative:events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|d:\\ubb_master_distributedsystemsininternet\\sem2\\amcsd\\lab-projects\\reliable-broadcast-maelstrom\\reliablebroadcast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3685A647-1B27-878B-41D4-31D9645628E5}|ReliableBroadcast.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "run.sh",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\run.sh",
               "RelativeDocumentMoniker": "run.sh",
@@ -67,33 +67,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventProcessor.cs",
-              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\EventProcessor.cs",
-              "RelativeDocumentMoniker": "EventProcessor.cs",
-              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\EventProcessor.cs",
-              "RelativeToolTip": "EventProcessor.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAkwKsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:06:14.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Application.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\Application.cs",
               "RelativeDocumentMoniker": "Application.cs",
               "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\Application.cs",
               "RelativeToolTip": "Application.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAkwFcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwEcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-20T18:05:59.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "RbLayer.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\RbLayer.cs",
               "RelativeDocumentMoniker": "RbLayer.cs",
@@ -101,12 +88,11 @@
               "RelativeToolTip": "RbLayer.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAkwG4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:05:40.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T18:05:40.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "PerfectFailureDetector.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\PerfectFailureDetector.cs",
               "RelativeDocumentMoniker": "PerfectFailureDetector.cs",
@@ -114,38 +100,24 @@
               "RelativeToolTip": "PerfectFailureDetector.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAAkwIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:05:01.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T18:05:01.626Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "BestEffortBroadcast.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\BestEffortBroadcast.cs",
               "RelativeDocumentMoniker": "BestEffortBroadcast.cs",
               "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\BestEffortBroadcast.cs",
               "RelativeToolTip": "BestEffortBroadcast.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAkwFoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-20T18:04:29.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PerfectLink.cs",
-              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\PerfectLink.cs",
-              "RelativeDocumentMoniker": "PerfectLink.cs",
-              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\PerfectLink.cs",
-              "RelativeToolTip": "PerfectLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:03:28.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Messages.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\Messages.cs",
               "RelativeDocumentMoniker": "Messages.cs",
@@ -158,7 +130,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
+              "Title": "EventProcessor.cs",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\EventProcessor.cs",
+              "RelativeDocumentMoniker": "EventProcessor.cs",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\EventProcessor.cs",
+              "RelativeToolTip": "EventProcessor.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAkwKsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T18:06:14.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PerfectLink.cs",
+              "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\PerfectLink.cs",
+              "RelativeDocumentMoniker": "PerfectLink.cs",
+              "ToolTip": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\PerfectLink.cs",
+              "RelativeToolTip": "PerfectLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T18:03:28.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Events.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\Events.cs",
               "RelativeDocumentMoniker": "Events.cs",
@@ -166,12 +162,11 @@
               "RelativeToolTip": "Events.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:01:49.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T18:01:49.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\UBB_Master_DistributedSystemsInInternet\\SEM2\\AMCSD\\lab-projects\\reliable-broadcast-maelstrom\\ReliableBroadcast\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -179,8 +174,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:01:08.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T18:01:08.083Z"
             }
           ]
         }

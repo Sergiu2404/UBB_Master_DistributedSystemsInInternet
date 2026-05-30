@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samplewebapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samplewebapp
+  template:
+    metadata:
+      labels:
+        app: samplewebapp
+    spec:
+      containers:
+      - name: samplewebapp
+        image: productappregistry.azurecr.io/samplewebapp:v1
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: samplewebapp-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: samplewebapp
+  ports:
+  - port: 80
+    targetPort: 8080

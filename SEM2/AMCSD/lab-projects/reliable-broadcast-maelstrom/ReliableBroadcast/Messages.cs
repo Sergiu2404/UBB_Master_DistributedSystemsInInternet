@@ -7,16 +7,12 @@ namespace ReliableBroadcast;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-// ─── Outer envelope ───────────────────────────────────────────────────────────
-
 public record MaelstromMessage
 {
     [JsonPropertyName("src")] public string Src { get; init; } = "";
     [JsonPropertyName("dest")] public string Dest { get; init; } = "";
     [JsonPropertyName("body")] public JsonElement Body { get; init; }
 }
-
-// ─── Body type field helper ───────────────────────────────────────────────────
 
 public static class BodyHelper
 {
@@ -32,18 +28,13 @@ public static class BodyHelper
             ? r.GetInt32() : null;
 }
 
-// ─── BEB payload (travels inside Maelstrom body as nested JSON) ───────────────
-
-/// <summary>
-/// The data that BEB carries. For RB this is:  { sender: "n1", value: 7 }
-/// It is serialised into the "rb_data" field of the Maelstrom body.
-/// </summary>
+//data that beb carries, for rb
+// serialised into the rb_data field of malestom body
 public record BebPayload(
     [property: JsonPropertyName("sender")] string Sender,
     [property: JsonPropertyName("value")] int Value);
 
-// ─── Typed outbound bodies ────────────────────────────────────────────────────
-
+// outbound bodies
 public record InitOkBody
 {
     [JsonPropertyName("type")] public string Type { get; init; } = "init_ok";
@@ -73,7 +64,7 @@ public record TopologyOkBody
     [JsonPropertyName("msg_id")] public int MsgId { get; init; }
 }
 
-/// <summary>Inter-node BEB message (flood).</summary>
+// beb flood
 public record BebMessageBody
 {
     [JsonPropertyName("type")] public string Type { get; init; } = "beb_broadcast";
@@ -81,14 +72,14 @@ public record BebMessageBody
     [JsonPropertyName("rb_data")] public BebPayload RbData { get; init; } = null!;
 }
 
-/// <summary>Heartbeat request sent by PFD.</summary>
+// heartbeat req sent by perf fail det
 public record HeartbeatRequestBody
 {
     [JsonPropertyName("type")] public string Type { get; init; } = "hb_request";
     [JsonPropertyName("msg_id")] public int MsgId { get; init; }
 }
 
-/// <summary>Heartbeat reply sent by PFD.</summary>
+// heartpeat reply sent by perf fail det
 public record HeartbeatReplyBody
 {
     [JsonPropertyName("type")] public string Type { get; init; } = "hb_reply";

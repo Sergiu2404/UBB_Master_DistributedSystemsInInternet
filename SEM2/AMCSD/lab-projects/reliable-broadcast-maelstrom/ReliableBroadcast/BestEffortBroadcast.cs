@@ -6,25 +6,10 @@ using System.Collections.Concurrent;
 
 namespace ReliableBroadcast;
 
-/// <summary>
-/// Best-Effort Broadcast (BEB).
-///
-/// Abstraction stack position:
-///   RB  →  BEB  →  PL
-///
-/// Algorithm:
-///   bebBroadcast(m):
-///     for all q in Π: plSend(q, m)
-///
-///   upon plDeliver(p, m):
-///     trigger bebDeliver(p, m)
-///
-/// Self-delivery:
-///   Maelstrom does not route a node's own messages back to itself via STDIN.
-///   Therefore <see cref="Broadcast"/> returns the self-delivery event
-///   synchronously so the caller (RB) can handle it inline before replying
-///   to the client — preserving correct sequencing.
-/// </summary>
+
+// betwene rb and pl
+// maelstrom doesnt route a node's own messages to itself via stdin
+// so broadcast returns the self-delivery event sync so caller rb can handle it before replying to the client (preserve sequencing)
 public sealed class BestEffortBroadcast
 {
     private readonly PerfectLink _pl;
@@ -44,13 +29,7 @@ public sealed class BestEffortBroadcast
         _peers = allNodes;
     }
 
-    // ── BEB broadcast ─────────────────────────────────────────────────────────
-
-    /// <summary>
-    /// Flood <paramref name="payload"/> to ALL processes.
-    /// Returns a <see cref="BebDeliverEvent"/> for self if self is in the peer
-    /// list (Maelstrom never loops messages back, so we handle self synchronously).
-    /// </summary>
+    // returns a beb deliv event for self if self is in the peer list (maelstrom never loops messages back, so we handle self sync)
     public BebDeliverEvent? Broadcast(BebPayload payload)
     {
         Log($"[BEB] bebBroadcast sender={payload.Sender} value={payload.Value} → {_peers.Count} peers");
@@ -58,19 +37,17 @@ public sealed class BestEffortBroadcast
         foreach (var peer in _peers)
         {
             if (peer == _selfId)
+                // val added to deliv before bcast_ok, otherwise deliv may not contain this val
                 selfDeliver = new BebDeliverEvent(_selfId, payload);
             else
+                // send payload with original sender and value to each peer
                 _pl.Send(_selfId, peer, new BebMessageBody { MsgId = _pl.NextMsgId(), RbData = payload });
         }
         return selfDeliver;
     }
 
-    // ── Inbound "beb_broadcast" from network (via PL / STDIN) ────────────────
-
-    /// <summary>
-    /// Called by the event processor for inbound "beb_broadcast" Maelstrom messages.
-    /// Enqueues a <see cref="BebDeliverEvent"/> for the RB layer to process.
-    /// </summary>
+    // inbound beb sent message
+    // enqueues a beb deliver event for the rb layer to proc
     public void HandleBebMessage(MaelstromMessage msg)
     {
         if (!msg.Body.TryGetProperty("rb_data", out var rbDataEl))

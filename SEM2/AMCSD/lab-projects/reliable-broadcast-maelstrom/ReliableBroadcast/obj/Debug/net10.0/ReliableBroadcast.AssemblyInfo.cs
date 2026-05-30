@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReliableBroadcast")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05a1a589486dfb2178167c2f3ae15119c4272fea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faa0407be875d0d2789d45e56641a674480d520b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReliableBroadcast")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReliableBroadcast")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
