@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>expense_tracker</RootNamespace>
+    <UserSecretsId>6b4df8df-e769-4851-94c3-4f8f5112fb5e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
+  </ItemGroup>
+
+</Project>

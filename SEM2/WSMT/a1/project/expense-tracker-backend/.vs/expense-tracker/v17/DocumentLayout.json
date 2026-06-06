@@ -1,0 +1,243 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\dtos\\transactiondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:dtos\\transactiondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\services\\transactionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:services\\transactionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\data\\sqlserverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:data\\sqlserverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\expense-tracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:expense-tracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sergiu\\AppData\\Roaming\\Microsoft\\UserSecrets\\6b4df8df-e769-4851-94c3-4f8f5112fb5e\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\repositories\\transactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:repositories\\transactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\expense-tracker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:expense-tracker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\services\\itransactionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:services\\itransactionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|d:\\programming\\projects\\.net\\individual-project-sergiu2404\\expense-tracker-backend\\repositories\\itransactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267F8CA-70F5-4ADF-8627-36671C08B163}|expense-tracker.csproj|solutionrelative:repositories\\itransactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransactionsRepository.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Repositories\\TransactionsRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TransactionsRepository.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Repositories\\TransactionsRepository.cs",
+              "RelativeToolTip": "Repositories\\TransactionsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T09:54:08.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransactionsService.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Services\\TransactionsService.cs",
+              "RelativeDocumentMoniker": "Services\\TransactionsService.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Services\\TransactionsService.cs",
+              "RelativeToolTip": "Services\\TransactionsService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T09:53:18.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SqlServerDbContext.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Data\\SqlServerDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\SqlServerDbContext.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Data\\SqlServerDbContext.cs",
+              "RelativeToolTip": "Data\\SqlServerDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T09:36:59.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwB4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T08:41:20.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-27T10:31:17.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransactionsController.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "Controllers\\TransactionsController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAA5wBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T09:47:05.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransactionDTOs.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\DTOs\\TransactionDTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\TransactionDTOs.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\DTOs\\TransactionDTOs.cs",
+              "RelativeToolTip": "DTOs\\TransactionDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:01:37.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "expense-tracker.csproj",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\expense-tracker.csproj",
+              "RelativeDocumentMoniker": "expense-tracker.csproj",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\expense-tracker.csproj",
+              "RelativeToolTip": "expense-tracker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-05T06:33:21.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-27T10:31:14.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\Sergiu\\AppData\\Roaming\\Microsoft\\UserSecrets\\6b4df8df-e769-4851-94c3-4f8f5112fb5e\\secrets.json",
+              "ToolTip": "C:\\Users\\Sergiu\\AppData\\Roaming\\Microsoft\\UserSecrets\\6b4df8df-e769-4851-94c3-4f8f5112fb5e\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-26T09:20:15.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITransactionsRepository.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Repositories\\ITransactionsRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ITransactionsRepository.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Repositories\\ITransactionsRepository.cs",
+              "RelativeToolTip": "Repositories\\ITransactionsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T09:56:27.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "expense-tracker",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\expense-tracker.csproj",
+              "RelativeDocumentMoniker": "expense-tracker.csproj",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\expense-tracker.csproj",
+              "RelativeToolTip": "expense-tracker.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-27T10:30:29.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Entities\\Transaction.cs",
+              "RelativeDocumentMoniker": "Entities\\Transaction.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Entities\\Transaction.cs",
+              "RelativeToolTip": "Entities\\Transaction.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwB4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T09:27:34.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ITransactionsService.cs",
+              "DocumentMoniker": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Services\\ITransactionsService.cs",
+              "RelativeDocumentMoniker": "Services\\ITransactionsService.cs",
+              "ToolTip": "D:\\Programming\\projects\\.net\\individual-project-Sergiu2404\\expense-tracker-backend\\Services\\ITransactionsService.cs",
+              "RelativeToolTip": "Services\\ITransactionsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T10:13:18.579Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
