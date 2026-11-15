@@ -1,0 +1,1 @@
+export type SignalLevel = 'RED' | 'YELLOW' | 'GREEN';

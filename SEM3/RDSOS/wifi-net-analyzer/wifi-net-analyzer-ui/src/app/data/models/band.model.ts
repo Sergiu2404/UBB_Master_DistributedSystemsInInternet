@@ -1,0 +1,1 @@
+export type Band = 'GHz_2_4' | 'GHz_5' | 'GHz_6';

@@ -1,0 +1,14 @@
+<ul class="flex flex-col gap-1 text-sm">
+    @for (wifiInterface of interfaces(); track wifiInterface.guid) {
+        <li class="flex items-center gap-2">
+            <span class="text-slate-300">
+                {{ wifiInterface.description }}
+            </span>
+            <span class="rounded-full bg-slate-700 px-2 py-0.5 text-xs text-slate-200">
+                {{ wifiInterface.state }}
+            </span>
+        </li>
+    } @empty {
+        <li class="text-slate-500">no wireless interfaces...</li>
+    }
+</ul>

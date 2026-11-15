@@ -1,0 +1,32 @@
+<main class="min-h-screen bg-slate-900 p-6 text-slate-100">
+  <header class="mb-6 flex flex-wrap items-start justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-bold">WiFi Analyzer</h1>
+      @if (wifiAnalyzerState.lastUpdatedAt(); as lastUpdatedAt) {
+        <p class="text-sm text-slate-500">Last update: {{ lastUpdatedAt | date: 'HH:mm:ss' }}</p>
+      }
+    </div>
+    <app-interface-summary [interfaces]="wifiAnalyzerState.interfaces()" />
+  </header>
+
+  @if (wifiAnalyzerState.errorMessage(); as errorMessage) {
+    <p class="mb-4 rounded-lg bg-red-900/50 p-3 text-red-200">{{ errorMessage }}</p>
+  }
+
+  <section class="mb-6 rounded-xl bg-slate-800 p-4">
+    <h2 class="mb-2 text-lg font-semibold">2.4 GHz channel occupancy</h2>
+    <app-channel-graph [channelOccupancies]="wifiAnalyzerState.channelOccupancies()" />
+  </section>
+
+  <section>
+    <h2 class="mb-2 text-lg font-semibold">
+      Detected networks ({{ wifiAnalyzerState.networks().length }})
+    </h2>
+    <div class="flex flex-col gap-3">
+      @for (network of wifiAnalyzerState.networks(); track network.bssid) {
+        <app-network-card [network]="network" />
+      } @empty {
+        <p class="text-slate-400">Scanning for networks...</p>
+      }
+    </div>
+  </section></main>

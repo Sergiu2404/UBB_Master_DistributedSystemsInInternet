@@ -1,0 +1,50 @@
+PROJECT 1:
+Implement a simple broadcasting in your language of choice:
+-communicate through UDP
+-programs should communicate through messages having this format:
+	-message size should be fixed: 1024 bytes;
+	-byte 0: should be the sending node index (order number);
+	-bytes 1-1003: random values;
+	-bytes 1004-1023: Sha-1 of bytes 0-1003 in HEX lower case;
+-configuration file:
+	-first line: nr of broadcasts by each node;
+	-remaining lines: ip port
+	-ex:
+1000
+127.0.0.1 5000 # index 0, consider instead host ips and which of the node i have to start, bc the others will be by somebody else
+127.0.0.1 5001 # index 1
+127.0.0.1 5002 # index 2
+127.0.0.1 5003 # index 3
+127.0.0.1 5004
+...
+
+-program args: config file path and node index
+	-bcastnode config.txt 3 # index is 3 in this case, run with my index told by teacher
+-every broadcast should be sent to the source as well;
+-every node should log all the messages received, message should look like:
+	-first elem: OK or FAIL depending on whether the sent SHA1 matches the calculated SHA1
+	-second elem: source node index
+	-third: the sent SHA1 (last 20 bytes of the messaes displayed as HEX)
+	-fourth: calculated SHA1 of the message
+	-ex:
+OK 1 0123456789abcdef0123456789abcdef01234567 0123456789abcdef0123456789abcdef01234567
+OK 2 0123456789abcdef0123456789abcdef01234567 0123456789abcdef0123456789abcdef01234567
+FAIL 0 0123456789abcdef0123456789abcdef01234567 0123456789abcdef0123456789abcdef01234aaa
+
+-log any errors in a separate file
+-all nodes should start within 10 seconds
+-all nodes should wait 15 seconds after startup before starting broadcasting
+-a node should stop after sending n broadcasts and receiving n * m broadcasts(in the configuration file example m = 5, n = 1000)
+-message reading / writing (especially reading) should insist until all the expected message size is read or written (use lib function or implement your own), so insist until reading 1024 bytes;
+-add timeout (if some node crashes, if no response for more than 5 seconds then dont freeze the rest of the nodes and maybe ignore it i guess)
+
+Each person should start multiple nodes per person (each 5 nodes or smth),consecutive nodes, and start script on multiple consecutive indexes
+Maybe using smth like:
+startnodes.sh config.txt 10 14
+
+Try this on your own laptop and computer to see how far you can go (how many messages)
+
+Run executable of program to broadcast and receive messages form the others;
+Run in less than a threshold time for us to be able to start our nodes (each node should have 2 components, one that is listening and one that is broadcasting)
+
+Use a single log file for a node

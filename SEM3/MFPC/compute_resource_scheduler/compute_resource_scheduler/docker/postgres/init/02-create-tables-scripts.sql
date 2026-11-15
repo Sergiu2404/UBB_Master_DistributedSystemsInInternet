@@ -1,0 +1,58 @@
+---- i kept these only for having the initial scripts, these dont help with anything, since they have been run on multiple dbs
+---- they would be run against a single default db
+--
+---- resources DB
+--create table compute_nodes (
+--    id uuid primary key default gen_random_uuid(),
+--    pool_id uuid not null,
+--    hostname varchar(255) not null unique,
+--    cpu_cores integer not null check (cpu_cores > 0),
+--    memory_mb bigint not null check (memory_mb > 0),
+--    available_cpu_cores integer not null,
+--    available_memory_mb bigint not null,
+--    status varchar(20) not null default 'active' check (status in ('active', 'maintenance', 'inactive')),
+--    version bigint not null default 0,
+--    check (available_cpu_cores between 0 and cpu_cores),
+--    check (available_memory_mb between 0 and memory_mb)
+--);
+--
+--create table if not exists resource_pools (
+--    id UUID primary key default gen_random_uuid(),
+--    name varchar(100) not null unique,
+--    region varchar(100) not null,
+--    created_at TIMESTAMPTZ not null default current_timestamp
+--);
+--
+--
+--
+---- jobs DB
+--create table jobs (
+--    id uuid primary key default gen_random_uuid(),
+--    name varchar(255) not null,
+--    required_cpu_cores integer not null check (required_cpu_cores > 0),
+--    required_memory_mb bigint not null check (required_memory_mb > 0),
+--    priority integer not null default 0,
+--    status varchar(20) not null default 'pending' check (status in ('pending', 'allocated', 'running', 'completed', 'failed')),
+--    submitted_at timestamptz not null default current_timestamp
+--);
+--
+--create table allocations (
+--    id uuid primary key default gen_random_uuid(),
+--    job_id uuid not null references jobs(id),
+--    compute_node_id uuid not null,
+--    allocated_cpu_cores integer not null check (allocated_cpu_cores > 0),
+--    allocated_memory_mb bigint not null check (allocated_memory_mb > 0),
+--    status varchar(20) not null default 'active' check (status in ('active', 'released')),
+--    created_at timestamptz not null default current_timestamp,
+--    released_at timestamptz
+--);
+--
+---- indexes in jobs DB
+--create index idx_jobs_status_priority
+--    on jobs(status, priority desc);
+--
+--create index idx_allocations_job_id
+--    on allocations(job_id);
+--
+--create index idx_allocations_compute_node
+--    on allocations(compute_node_id);

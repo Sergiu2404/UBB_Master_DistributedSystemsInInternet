@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: compute_resource_scheduler
+  datasource:
+    resources:
+      jdbc-url: jdbc:postgresql://localhost:5433/compute_resources
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
+    jobs:
+      jdbc-url: jdbc:postgresql://localhost:5433/job_management
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
