@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "sequential_c\\x64\\Debug\\sha1.h.obj.dt.obj",
+            "outputs": [
+                "sequential_c\\x64\\Debug\\sha1.h.obj.dt.module.json",
+                "sequential_c\\x64\\Debug\\sha1.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

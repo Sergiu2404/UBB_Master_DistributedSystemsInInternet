@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="multithreaded_c.vcxproj" Id="1c69c331-a49c-4f5a-b315-4695b379f4a3" />
+</Solution>

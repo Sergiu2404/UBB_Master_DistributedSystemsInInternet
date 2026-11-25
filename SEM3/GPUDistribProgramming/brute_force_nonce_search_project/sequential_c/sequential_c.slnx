@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="sequential_c.vcxproj" Id="bbb39401-c248-4bb7-b73d-0a88a6e7da57" />
+</Solution>

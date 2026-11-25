@@ -1,0 +1,2 @@
+D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\x64\Release\pthreadVC3.dll
+D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\multithreaded_c\x64\Release\multithr.BAE6BADE.Up2Date

@@ -1,0 +1,49 @@
+﻿  Installing vcpkg dependencies to D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\
+  "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\vcpkg\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows" --vcpkg-root "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\vcpkg\\" "--x-manifest-root=D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\\" "--x-install-root=D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\\" 
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\vcpkg\vcpkg-running.lock: note: waiting to take filesystem lock...
+  Detecting compiler hash for triplet x64-windows...
+  Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+  The following packages are already installed:
+    * vcpkg-cmake-config:x64-windows@2026-07-21
+  The following packages will be built and installed:
+      pthreads:x64-windows@3.0.0#14 -- git+https://github.com/microsoft/vcpkg@2e0a6df2800d3677b941dc6504f083965b7886d9
+  Restored 0 package(s) from C:\Users\Sergiu\AppData\Local\vcpkg\archives in 140 us. Use --debug to see more details.
+  Installing 1/1 pthreads:x64-windows@3.0.0#14...
+  pthreads:x64-windows@3.0.0#14 package ABI: 4b257680b5ee82a8352cb712f969c36a3cf2f7086455f9d25646c930b0f87b68
+  Building pthreads:x64-windows@3.0.0#14...
+  C:\Users\Sergiu\AppData\Local\vcpkg\registries\git-trees\2e0a6df2800d3677b941dc6504f083965b7886d9: info: installing from git registry git+https://github.com/microsoft/vcpkg@2e0a6df2800d3677b941dc6504f083965b7886d9
+  -- Using cached pthreads4w-code-v3.0.0.zip
+  -- Extracting source C:/Users/Sergiu/AppData/Local/vcpkg/downloads/pthreads4w-code-v3.0.0.zip
+  -- Applying patch fix-arm-macro.patch
+  CMake Error at scripts/cmake/z_vcpkg_apply_patches.cmake:34 (message):
+    Applying patch failed: fatal: unable to access '.git/config': Filename too
+    long
+  
+  Call Stack (most recent call first):
+    scripts/cmake/vcpkg_extract_source_archive.cmake:147 (z_vcpkg_apply_patches)
+    scripts/cmake/vcpkg_extract_source_archive_ex.cmake:8 (vcpkg_extract_source_archive)
+    scripts/cmake/vcpkg_from_sourceforge.cmake:36 (vcpkg_extract_source_archive_ex)
+    C:/Users/Sergiu/AppData/Local/vcpkg/registries/git-trees/2e0a6df2800d3677b941dc6504f083965b7886d9/portfile.cmake:20 (vcpkg_from_sourceforge)
+    scripts/ports.cmake:209 (include)
+  
+  
+EXEC : error : building pthreads:x64-windows failed with: BUILD_FAILED
+  See https://learn.microsoft.com/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli for more information.
+  Elapsed time to handle pthreads:x64-windows: 351 ms
+  Please ensure you're using the latest port files with `git pull` and `vcpkg update`.
+  Then check for known issues at:
+    https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+pthreads
+  You can submit a new issue at:
+    https://github.com/microsoft/vcpkg/issues/new?title=%5Bpthreads%5D%20build%20error%20on%20x64-windows&body=Copy%20issue%20body%20from%20D%3A%2FUBB_Master_DistributedSystemsInInternet%2FSEM3%2FGPUDistribProgramming%2Fbrute_force_nonce_search_project%2Fmultithreaded_c%2Fvcpkg_installed%2Fx64-windows%2Fvcpkg%2Fissue_body.md
+  
+C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\vcpkg\scripts\buildsystems\msbuild\support\InstallImplementation.targets(9,5): error MSB3073: The command ""C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\vcpkg\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows" --vcpkg-root "C:\Program Files\Microsoft Visual Studio\18\Insiders\VC\vcpkg\\" "--x-manifest-root=D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\\" "--x-install-root=D:\UBB_Master_DistributedSystemsInInternet\SEM3\GPUDistribProgramming\brute_force_nonce_search_project\multithreaded_c\vcpkg_installed\x64-windows\\" " exited with code 1.

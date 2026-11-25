@@ -1,0 +1,7 @@
+You will build a proof-of-work search three times, sequential C, multi-threaded C and CUDA, and optimize each one until you can explain where its time goes. The workload is a brute-force search for a nonce that makes a SHA-1 digest end in a given hex suffix. Every nonce can be tested on its own, so the search scales to any number of threads. That makes it a clean way to measure what a GPU gives you over a well-tuned CPU.
+ 
+Given an input buffer B (arbitrary bytes, length L) and a suffix S of k lowercase hex digits, find the a byte buffer n (nonce) such that the hex form of the SHA1 checksum of the concatenation B‖nends in S.
+ 
+You pick your own input and suffix, under one rule: your fastest implementation (normally the optimized CUDA version) must take more than 2 seconds on the GPU you benchmark on. Below 2 seconds, start-up and transfer costs hide the kernel's real throughput.
+ 
+You do not have to write SHA-1 from scratch. Take a public-domain or permissively licensed C implementation from GitHub and adapt it to CUDA yourself: mark the compression function __device__ (or __host__ __device__), and remove dynamic memory and memcpy calls
